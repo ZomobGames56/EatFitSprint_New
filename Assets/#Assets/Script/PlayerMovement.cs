@@ -32,10 +32,13 @@ public class PlayerMovement : MonoBehaviour
     GameObject firstTimeFight;
     [SerializeField]
     AudioClip crashSound,loseClip;
+    bool triggerAtOnce;
+    
     private void Start()
     {
         canLeftRightMovement = false;
         doTweemAnimationCalled = false;
+        triggerAtOnce = false;
     }
     private void Update()
     {
@@ -69,6 +72,7 @@ public class PlayerMovement : MonoBehaviour
     void PlayerHorizontalMovement()
     {
 
+       
         if (dyanamicJoyStick.Horizontal >= 0.1f || dyanamicJoyStick.Horizontal <= -0.1f)
         {
             //transform.position += (transform.right * dyanamicJoyStick.Horizontal)
@@ -167,19 +171,26 @@ public class PlayerMovement : MonoBehaviour
 
         if (other.CompareTag("Obstacle"))
         {
-            HY_AudioManager.instance.PlayAudioEffectOnce(crashSound);
-            if (!doTweemAnimationCalled)
+            
+           
+            if (!triggerAtOnce)
             {
-                doTweemAnimationCalled = true;
-                yTiltSpeed = 0;
-                transform.DOShakePosition(0.5f, 0.5f, 10, 90);
-                transform.DORotate(new Vector3(0, 0, rotationZ), rotateDuration, RotateMode.FastBeyond360)
-                   .SetEase(Ease.OutBack);
+                triggerAtOnce=true;
+                HY_AudioManager.instance.PlayAudioEffectOnce(crashSound);
+                if (!doTweemAnimationCalled)
+                {
+                    doTweemAnimationCalled = true;
+                    yTiltSpeed = 0;
+                    transform.DOShakePosition(0.5f, 0.5f, 10, 90);
+                    transform.DORotate(new Vector3(0, 0, rotationZ), rotateDuration, RotateMode.FastBeyond360)
+                       .SetEase(Ease.OutBack);
 
+                }
+                forwardSpeed = 0;
+                //Open Game Over Screen.
+                StartCoroutine(WaitGameOver());
             }
-            forwardSpeed = 0;
-            //Open Game Over Screen.
-            StartCoroutine(WaitGameOver());
+            
         }
 
 

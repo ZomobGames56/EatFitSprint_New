@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5918858733617342826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7024201448087590505}
+  - component: {fileID: 2470487738605560600}
+  m_Layer: 0
+  m_Name: FireBtnBehavior
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7024201448087590505
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5918858733617342826}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.49749488, y: 3.6135068, z: 482.07013}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2470487738605560600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5918858733617342826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7707d19c29c820b4e958c50daaa0ace6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodList:
+  - {fileID: 7665996226415346601, guid: bb77699960665e14f9a008b48cca7068, type: 3}
+  - {fileID: 1862483479269618223, guid: dc69f96cf72386c4aa6dbfbad2b20546, type: 3}
+  - {fileID: 5883453794713221969, guid: 7e8c2cd75ce7f474da40609ea1b0b96c, type: 3}
+  junkFoodList:
+  - {fileID: 6896862261039963335, guid: e35c2b09f9ee40946878b6afc0d416d6, type: 3}
+  - {fileID: 8052600896780958722, guid: fd73f446eb41c594f89294fa7a8a79d0, type: 3}
+  - {fileID: 3461981110916248532, guid: 415813068909ccd4ca482f4841f21c2f, type: 3}
+  spawnPoint: {fileID: 0}
+  throwSound: {fileID: 8300000, guid: 22003a5e81cd8a34bb1de4d1cdd778ce, type: 3}
