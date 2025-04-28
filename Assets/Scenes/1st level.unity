@@ -1365,9 +1365,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 566332285}
     - target: {fileID: 8017779941404274142, guid: 67f5279860941a84abd25d36b6615422, type: 3}
+      propertyPath: obstacleYVal
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8017779941404274142, guid: 67f5279860941a84abd25d36b6615422, type: 3}
       propertyPath: lastSpawedObj
       value: 
       objectReference: {fileID: 1059264822}
+    - target: {fileID: 8017779941404274142, guid: 67f5279860941a84abd25d36b6615422, type: 3}
+      propertyPath: food_FruitYValu
+      value: 3.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -6,7 +6,7 @@ public class FirstTimeUser : MonoBehaviour
     [SerializeField]
     GameObject clickImg;
     
-    private void Awake()
+    private void Start()
     {
         clickImg.SetActive(false);
         if (!SaveDataManager.instance.VariableExist("FirstTimeEnter"))

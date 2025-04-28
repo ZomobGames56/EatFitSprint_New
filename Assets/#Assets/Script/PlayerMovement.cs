@@ -31,9 +31,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     GameObject firstTimeFight;
     [SerializeField]
-    AudioClip crashSound,loseClip;
+    AudioClip crashSound, loseClip;
     bool triggerAtOnce;
-    
+
     private void Start()
     {
         canLeftRightMovement = false;
@@ -51,6 +51,23 @@ public class PlayerMovement : MonoBehaviour
         if (canLeftRightMovement)
         {
             FightTimeMovement();
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            triggerAtOnce = true;
+            HY_AudioManager.instance.PlayAudioEffectOnce(crashSound);
+            if (!doTweemAnimationCalled)
+            {
+                doTweemAnimationCalled = true;
+                yTiltSpeed = 0;
+                transform.DOShakePosition(0.5f, 0.5f, 10, 90);
+                transform.DORotate(new Vector3(0, 0, rotationZ), rotateDuration, RotateMode.FastBeyond360)
+                   .SetEase(Ease.OutBack);
+
+            }
+            forwardSpeed = 0;
+            //Open Game Over Screen.
+            StartCoroutine(WaitGameOver());
         }
     }
     void PlayerBound()
@@ -72,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
     void PlayerHorizontalMovement()
     {
 
-       
+
         if (dyanamicJoyStick.Horizontal >= 0.1f || dyanamicJoyStick.Horizontal <= -0.1f)
         {
             //transform.position += (transform.right * dyanamicJoyStick.Horizontal)
@@ -139,7 +156,7 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator WaitForFightingPanel()
     {
         yield return new WaitForSeconds(3f);
-       
+
         GameManager.instance.makeMeFitScreen.SetActive(false);
         GameManager.instance.collectingPanel.SetActive(false);
         if (!SaveDataManager.instance.VariableExist("KnowFighting"))
@@ -171,26 +188,32 @@ public class PlayerMovement : MonoBehaviour
 
         if (other.CompareTag("Obstacle"))
         {
-            
-           
+
             if (!triggerAtOnce)
             {
-                triggerAtOnce=true;
+                triggerAtOnce = true;
                 HY_AudioManager.instance.PlayAudioEffectOnce(crashSound);
                 if (!doTweemAnimationCalled)
                 {
                     doTweemAnimationCalled = true;
                     yTiltSpeed = 0;
-                    transform.DOShakePosition(0.5f, 0.5f, 10, 90);
+                    transform.DOShakePosition(0.5f, 0.5f, 10, 90)
+                          .OnUpdate(() =>
+                          {
+                              Vector3 pos = transform.position;
+                              pos.y = -24.8f; // Lock Y
+                              transform.position = pos;
+                          });
                     transform.DORotate(new Vector3(0, 0, rotationZ), rotateDuration, RotateMode.FastBeyond360)
-                       .SetEase(Ease.OutBack);
+             .SetEase(Ease.OutBack);
+
 
                 }
                 forwardSpeed = 0;
                 //Open Game Over Screen.
                 StartCoroutine(WaitGameOver());
             }
-            
+
         }
 
 
