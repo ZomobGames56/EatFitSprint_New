@@ -42,13 +42,15 @@ public class PickUpAnimation : MonoBehaviour
                         gameObject.SetActive(false);
                         if (gameObject.transform.tag == "Fruit")
                         {
-                            GameManager.instance.fruitCount += 2;
-                            GameManager.instance.gameObjects[GameManager.instance.index].SetActive(true);
-                            GameManager.instance.index++;
+                           //GameManager.instance.fruitCount += 2;
+                           // GameManager.instance.gameObjects[GameManager.instance.index].SetActive(true);
+                           // print(GameManager.instance.gameObjects[GameManager.instance.index]);
+                           // print(GameManager.instance);
+                           // GameManager.instance.index++;
                         }
                         else if(gameObject.transform.tag =="JunkFood")
                         {
-                            GameManager.instance.junkFoodCount += 2;
+                           // GameManager.instance.junkFoodCount += 2;
                         }
                        
                     });

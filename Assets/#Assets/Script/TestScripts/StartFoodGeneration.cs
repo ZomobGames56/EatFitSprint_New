@@ -11,7 +11,7 @@ public class StartFoodGeneration : MonoBehaviour
     int lenght = 120;
 
     [SerializeField]
-    float maxX = 9, maxZ = 15;
+    float maxX = 9, maxZ = 15, food_FruitYValu=3.5f,obstacleYVal=1;
 
     [SerializeField]
     Transform lastSpawedObj;
@@ -33,13 +33,13 @@ public class StartFoodGeneration : MonoBehaviour
                     if (value == 0)
                     {
                         GameObject obs_Obj = Instantiate(obstacle.gameObject,parent);
-                        obs_Obj.transform.position = new Vector3(-10.5f, 1, lastSpawedObj.position.z + maxZ);
+                        obs_Obj.transform.position = new Vector3(-10.5f, obstacleYVal, lastSpawedObj.position.z + maxZ);
                         lastSpawedObj = obs_Obj.transform;
                     }
                     if (value == 1)
                     {
                         GameObject obs_Obj = Instantiate(obstacle.gameObject,parent);
-                        obs_Obj.transform.position = new Vector3(5f, 1, lastSpawedObj.position.z + maxZ);
+                        obs_Obj.transform.position = new Vector3(5f, obstacleYVal, lastSpawedObj.position.z + maxZ);
                         lastSpawedObj = obs_Obj.transform;
                     }
                     
@@ -47,7 +47,7 @@ public class StartFoodGeneration : MonoBehaviour
                 else
                 {
                     GameObject obj = Instantiate(spawnObjetList[Random.Range(0, spawnObjetList.Count - 1)],parent);
-                    obj.transform.position = new Vector3(x, 3.5f, lastSpawedObj.position.z + maxZ);
+                    obj.transform.position = new Vector3(x, food_FruitYValu, lastSpawedObj.position.z + maxZ);
                     lastSpawedObj = obj.transform;
                 }
                 
@@ -55,7 +55,7 @@ public class StartFoodGeneration : MonoBehaviour
             else
             {
                 GameObject obj = Instantiate(spawnObjetList[Random.Range(0, spawnObjetList.Count - 1)], parent);
-                obj.transform.position = new Vector3(x, 3.5f, lastSpawedObj.position.z + maxZ);
+                obj.transform.position = new Vector3(x, food_FruitYValu, lastSpawedObj.position.z + maxZ);
                 lastSpawedObj = obj.transform;
             }
 

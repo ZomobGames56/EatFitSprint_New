@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 2129457501250158742}
   - component: {fileID: 1211669240979267582}
   - component: {fileID: 3638506964048608807}
-  - component: {fileID: 8436695948507869943}
   - component: {fileID: 5073297017651274223}
+  - component: {fileID: 1105376002311042125}
   m_Layer: 0
   m_Name: Orange
   m_TagString: Fruit
@@ -101,35 +101,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274089711832b514fb0c59db02eb926f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveUpDistance: 2.5
-  moveUpDuration: 0.2
-  moveToPlayerDuration: 0.1
+  moveUpDistance: 10
+  moveUpDuration: 0.25
+  moveToPlayerDuration: 0.15
   playerTransform: {fileID: 0}
   rotationAngle: 180
   duration: 1
   objectCollection: {fileID: 8300000, guid: 26ce014667dda5944855fd2cdd11c69f, type: 3}
---- !u!64 &8436695948507869943
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8490056444676276550}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4711208715938537054, guid: d7a4e0af9ecb6264dbdc6b04e8e48f63, type: 3}
 --- !u!54 &5073297017651274223
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -157,3 +135,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1105376002311042125
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8490056444676276550}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3044469, y: 1.631278, z: 1.3044469}
+  m_Center: {x: 0, y: 0.8134155, z: 0}
