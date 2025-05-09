@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     float leftRightMoveSpeed;
     [SerializeField]
-    float positiveXVal = 2.5f, negativeXVal = -2.5f;
+    float positiveXVal = 2.5f, negativeXVal = -2.5f, yAfterLost;
     [SerializeField]
     GameObject firstTimeFight;
     [SerializeField]
@@ -201,7 +201,7 @@ public class PlayerMovement : MonoBehaviour
                           .OnUpdate(() =>
                           {
                               Vector3 pos = transform.position;
-                              pos.y = -24.8f; // Lock Y
+                              pos.y = yAfterLost; // Lock Y
                               transform.position = pos;
                           });
                     transform.DORotate(new Vector3(0, 0, rotationZ), rotateDuration, RotateMode.FastBeyond360)

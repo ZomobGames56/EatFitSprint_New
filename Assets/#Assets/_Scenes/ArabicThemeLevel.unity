@@ -5955,8 +5955,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 654057840}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0000038146973, y: 0, z: 888.7624}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 888.7624}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5969,7 +5969,7 @@ Transform:
   - {fileID: 207860036}
   - {fileID: 398704969}
   - {fileID: 672091570}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 986523641}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &664483608
 GameObject:
@@ -9831,6 +9831,7 @@ Transform:
   - {fileID: 2063690724}
   - {fileID: 1695666705}
   - {fileID: 1089276759}
+  - {fileID: 654057841}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &991495173
@@ -13759,6 +13760,7 @@ MonoBehaviour:
   leftRightMoveSpeed: 15
   positiveXVal: 11
   negativeXVal: -11
+  yAfterLost: 0
   firstTimeFight: {fileID: 354811748}
   crashSound: {fileID: 8300000, guid: b5573e051fd38ef489f82b4de922fe1b, type: 3}
   loseClip: {fileID: 8300000, guid: ee61f30a4f29daa4fad207264f746304, type: 3}
@@ -37994,7 +37996,6 @@ SceneRoots:
   - {fileID: 1727586834}
   - {fileID: 1107537182}
   - {fileID: 986523641}
-  - {fileID: 654057841}
   - {fileID: 100101697}
   - {fileID: 839390863}
   - {fileID: 601907560}

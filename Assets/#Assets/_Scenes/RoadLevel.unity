@@ -1576,6 +1576,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8143055765572834298, guid: ac571b667eab826428be5ba342fca064, type: 3}
+      propertyPath: yAfterLost
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8143055765572834298, guid: ac571b667eab826428be5ba342fca064, type: 3}
       propertyPath: firstTimeFight
       value: 
       objectReference: {fileID: 1650363938}
