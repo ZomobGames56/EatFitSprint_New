@@ -32,8 +32,9 @@ public class CubeSpawner : MonoBehaviour
             int index =Random.Range(0,parentObj.Length-1);
 
             SpawnCubeInCircle(parentObj[index]);
-            z += 2;
+            z += 12;
             parentObj[index].transform.position = new Vector3(x, 0, lastObj.transform.position.z + z);
+            
         }
     }
 
@@ -48,8 +49,8 @@ public class CubeSpawner : MonoBehaviour
             print(angle);
             Vector3 position = new Vector3(x, waterMelon.transform.position.y, z); // Position on the XY plane
 
-            Instantiate(cube, position, Quaternion.identity, ParentObj.transform); // Spawn cube
-
+           GameObject obj =  Instantiate(cube, position, Quaternion.identity, ParentObj.transform); // Spawn cube
+            lastObj = obj.transform;
         }
     }
 }
