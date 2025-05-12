@@ -42,7 +42,7 @@ public class InGameTimer : MonoBehaviour
         timeUp = false;
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         if (canRunTimer && !timeUp)
@@ -80,9 +80,9 @@ public class InGameTimer : MonoBehaviour
             {
                 GameManager.instance.FitnessStatus(CharacterShapeChange.instance.fitNessBar.value);
                 StartCoroutine(WaitToShowGameOver());
-               // print(GameManager.instance.status);
-                // print("Min goes<0called");
+               
                 //revive panel open
+
                 timeUp = true;
                 timerText.text = "00:00";
                 junkFoodThrowBtn.interactable = false;

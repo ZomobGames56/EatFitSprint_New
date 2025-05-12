@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6175513858677180994}
   - component: {fileID: 135809090941699636}
   - component: {fileID: 4974392952761728113}
-  - component: {fileID: 3308429731441718455}
   - component: {fileID: 1893588085269206479}
   m_Layer: 0
   m_Name: Mango
@@ -108,33 +107,6 @@ MonoBehaviour:
   rotationAngle: 180
   duration: 1
   objectCollection: {fileID: 8300000, guid: 26ce014667dda5944855fd2cdd11c69f, type: 3}
---- !u!54 &3308429731441718455
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6140924244649413642}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!65 &1893588085269206479
 BoxCollider:
   m_ObjectHideFlags: 0

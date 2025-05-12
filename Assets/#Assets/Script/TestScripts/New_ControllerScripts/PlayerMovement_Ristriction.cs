@@ -1,13 +1,13 @@
 using UnityEngine;
 
 public class PlayerMovement_Ristriction : MonoBehaviour
-{ 
+{
 
     [SerializeField]
     Joystick joystick;
     Vector3 move;
     [SerializeField]
-    float moveSpeed = 10f,rotateSpeed;
+    float moveSpeed = 10f, rotateSpeed;
     [SerializeField]
     Transform cam;
     [SerializeField]
@@ -18,7 +18,7 @@ public class PlayerMovement_Ristriction : MonoBehaviour
         PlayerMovement();
     }
 
-    
+
     public void PlayerMovement()
     {
 
@@ -27,17 +27,20 @@ public class PlayerMovement_Ristriction : MonoBehaviour
         move.y = 0f;
 
 
-        transform.position += move * moveSpeed * Time.deltaTime;
+        //if (joystick.Horizontal >= 0.25f || joystick.Horizontal <= -0.25f ||
+        //    joystick.Vertical > 0.25f || joystick.Vertical <= -0.25f)
+            transform.position += move * moveSpeed * Time.deltaTime;
+
         // Debug.Log("Transform one is calling");
 
-        if (move.magnitude != 0)
+        if (move.magnitude >=0.15f|| move.magnitude <= -0.15f)
         {
-           
+
             Rotate();
         }
 
-        PlayerBoundires();  
-       
+        PlayerBoundires();
+
     }
     public void Rotate()
     {
@@ -51,22 +54,22 @@ public class PlayerMovement_Ristriction : MonoBehaviour
         if (transform.position.x >= maxXValue)
         {
             transform.position = new Vector3(maxXValue, transform.position.y, transform.position.z);
-           // transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0, 0, 0), 15 * Time.deltaTime);
-            
+            // transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0, 0, 0), 15 * Time.deltaTime);
+
 
 
         }
         else if (transform.position.x <= -maxXValue)
         {
             transform.position = new Vector3(-maxXValue, transform.position.y, transform.position.z);
-          ///  transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0, 0, 0), 15 * Time.deltaTime);
+            ///  transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0, 0, 0), 15 * Time.deltaTime);
 
         }
         if (transform.position.z <= -maxZValue)
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, -maxZValue);
         }
-        
+
     }
 
 }
