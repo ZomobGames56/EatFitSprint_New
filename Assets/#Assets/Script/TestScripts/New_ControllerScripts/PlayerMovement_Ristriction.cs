@@ -1,8 +1,10 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerMovement_Ristriction : MonoBehaviour
 {
 
+    private static PlayerMovement_Ristriction instance;
     [SerializeField]
     Joystick joystick;
     Vector3 move;
@@ -12,65 +14,111 @@ public class PlayerMovement_Ristriction : MonoBehaviour
     Transform cam;
     [SerializeField]
     float maxXValue, maxZValue;
-
+    bool stopRun;
+    [SerializeField]
+    GameObject firstTimeFight;
+    bool canLeftRightMovement;
+    [SerializeField]
+    GameObject timerUpPanel;
+    private void Awake()
+    {
+        instance = this;
+    }
+    private void OnEnable()
+    {
+        n_Timer.NotifyPlayerTimeUp += AfterTimeUpPlayer;
+    }
+    private void OnDisable()
+    {
+        n_Timer.NotifyPlayerTimeUp -= AfterTimeUpPlayer;
+    }
+    private void OnDestroy()
+    {
+        Destroy(gameObject);
+    }
+    private void Start()
+    {
+        stopRun = false;
+    }
     private void Update()
     {
-        PlayerMovement();
+        if (!stopRun)
+        {
+            PlayerMovement();
+        }
     }
-
-
     public void PlayerMovement()
     {
-
         move = cam.transform.right * joystick.Horizontal +
                    cam.transform.forward * joystick.Vertical;
         move.y = 0f;
-
-
-        //if (joystick.Horizontal >= 0.25f || joystick.Horizontal <= -0.25f ||
-        //    joystick.Vertical > 0.25f || joystick.Vertical <= -0.25f)
-            transform.position += move * moveSpeed * Time.deltaTime;
-
-        // Debug.Log("Transform one is calling");
-
-        if (move.magnitude >=0.15f|| move.magnitude <= -0.15f)
+        transform.position += move * moveSpeed * Time.deltaTime;
+        if (move.magnitude >= 0.15f || move.magnitude <= -0.15f)
         {
-
             Rotate();
         }
-
         PlayerBoundires();
-
     }
     public void Rotate()
     {
         Quaternion rot = Quaternion.LookRotation(move, Vector3.up);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, rot,
             rotateSpeed * Time.deltaTime);
-        // tfansform.rotation = Quaternion .Slerp(transform.rotation,rot, 10* Time.deltaTime);
     }
     void PlayerBoundires()
     {
         if (transform.position.x >= maxXValue)
         {
             transform.position = new Vector3(maxXValue, transform.position.y, transform.position.z);
-            // transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0, 0, 0), 15 * Time.deltaTime);
-
-
-
         }
         else if (transform.position.x <= -maxXValue)
         {
             transform.position = new Vector3(-maxXValue, transform.position.y, transform.position.z);
-            ///  transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0, 0, 0), 15 * Time.deltaTime);
-
         }
         if (transform.position.z <= -maxZValue)
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, -maxZValue);
         }
-
     }
 
+    public static void CanStopMove(bool can)
+    {
+        instance.stopRun = can;
+    }
+
+    void AfterTimeUpPlayer()
+    {
+        StartCoroutine(WaitForFightingPanel());
+        transform.rotation = Quaternion.Euler(Vector3.zero);
+       
+        transform.position = new Vector3(0, 0, 100f);
+        //transform.position = Vector3.Lerp(transform.position, targetPos, moveSpeed * Time.deltaTime);
+        //transform.position += Vector3.forward * moveSpeed * Time.deltaTime;
+    }
+
+
+    IEnumerator WaitForFightingPanel()
+    {
+        yield return new WaitForSeconds(3f);
+        transform.rotation = Quaternion.Euler(Vector3.zero);
+
+        timerUpPanel.SetActive(false);
+        GameManager.instance.makeMeFitScreen.SetActive(false);
+        GameManager.instance.collectingPanel.SetActive(false);
+        if (!SaveDataManager.instance.VariableExist("KnowFighting"))
+        {
+            firstTimeFight.SetActive(true);
+            //print("TeachMe");
+        }
+        else
+        {
+            GameManager.instance.fightingPanel.SetActive(true);
+            InGameTimer.instance.canRunTimer = true;
+            canLeftRightMovement = true;
+            CameraFollow.instance.initialCameraRotation = new Vector3(3f, 0, 0);
+            CameraFollow.instance.offsetFromPlayer = new Vector3(0, 10, -25);
+        }
+
+    }
 }
 

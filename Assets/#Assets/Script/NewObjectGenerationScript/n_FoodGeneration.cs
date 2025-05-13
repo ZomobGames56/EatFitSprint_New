@@ -5,6 +5,8 @@ using JetBrains.Annotations;
 
 public class n_FoodGeneration : MonoBehaviour
 {
+
+
     [SerializeField]
     List<GameObject> m_fruits = new List<GameObject>();
     [SerializeField]
@@ -12,12 +14,21 @@ public class n_FoodGeneration : MonoBehaviour
     [SerializeField]
     float maxX, distanceInZ, distanceInY;
     [SerializeField]
-    Transform lastSpawnObj,parent;
+    Transform lastSpawnObj, parent;
     [SerializeField]
     int foodSpawnCount;
+    private void OnEnable()
+    {
+        n_Timer.OnHideParent += HandleHideParent;
+    }
 
+    private void OnDisable()
+    {
+        n_Timer.OnHideParent -= HandleHideParent;
+    }
     private void Start()
     {
+
         for(int i = 0; i <=foodSpawnCount; i++)
         {
             if (i%2==0)
@@ -35,5 +46,10 @@ public class n_FoodGeneration : MonoBehaviour
                 lastSpawnObj = g_obj.transform;
             }
         }
+    }
+
+    void HandleHideParent()
+    {
+        parent.gameObject.SetActive(false);
     }
 }

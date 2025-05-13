@@ -11,6 +11,8 @@ public class UIManager : MonoBehaviour
     public GameObject gameOverPanel,settingPanel;
     [SerializeField]
     AudioClip buttonClip;
+   
+
     private void Awake()
     {
         if (Instance == null)
@@ -19,12 +21,9 @@ public class UIManager : MonoBehaviour
         }
         gameOverPanel.SetActive(false);
         settingPanel.SetActive(false);
-    }
-    void Start()
-    {
-        
-    }
 
+       
+    }
     // Update is called once per frame
     void Update()
     {

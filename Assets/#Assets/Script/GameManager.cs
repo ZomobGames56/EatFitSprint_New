@@ -26,6 +26,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     AudioClip playBtnClip,winClip,loseClip;
 
+    [SerializeField]
+    GameObject timerBG_GO;
+
     bool soundPlayed;
     private void Awake()
     {
@@ -39,7 +42,9 @@ public class GameManager : MonoBehaviour
         isVictory = false;
         mainMenuPanel.SetActive(true);
         m_movementInstruction.SetActive(false);
+        timerBG_GO.SetActive(false);
     }
+   
     private void Update()
     {
         fruitCountTxt.text = fruitCount.ToString();
@@ -78,6 +83,8 @@ public class GameManager : MonoBehaviour
         }
         HY_AudioManager.instance.PlayAudioEffectOnce(playBtnClip);
         mainMenuPanel.SetActive(false);
+        timerBG_GO.SetActive(true);
+        n_Timer.StartTimerBool(true);
     }
     //---------------------------- -150 to 150 
 
