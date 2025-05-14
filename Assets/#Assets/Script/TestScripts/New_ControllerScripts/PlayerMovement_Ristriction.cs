@@ -92,6 +92,8 @@ public class PlayerMovement_Ristriction : MonoBehaviour
         transform.rotation = Quaternion.Euler(Vector3.zero);
        
         transform.position = new Vector3(0, 0, 100f);
+        GameManager.instance.makeMeFitScreen.SetActive(true);
+
         //transform.position = Vector3.Lerp(transform.position, targetPos, moveSpeed * Time.deltaTime);
         //transform.position += Vector3.forward * moveSpeed * Time.deltaTime;
     }

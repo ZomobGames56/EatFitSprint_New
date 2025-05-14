@@ -73,18 +73,22 @@ public class GameManager : MonoBehaviour
         if (!SaveDataManager.instance.VariableExist("LearnedPlay"))
         {
             m_movementInstruction.SetActive(true);
+         
+
 
         }
         else
         {
             start = true;
             collectingPanel.SetActive(true);
+            timerBG_GO.SetActive(true);
+            n_Timer.StartTimerBool(true);
 
         }
         HY_AudioManager.instance.PlayAudioEffectOnce(playBtnClip);
         mainMenuPanel.SetActive(false);
-        timerBG_GO.SetActive(true);
-        n_Timer.StartTimerBool(true);
+       // timerBG_GO.SetActive(true);
+       // n_Timer.StartTimerBool(true);
     }
     //---------------------------- -150 to 150 
 

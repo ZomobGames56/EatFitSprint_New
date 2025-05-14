@@ -3,6 +3,8 @@ using UnityEngine.EventSystems;
 
 public class ILearnDrag : MonoBehaviour,IDragHandler
 {
+    [SerializeField]
+    GameObject timerBG_GO;
     public void OnDrag(PointerEventData eventData)
     {
         GameManager.instance.start = true;
@@ -10,6 +12,8 @@ public class ILearnDrag : MonoBehaviour,IDragHandler
         PlayerPrefs.SetString("FirstTimeEnter", "1");
         PlayerPrefs.SetString("LearnedPlay", "1");
         gameObject.SetActive(false);
+        timerBG_GO.SetActive(true);
+        n_Timer.StartTimerBool(true);
 
     }
 }
