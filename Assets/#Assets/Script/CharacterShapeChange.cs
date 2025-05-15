@@ -8,7 +8,7 @@ public class CharacterShapeChange : MonoBehaviour
     SkinnedMeshRenderer playersSkin;
     public float myValue = 0;
     //[SerializeField]
-    public Slider fitNessBar;
+    public Slider fitNessBar, toShowplayerBar;
     //public int coinsUpdater;
     int rndGenratorNum, rndStartSlimVal, rndStartFatVal;
     [SerializeField]
@@ -32,6 +32,7 @@ public class CharacterShapeChange : MonoBehaviour
             rndStartSlimVal = Random.Range(-150, -70);
             playersSkin.SetBlendShapeWeight(0, rndStartSlimVal);
             fitNessBar.value = rndStartSlimVal;
+            toShowplayerBar.value = rndStartSlimVal;
         }
         if (rndGenratorNum == 1)
         {
@@ -39,6 +40,7 @@ public class CharacterShapeChange : MonoBehaviour
             rndStartFatVal = Random.Range(70, 151);
             playersSkin.SetBlendShapeWeight(0, rndStartFatVal);
             fitNessBar.value = rndStartFatVal;
+            toShowplayerBar.value = rndStartFatVal;
 
         }
     }

@@ -43,39 +43,9 @@ public class n_Timer : MonoBehaviour
         if (canStartTimer)
         {
             seconds -= Time.deltaTime;
-            // print((int)seconds);
             FillImageEffect();
             TimerBehavior();
-            #region //Old Unmanagecode
-            if (seconds < 0)
-            {
-                seconds = 0;
-                PlayerMovement_Ristriction.CanStopMove(true);
-                //UI Pop up--> Transaction Screen--> Player Positon Reset-->All objects disable
-                timerObj.SetActive(false);
-                if (!isInvoked)
-                {
-                    timeText.SetActive(true);
-                    OnHideParent?.Invoke();
-                    NotifyPlayerTimeUp?.Invoke();
-                    isInvoked = true;
-                }
-                //timeUpPanel.SetActive(true);
-                //OnHideParent?.Invoke();
-                //NotifyPlayerTimeUp?.Invoke();
-                //canStartTimer=false;
-            }
-            if (seconds < 10)
-            {
-                timerText.text = "0" + minutes + ":" + "0" + (int)seconds;
-
-            }
-            else
-            {
-                timerText.text = "0" + minutes + ":" + (int)seconds;
-
-            }
-            #endregion
+            
         }
     }
 
@@ -90,17 +60,7 @@ public class n_Timer : MonoBehaviour
         {
             seconds = 0;
             PlayerMovement_Ristriction.CanStopMove(true);
-            //if (!isInvoked)
-
-            //timerObj.SetActive(false);
-            //if (!isInvoked)
-            //{
-            //    timeUpPanel.SetActive(true);
-            //    OnHideParent?.Invoke();
-            //    NotifyPlayerTimeUp?.Invoke();
-            //    isInvoked = true;
-            //}
-
+            TimeUpAnimationEffect();
         }
         if (seconds < 10)
         {
@@ -113,7 +73,7 @@ public class n_Timer : MonoBehaviour
 
         }
     }
-    public void FillImageEffect()
+    void FillImageEffect()
     {
 
 
@@ -137,53 +97,106 @@ public class n_Timer : MonoBehaviour
         if ((int)seconds <= 0)
         {
 
-            pulseTween.Kill();
-            // isPulsing = false;
-            if (!isFade)
-            {
-                         timeText.SetActive(true);
-                timeText.transform.DOMove(new Vector3(540, timeText.transform.position.y, timeText.transform.position.z), 0.5f)
-                    .OnComplete(() => {
-                        timeText.transform.DOMove(new Vector3(500, timeText.transform.position.y, timeText.transform.position.z), 4f)
-                        .OnComplete(() => { timeText.transform.DOMove(new Vector3(1500, timeText.transform.position.y, timeText.transform.position.z), 0.5f)
-                                .OnComplete(() =>
-                                {
-                                    timeText.gameObject.SetActive(false);
+            //pulseTween.Kill();
+            //// isPulsing = false;
+            //if (!isFade)
+            //{
+            //    /// Time Up Text animation
+            //             timeText.SetActive(true);
+            //    timeText.transform.DOMove(new Vector3(540, timeText.transform.position.y, timeText.transform.position.z), 0.5f)
+            //        .OnComplete(() => {
+            //            timeText.transform.DOMove(new Vector3(500, timeText.transform.position.y, timeText.transform.position.z), 4f)
+            //            .OnComplete(() => { timeText.transform.DOMove(new Vector3(1500, timeText.transform.position.y, timeText.transform.position.z), 0.5f)
+            //                    .OnComplete(() =>
+            //                    {
+            //                        timeText.transform.DOKill();
+            //                        timeText.gameObject.SetActive(false);
 
-                                });
-                        });
-                    });
+            //                    });
+            //            });
+            //        });
 
 
 
-                           OnHideParent?.Invoke();
-                timerObj.transform.DOScale(1.35f, 5f).SetEase(Ease.OutBack)
-                    .OnComplete(() =>
-                    {
-                       
+            //               OnHideParent?.Invoke();
+            //    timerObj.transform.DOScale(1.35f, 5f).SetEase(Ease.OutBack)
+            //        .OnComplete(() =>
+            //        {
 
-                        timerObj.transform.DOScale(0f, 0.5f).SetEase(Ease.InBack)
-                       .OnComplete(() =>
-                       {
-                           timerObj.gameObject.SetActive(false);
-                           // timeUpPanel.transform.DOScale
-                           // Invoke Events
-                           //timeUpPanel.SetActive(true);
-                           NotifyPlayerTimeUp?.Invoke();
-                          // PlayerMovement_Ristriction.AfterTimeUpPlayer();
 
-                       });
+            //            timerObj.transform.DOScale(0f, 0.5f).SetEase(Ease.InBack)
+            //           .OnComplete(() =>
+            //           {
+            //               timerObj.transform.DOKill();
+            //               timerObj.gameObject.SetActive(false);
+            //               // timeUpPanel.transform.DOScale
+            //               // Invoke Events
+            //               //timeUpPanel.SetActive(true);
+            //               NotifyPlayerTimeUp?.Invoke();
+            //              // PlayerMovement_Ristriction.AfterTimeUpPlayer();
 
-                    });
-                isFade = true;
-                // isPulsing = true;
+            //           });
 
-            }
+            //        });
+            //    isFade = true;
+            //    // isPulsing = true;
+
+            //}
 
         }
 
     }
 
+    void TimeUpAnimationEffect()
+    {
+        pulseTween.Kill();
+        // isPulsing = false;
+        if (!isFade)
+        {
+            /// Time Up Text animation
+            timeText.SetActive(true);
+            timeText.transform.DOMove(new Vector3(540, timeText.transform.position.y, timeText.transform.position.z), 0.5f)
+                .OnComplete(() =>
+                {
+                    timeText.transform.DOMove(new Vector3(500, timeText.transform.position.y, timeText.transform.position.z), 4f)
+                    .OnComplete(() =>
+                    {
+                        timeText.transform.DOMove(new Vector3(1500, timeText.transform.position.y, timeText.transform.position.z), 0.5f)
+                            .OnComplete(() =>
+                            {
+                                timeText.transform.DOKill();
+                                timeText.gameObject.SetActive(false);
+
+                            });
+                    });
+                });
+
+
+
+            OnHideParent?.Invoke();
+            timerObj.transform.DOScale(1.35f, 5f).SetEase(Ease.OutBack)
+                .OnComplete(() =>
+                {
+
+
+                    timerObj.transform.DOScale(0f, 0.5f).SetEase(Ease.InBack)
+                   .OnComplete(() =>
+                   {
+                       timerObj.transform.DOKill();
+                       timerObj.gameObject.SetActive(false);
+
+                       NotifyPlayerTimeUp?.Invoke();
+
+
+                   });
+
+                });
+            isFade = true;
+
+
+        }
+
+    }
 
 
 

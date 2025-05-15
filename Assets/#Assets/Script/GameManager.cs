@@ -1,3 +1,5 @@
+using DG.Tweening;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -24,12 +26,15 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     GameObject m_movementInstruction;
     [SerializeField]
-    AudioClip playBtnClip,winClip,loseClip;
+    AudioClip playBtnClip, winClip, loseClip;
 
     [SerializeField]
-    GameObject timerBG_GO;
+    GameObject timerBG_GO, modelViewCamera;
+    [SerializeField]
+    GameObject modelViewPanel;
 
     bool soundPlayed;
+
     private void Awake()
     {
         if (instance == null)
@@ -43,8 +48,16 @@ public class GameManager : MonoBehaviour
         mainMenuPanel.SetActive(true);
         m_movementInstruction.SetActive(false);
         timerBG_GO.SetActive(false);
+        modelViewCamera.SetActive(false);
     }
-   
+    private void OnEnable()
+    {
+        CameraEventHandler.CameraEvent += CameraAnimationEndEvent;
+    }
+    private void OnDisable()
+    {
+        CameraEventHandler.CameraEvent -= CameraAnimationEndEvent;
+    }
     private void Update()
     {
         fruitCountTxt.text = fruitCount.ToString();
@@ -70,25 +83,23 @@ public class GameManager : MonoBehaviour
     }
     public void Play()
     {
-        if (!SaveDataManager.instance.VariableExist("LearnedPlay"))
-        {
-            m_movementInstruction.SetActive(true);
-         
+        modelViewCamera.SetActive(true);
+        //if (!SaveDataManager.instance.VariableExist("LearnedPlay"))
+        //{
+        //    m_movementInstruction.SetActive(true);
+        //}
+        //else
+        //{
+        //    start = true;
+        //    collectingPanel.SetActive(true);
+        //    timerBG_GO.SetActive(true);
+        //    n_Timer.StartTimerBool(true);
+
+        //}
 
 
-        }
-        else
-        {
-            start = true;
-            collectingPanel.SetActive(true);
-            timerBG_GO.SetActive(true);
-            n_Timer.StartTimerBool(true);
-
-        }
         HY_AudioManager.instance.PlayAudioEffectOnce(playBtnClip);
         mainMenuPanel.SetActive(false);
-       // timerBG_GO.SetActive(true);
-       // n_Timer.StartTimerBool(true);
     }
     //---------------------------- -150 to 150 
 
@@ -163,4 +174,24 @@ public class GameManager : MonoBehaviour
     }
 
 
+
+    IEnumerator ModelCameraView()
+    {
+        // start model camera false
+        //event for model camera complete
+        // 
+        yield return null;
+    }
+
+
+    public void CameraAnimationEndEvent()
+    {
+        //set active panel
+        //status of the character
+        print("End Calling");
+        // instance.modelViewCamera.SetActive(false);
+        modelViewPanel.SetActive(true);
+        modelViewPanel.transform.DOScale(1, 0.5f).SetEase(Ease.OutBack);
+
+    }
 }
