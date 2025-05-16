@@ -31,9 +31,11 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     GameObject timerBG_GO, modelViewCamera;
     [SerializeField]
-    GameObject modelViewPanel;
+    GameObject modelViewPanel, joystick;
 
     bool soundPlayed;
+    [SerializeField]
+    GameObject loadingPanel;
 
     private void Awake()
     {
@@ -170,9 +172,21 @@ public class GameManager : MonoBehaviour
     public void Retry()
     {
         HY_AudioManager.instance.PlayAudioEffectOnce(playBtnClip);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        int rand = Random.Range(0, 4);
+        StartCoroutine(LoadSceneAsync(rand));
     }
 
+
+    IEnumerator LoadSceneAsync(int index)
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(index);
+        while (!operation.isDone)
+        {
+            loadingPanel.SetActive(true);
+            yield return null;
+        }
+        loadingPanel.SetActive(false);
+    }
 
 
     IEnumerator ModelCameraView()
@@ -193,5 +207,24 @@ public class GameManager : MonoBehaviour
         modelViewPanel.SetActive(true);
         modelViewPanel.transform.DOScale(1, 0.5f).SetEase(Ease.OutBack);
 
+    }
+
+    public void Lets_GO()
+    {
+        modelViewPanel.SetActive(false);
+        modelViewCamera.SetActive(false);
+        joystick.SetActive(true);
+        if (!SaveDataManager.instance.VariableExist("LearnedPlay"))
+        {
+            m_movementInstruction.SetActive(true);
+        }
+        else
+        {
+            start = true;
+            collectingPanel.SetActive(true);
+            timerBG_GO.SetActive(true);
+            n_Timer.StartTimerBool(true);
+
+        }
     }
 }

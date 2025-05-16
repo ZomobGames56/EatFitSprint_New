@@ -10,7 +10,7 @@ public class FireObjectbehavior : MonoBehaviour
     [SerializeField]
     float giveDamge = 0.5f;
     [SerializeField]
-    int force = 150;
+  //  int force = 150;
     Transform enemy;
     Rigidbody rb;
     [SerializeField]

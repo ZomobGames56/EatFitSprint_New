@@ -17,7 +17,7 @@ public class n_Timer : MonoBehaviour
     GameObject timerObj, timeText;
     public static event Action OnHideParent;
     public static event Action NotifyPlayerTimeUp;
-    bool isInvoked;
+    //bool isInvoked;
 
     [SerializeField]
     Image timerFillImg;
@@ -30,7 +30,7 @@ public class n_Timer : MonoBehaviour
     {
         instance = this;
         canStartTimer = false;
-        isInvoked = false;
+       //isInvoked = false;
         maxSeconds = seconds;
         timerFillImg.fillAmount = seconds / maxSeconds;
     }

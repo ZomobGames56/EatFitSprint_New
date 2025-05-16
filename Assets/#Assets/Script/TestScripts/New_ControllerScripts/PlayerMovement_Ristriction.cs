@@ -20,6 +20,14 @@ public class PlayerMovement_Ristriction : MonoBehaviour
     bool canLeftRightMovement;
     [SerializeField]
     GameObject timerUpPanel;
+
+    [SerializeField]
+    float playLastPosZVal = 100f;
+
+    [SerializeField]
+    float leftRightMoveSpeed;
+    [SerializeField]
+    float positiveXVal = 2.5f, negativeXVal = -2.5f, yAfterLost;
     private void Awake()
     {
         instance = this;
@@ -45,6 +53,10 @@ public class PlayerMovement_Ristriction : MonoBehaviour
         if (!stopRun)
         {
             PlayerMovement();
+        }
+        if (canLeftRightMovement)
+        {
+            FightTimeMovement();
         }
     }
     public void PlayerMovement()
@@ -91,14 +103,30 @@ public class PlayerMovement_Ristriction : MonoBehaviour
         StartCoroutine(WaitForFightingPanel());
         transform.rotation = Quaternion.Euler(Vector3.zero);
        
-        transform.position = new Vector3(0, 0, 100f);
+        transform.position = new Vector3(0, 0, playLastPosZVal);
         GameManager.instance.makeMeFitScreen.SetActive(true);
 
         //transform.position = Vector3.Lerp(transform.position, targetPos, moveSpeed * Time.deltaTime);
         //transform.position += Vector3.forward * moveSpeed * Time.deltaTime;
     }
 
+    void FightTimeMovement()
+    {
 
+        transform.position += Vector3.right * leftRightMoveSpeed * Time.deltaTime;
+        if (transform.position.x >= positiveXVal)
+        {
+            transform.position = new Vector3(positiveXVal,
+                transform.position.y, transform.position.z);
+            leftRightMoveSpeed *= -1;
+        }
+        if (transform.position.x <= negativeXVal)
+        {
+            transform.position = new Vector3(negativeXVal, transform.position.y,
+                transform.position.z);
+            leftRightMoveSpeed *= -1;
+        }
+    }
     IEnumerator WaitForFightingPanel()
     {
         yield return new WaitForSeconds(3f);
