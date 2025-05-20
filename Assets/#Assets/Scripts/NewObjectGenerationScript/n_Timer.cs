@@ -30,7 +30,7 @@ public class n_Timer : MonoBehaviour
     {
         instance = this;
         canStartTimer = false;
-       //isInvoked = false;
+        //isInvoked = false;
         maxSeconds = seconds;
         timerFillImg.fillAmount = seconds / maxSeconds;
     }
@@ -45,7 +45,7 @@ public class n_Timer : MonoBehaviour
             seconds -= Time.deltaTime;
             FillImageEffect();
             TimerBehavior();
-            
+
         }
     }
 
@@ -94,56 +94,7 @@ public class n_Timer : MonoBehaviour
             print("under 5");
         }
 
-        if ((int)seconds <= 0)
-        {
 
-            //pulseTween.Kill();
-            //// isPulsing = false;
-            //if (!isFade)
-            //{
-            //    /// Time Up Text animation
-            //             timeText.SetActive(true);
-            //    timeText.transform.DOMove(new Vector3(540, timeText.transform.position.y, timeText.transform.position.z), 0.5f)
-            //        .OnComplete(() => {
-            //            timeText.transform.DOMove(new Vector3(500, timeText.transform.position.y, timeText.transform.position.z), 4f)
-            //            .OnComplete(() => { timeText.transform.DOMove(new Vector3(1500, timeText.transform.position.y, timeText.transform.position.z), 0.5f)
-            //                    .OnComplete(() =>
-            //                    {
-            //                        timeText.transform.DOKill();
-            //                        timeText.gameObject.SetActive(false);
-
-            //                    });
-            //            });
-            //        });
-
-
-
-            //               OnHideParent?.Invoke();
-            //    timerObj.transform.DOScale(1.35f, 5f).SetEase(Ease.OutBack)
-            //        .OnComplete(() =>
-            //        {
-
-
-            //            timerObj.transform.DOScale(0f, 0.5f).SetEase(Ease.InBack)
-            //           .OnComplete(() =>
-            //           {
-            //               timerObj.transform.DOKill();
-            //               timerObj.gameObject.SetActive(false);
-            //               // timeUpPanel.transform.DOScale
-            //               // Invoke Events
-            //               //timeUpPanel.SetActive(true);
-            //               NotifyPlayerTimeUp?.Invoke();
-            //              // PlayerMovement_Ristriction.AfterTimeUpPlayer();
-
-            //           });
-
-            //        });
-            //    isFade = true;
-            //    // isPulsing = true;
-
-            //}
-
-        }
 
     }
 
@@ -158,17 +109,22 @@ public class n_Timer : MonoBehaviour
             timeText.transform.DOMove(new Vector3(540, timeText.transform.position.y, timeText.transform.position.z), 0.5f)
                 .OnComplete(() =>
                 {
-                    timeText.transform.DOMove(new Vector3(500, timeText.transform.position.y, timeText.transform.position.z), 4f)
+                    timeText.transform.DOMove(new Vector3(540, timeText.transform.position.y, timeText.transform.position.z), 2f)
                     .OnComplete(() =>
                     {
-                        timeText.transform.DOMove(new Vector3(1500, timeText.transform.position.y, timeText.transform.position.z), 0.5f)
-                            .OnComplete(() =>
-                            {
-                                timeText.transform.DOKill();
-                                timeText.gameObject.SetActive(false);
+                        timeText.transform.DOMove(new Vector3(500, timeText.transform.position.y, timeText.transform.position.z), 0.1f)
+                         .OnComplete(() =>
+                         {
+                             timeText.transform.DOMove(new Vector3(1500, timeText.transform.position.y, timeText.transform.position.z), 0.5f)
+                                 .OnComplete(() =>
+                                 {
+                                     timeText.transform.DOKill();
+                                     timeText.gameObject.SetActive(false);
 
-                            });
+                                 });
+                         });
                     });
+
                 });
 
 
