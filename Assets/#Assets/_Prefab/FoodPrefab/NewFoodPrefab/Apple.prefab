@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 4603209726604776418}
   - component: {fileID: 6978468503908532839}
   - component: {fileID: 5476237446548448239}
+  - component: {fileID: 8852899181853954001}
   - component: {fileID: 6866649266221873108}
-  - component: {fileID: 5878899448623870752}
-  - component: {fileID: 2257357929623391354}
   m_Layer: 0
   m_Name: Apple
   m_TagString: Fruit
@@ -89,27 +88,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6866649266221873108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6023258316557579752}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 274089711832b514fb0c59db02eb926f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveUpDistance: 2.5
-  moveUpDuration: 0.2
-  moveToPlayerDuration: 0.1
-  playerTransform: {fileID: 0}
-  rotationAngle: 180
-  duration: 1
-  objectCollection: {fileID: 8300000, guid: 26ce014667dda5944855fd2cdd11c69f, type: 3}
---- !u!64 &5878899448623870752
-MeshCollider:
+--- !u!65 &8852899181853954001
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -126,34 +106,25 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 7004783832934855251, guid: 3d169ccca22f8e94794765ed5a0cc593, type: 3}
---- !u!54 &2257357929623391354
-Rigidbody:
+  serializedVersion: 3
+  m_Size: {x: 0.9942678, y: 0.88829327, z: 0.83806074}
+  m_Center: {x: -0.0022235597, y: 0.5089351, z: -0.13307196}
+--- !u!114 &6866649266221873108
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6023258316557579752}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274089711832b514fb0c59db02eb926f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveUpDistance: 10
+  moveUpDuration: 0.25
+  moveToPlayerDuration: 0.15
+  playerTransform: {fileID: 0}
+  rotationAngle: 180
+  duration: 1
+  objectCollection: {fileID: 8300000, guid: 26ce014667dda5944855fd2cdd11c69f, type: 3}

@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 33ab377b49aa14f6fae6e5bac230a5d4, type: 2}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -680,7 +680,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &888329726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -947,7 +947,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1149902476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1993,6 +1993,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FoodGeneration
       objectReference: {fileID: 0}
+    - target: {fileID: 1510353712692332607, guid: b5605d2c815dff6449246a358ded4a73, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2654411987542698164, guid: b5605d2c815dff6449246a358ded4a73, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2094,6 +2098,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pizza
       objectReference: {fileID: 0}
+    - target: {fileID: 6088596182212116662, guid: ce422afb33c5cb64180e445c119f36e1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2110,6 +2118,10 @@ PrefabInstance:
     - target: {fileID: 4239719709827791565, guid: 5826ad9a42d8062439ea0f4cdaf2320d, type: 3}
       propertyPath: m_Name
       value: Burgger
+      objectReference: {fileID: 0}
+    - target: {fileID: 4239719709827791565, guid: 5826ad9a42d8062439ea0f4cdaf2320d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7772971372642053143, guid: 5826ad9a42d8062439ea0f4cdaf2320d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2170,7 +2182,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 235926251218661658, guid: e9a7a4e543e994b4fb4c45fbeb7854b3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2959269468956136609, guid: e9a7a4e543e994b4fb4c45fbeb7854b3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2228,6 +2240,10 @@ PrefabInstance:
     - target: {fileID: 5662602450985092051, guid: c889f10a82e2946479ded7bf3454dc17, type: 3}
       propertyPath: m_Name
       value: Cake
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662602450985092051, guid: c889f10a82e2946479ded7bf3454dc17, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8317968188449774814, guid: c889f10a82e2946479ded7bf3454dc17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2350,6 +2366,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Donut
       objectReference: {fileID: 0}
+    - target: {fileID: 8958445491613371168, guid: ca4917f0fba8f7f4fbc8ac95890dbbdb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2366,6 +2386,10 @@ PrefabInstance:
     - target: {fileID: 2121162353383460020, guid: a2a816ca199770244ad9456c59b51722, type: 3}
       propertyPath: m_Name
       value: Cold Drinks
+      objectReference: {fileID: 0}
+    - target: {fileID: 2121162353383460020, guid: a2a816ca199770244ad9456c59b51722, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5693827062178158947, guid: a2a816ca199770244ad9456c59b51722, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2464,6 +2488,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1445236340059064495, guid: 27a17226640d8974795b00c0ad46e5fc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2753747529914080219, guid: 27a17226640d8974795b00c0ad46e5fc, type: 3}
       propertyPath: m_RenderPostProcessing
       value: 1
@@ -2529,6 +2557,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: French Fry
       objectReference: {fileID: 0}
+    - target: {fileID: 5029547148307427517, guid: 95c45c18566c5d04bb56cf0ef9abde5d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2545,6 +2577,10 @@ PrefabInstance:
     - target: {fileID: 173391814859152423, guid: c0cfb00f781742348a936438ec764fe2, type: 3}
       propertyPath: m_Name
       value: FoodobjectPooler
+      objectReference: {fileID: 0}
+    - target: {fileID: 173391814859152423, guid: c0cfb00f781742348a936438ec764fe2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9165476116373169095, guid: c0cfb00f781742348a936438ec764fe2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2876,6 +2912,10 @@ PrefabInstance:
     - target: {fileID: 365333780835118018, guid: a5feefbee676cde4a99cf0f14b2b9a10, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 365333780835118018, guid: a5feefbee676cde4a99cf0f14b2b9a10, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 365333780835118018, guid: a5feefbee676cde4a99cf0f14b2b9a10, type: 3}
       propertyPath: m_TagString

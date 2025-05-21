@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8520520910224955059
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8885261451962243801}
+  - component: {fileID: 7301949988881081412}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8885261451962243801
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8520520910224955059}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.112206444, y: 4.0579586, z: -476.61887}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7301949988881081412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8520520910224955059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b7beb2bc808a5346a20a6146aab6440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0
+  fruitCount: 0
+  junkFoodCount: 0
+  gameObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  mainMenuPanel: {fileID: 0}
+  isVictory: 0
+  start: 0
+  status: 
+  fruitCountTxt: {fileID: 0}
+  junkFoodCountTxt: {fileID: 0}
+  makeMeFitScreen: {fileID: 0}
+  fightingPanel: {fileID: 0}
+  collectingPanel: {fileID: 0}
+  m_movementInstruction: {fileID: 0}
+  playBtnClip: {fileID: 8300000, guid: 7346d18b77ef2974c9e720ec19932b02, type: 3}
+  winClip: {fileID: 8300000, guid: e091e9ab679aed44789cbe93b88ddc88, type: 3}
+  loseClip: {fileID: 8300000, guid: ee61f30a4f29daa4fad207264f746304, type: 3}
