@@ -518,8 +518,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Time Up
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5d1d7f11dda8dbd409ab1148bbce6bf7, type: 2}
-  m_sharedMaterial: {fileID: -9024528390762498578, guid: 5d1d7f11dda8dbd409ab1148bbce6bf7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1374,7 +1374,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5250790934659675711
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1466,8 +1466,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 5976749601694669258}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 55, y: 0}
   m_SizeDelta: {x: 65, y: -110}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2022,7 +2022,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &871061610600499636
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2786,8 +2786,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 00:00
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5d1d7f11dda8dbd409ab1148bbce6bf7, type: 2}
-  m_sharedMaterial: {fileID: -9024528390762498578, guid: 5d1d7f11dda8dbd409ab1148bbce6bf7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3389,12 +3389,12 @@ GameObject:
   - component: {fileID: 2824317383746997177}
   - component: {fileID: 6949065912248932655}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: LoadingPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4777957747285837028
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3747,8 +3747,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Avoid Fruit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5d1d7f11dda8dbd409ab1148bbce6bf7, type: 2}
-  m_sharedMaterial: {fileID: -9024528390762498578, guid: 5d1d7f11dda8dbd409ab1148bbce6bf7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3772,7 +3772,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 125
+  m_fontSize: 110.25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4579,7 +4579,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2221415135669357971
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4976,8 +4976,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Help Her Get Fit!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5d1d7f11dda8dbd409ab1148bbce6bf7, type: 2}
-  m_sharedMaterial: {fileID: -9024528390762498578, guid: 5d1d7f11dda8dbd409ab1148bbce6bf7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7432,8 +7432,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Collect Junk Food \nTo get fit."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5d1d7f11dda8dbd409ab1148bbce6bf7, type: 2}
-  m_sharedMaterial: {fileID: -9024528390762498578, guid: 5d1d7f11dda8dbd409ab1148bbce6bf7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7457,7 +7457,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 81.5
+  m_fontSize: 73.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
