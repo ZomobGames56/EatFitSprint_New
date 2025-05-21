@@ -46,7 +46,7 @@ public class DonwDotween : MonoBehaviour
            .Append(transform.DORotate(new Vector3(0, 0, 10), 0.15f))           // Rotate right
            .Append(transform.DORotate(new Vector3(0, 0, -10), 0.15f))          // Rotate left
            .Append(transform.DORotate(Vector3.zero, 0.1f))                     // Reset rotation
-           .Append(transform.DOScale(1f, 1f))                                  // Scale down
+           .Append(transform.DOScale(1f, 0.35f))                                  // Scale down
            .AppendInterval(1f)                                                 // Delay before loop
            .SetLoops(-1);
 
