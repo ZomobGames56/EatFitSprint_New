@@ -14,7 +14,6 @@ public class CameraFollow : MonoBehaviour
 
     public float cameraFollowSpeed = 5f;
 
-    // Start is called before the first frame update
     private void Awake()
     {
         if (instance == null)

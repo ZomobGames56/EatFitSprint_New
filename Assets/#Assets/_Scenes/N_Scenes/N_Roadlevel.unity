@@ -894,13 +894,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055706400}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.33480877, y: 0.0050784475, z: -0.0017311104, w: -0.9422708}
-  m_LocalPosition: {x: 1.0301838, y: 38.777946, z: -943.4812}
+  m_LocalRotation: {x: 0.095845714, y: 0, z: 0, w: 0.99539626}
+  m_LocalPosition: {x: -2, y: 10, z: -928.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 11, y: 0, z: 0}
 --- !u!114 &1055706402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -915,7 +915,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 184244502}
   initialCameraRotation: {x: 25, y: 0, z: 0}
-  offsetFromPlayer: {x: 0, y: 40, z: -42}
+  offsetFromPlayer: {x: 0, y: 40, z: -48}
   cameraFollowSpeed: 5
 --- !u!114 &1055706403
 MonoBehaviour:
@@ -1116,7 +1116,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1097027879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1174,7 +1174,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -2193,7 +2193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4733587469795485181, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4798751875537999899, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
       propertyPath: m_fontColor.b
@@ -3452,6 +3452,7 @@ GameObject:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1055706401}
   - {fileID: 1384555645}
   - {fileID: 1811677543}
   - {fileID: 2110944155}
@@ -3460,7 +3461,6 @@ SceneRoots:
   - {fileID: 1392806752}
   - {fileID: 1094550871}
   - {fileID: 1097027883}
-  - {fileID: 1055706401}
   - {fileID: 193148165}
   - {fileID: 618396658}
   - {fileID: 1734088491}

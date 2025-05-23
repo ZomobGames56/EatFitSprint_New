@@ -15,9 +15,9 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
   m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogColor: {r: 0.050980397, g: 0.16078432, b: 0.38823533, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 0.001
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
+  m_Sun: {fileID: 793785878}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10310,13 +10310,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1221369861}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.33480877, y: 0.0050784475, z: -0.0017311104, w: -0.9422708}
-  m_LocalPosition: {x: 1.0301838, y: 38.777946, z: -943.4812}
+  m_LocalRotation: {x: 0.095845714, y: 0.00000836351, z: -0.00008685841, w: 0.99539626}
+  m_LocalPosition: {x: -2, y: 10, z: -927.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 11, y: 0, z: -0.01}
 --- !u!114 &1221369863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10331,7 +10331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 1057492958}
   initialCameraRotation: {x: 25, y: 0, z: 0}
-  offsetFromPlayer: {x: 0, y: 40, z: -42}
+  offsetFromPlayer: {x: 0, y: 40, z: -48}
   cameraFollowSpeed: 5
 --- !u!114 &1221369864
 MonoBehaviour:
@@ -13361,7 +13361,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4733587469795485181, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4798751875537999899, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
       propertyPath: m_fontColor.b
@@ -15794,7 +15794,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1794232984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19370,12 +19370,12 @@ MeshFilter:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1221369862}
   - {fileID: 1057492956}
   - {fileID: 36796279}
   - {fileID: 793785879}
   - {fileID: 209295661}
   - {fileID: 1752734682}
-  - {fileID: 1221369862}
   - {fileID: 1932133399}
   - {fileID: 1794232988}
   - {fileID: 1029943029}

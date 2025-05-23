@@ -86,22 +86,10 @@ public class GameManager : MonoBehaviour
     public void Play()
     {
         modelViewCamera.SetActive(true);
-        //if (!SaveDataManager.instance.VariableExist("LearnedPlay"))
-        //{
-        //    m_movementInstruction.SetActive(true);
-        //}
-        //else
-        //{
-        //    start = true;
-        //    collectingPanel.SetActive(true);
-        //    timerBG_GO.SetActive(true);
-        //    n_Timer.StartTimerBool(true);
-
-        //}
-
-
         HY_AudioManager.instance.PlayAudioEffectOnce(playBtnClip);
         mainMenuPanel.SetActive(false);
+        CameraFollow.instance.initialCameraRotation = new Vector3 (25,0,0);
+        CameraFollow.instance.offsetFromPlayer = new Vector3 (0,40,-48);
     }
     //---------------------------- -150 to 150 
 
