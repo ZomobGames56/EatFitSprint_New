@@ -60,6 +60,11 @@ public class CharacterShapeChange : MonoBehaviour
             fruitTxt.text = "Collect Fruit To Get Fit!";
         }
     }
+
+    private void Update()
+    {
+        playersSkin.SetBlendShapeWeight(0,fitNessBar.value);
+    }
     void ImageObjActiveState(bool canTrue)
     {
         fruitCrossImg.SetActive(!canTrue);

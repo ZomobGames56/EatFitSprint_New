@@ -1,12 +1,7 @@
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
-using JetBrains.Annotations;
-
 public class n_FoodGeneration : MonoBehaviour
 {
-
-
     [SerializeField]
     List<GameObject> m_fruits = new List<GameObject>();
     [SerializeField]
@@ -48,6 +43,8 @@ public class n_FoodGeneration : MonoBehaviour
         }
     }
 
+
+    
     void HandleHideParent()
     {
         parent.gameObject.SetActive(false);

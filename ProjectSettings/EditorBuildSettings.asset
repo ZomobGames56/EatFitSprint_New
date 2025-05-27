@@ -5,13 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/#Assets/_Scenes/N_Scenes/N_ArabicLevel.unity
     guid: a6ff71ecb804c404f870da6855ca8e83
-  - enabled: 1
+  - enabled: 0
     path: Assets/#Assets/_Scenes/N_Scenes/N_Roadlevel.unity
     guid: a93ce3c7e8ce1464db249ed149ff7e1b
-  - enabled: 1
+  - enabled: 0
     path: Assets/#Assets/_Scenes/N_Scenes/N_StreetLevel.unity
     guid: 4fc49d1fc55ae314d93fe17513dc9a6f
   - enabled: 1

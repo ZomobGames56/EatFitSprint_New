@@ -9,6 +9,11 @@ TagManager:
   - Fruit
   - JunkFood
   - Enemy
+  - Hay
+  - WoodCart
+  - Car
+  - Barrier
+  - Box
   layers:
   - Default
   - TransparentFX

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 905b795272473504cbb009f61b5fd00a
+guid: 6f32c9e8bdbe48f45a566c241ae5cf79
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,13 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Leaves
-    second: {fileID: 2100000, guid: cca3e863bc94a3041813292973c9103d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Village Props_01
-    second: {fileID: 2100000, guid: cca3e863bc94a3041813292973c9103d, type: 2}
+      name: lambert2
+    second: {fileID: 2100000, guid: b6f86f3d2d3073249ad6f88b5d02c722, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -26,8 +21,6 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
     motionNodeName: 
-    rigImportErrors: 
-    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 

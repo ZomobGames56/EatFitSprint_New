@@ -157,13 +157,18 @@ public class GameManager : MonoBehaviour
         HY_AudioManager.instance.PlayAudioEffectOnce(playBtnClip);
         Application.Quit();
     }
-    public void Retry()
+    public void HomeBtn()
     {
         HY_AudioManager.instance.PlayAudioEffectOnce(playBtnClip);
         int rand = Random.Range(0, 4);
         StartCoroutine(LoadSceneAsync(rand));
     }
 
+    public void Retry()
+    {
+        StartCoroutine(LoadSceneAsync(SceneManager.GetActiveScene().buildIndex));
+        //LoadSceneAsync();
+    }
 
     IEnumerator LoadSceneAsync(int index)
     {

@@ -61,15 +61,35 @@ public class PlayerMovement_Ristriction : MonoBehaviour
     }
     public void PlayerMovement()
     {
-        move = cam.transform.right * joystick.Horizontal +
-                   cam.transform.forward * joystick.Vertical;
-        move.y = 0f;
-        transform.position += move * moveSpeed * Time.deltaTime;
-        if (move.magnitude >= 0.15f || move.magnitude <= -0.15f)
-        {
-            Rotate();
-        }
-        PlayerBoundires();
+        //move = cam.transform.right * joystick.Horizontal +
+        //           cam.transform.forward * joystick.Vertical;
+        //move.y = 0f;
+
+        //transform.position += (move * moveSpeed * Time.deltaTime);
+        //if (move.magnitude >= 0.15f || move.magnitude <= -0.15f)
+        //{
+        //    Rotate();
+        //}
+        //PlayerBoundires();
+
+     
+        
+            move = cam.transform.right * joystick.Horizontal + cam.transform.forward * joystick.Vertical;
+            move.y = 0f;
+            move = move.normalized;
+
+            float joystickStrength = Mathf.Clamp01(new Vector2(joystick.Horizontal, joystick.Vertical).magnitude);
+        
+            transform.position += move * moveSpeed * joystickStrength * Time.deltaTime;
+
+            if (joystickStrength >= 0.01f)
+            {
+                Rotate();
+            }
+
+            PlayerBoundires();
+        
+
     }
     public void Rotate()
     {

@@ -2081,6 +2081,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2637201840320337297, guid: 6aab9a18f7986f846ad0e7c4fab17a27, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391769663586098957, guid: 6aab9a18f7986f846ad0e7c4fab17a27, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5500313669643847662, guid: 6aab9a18f7986f846ad0e7c4fab17a27, type: 3}
       propertyPath: fitNessBar
       value: 
@@ -2092,6 +2100,10 @@ PrefabInstance:
     - target: {fileID: 7326100459103745523, guid: 6aab9a18f7986f846ad0e7c4fab17a27, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628617789608985344, guid: 6aab9a18f7986f846ad0e7c4fab17a27, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8018205086785656647, guid: 6aab9a18f7986f846ad0e7c4fab17a27, type: 3}
       propertyPath: m_LocalPosition.x
