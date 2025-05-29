@@ -27,13 +27,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4400191911594823491}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.6925084, z: 0, w: 0.7214098}
+  m_LocalRotation: {x: -0, y: 0.6925109, z: -0, w: 0.7214075}
   m_LocalPosition: {x: 487.2829, y: 0.59999996, z: 82.04171}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.010000001, y: 0.01, z: 0.010000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 87.658, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1605483360387302656
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -59,9 +59,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -106,5 +103,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 60, y: 1, z: 24}
-  m_Center: {x: -30, y: -0.5, z: 12}
+  m_Size: {x: 7200.001, y: 120, z: 2880.0002}
+  m_Center: {x: -3600.0005, y: -60, z: 1440.0001}
