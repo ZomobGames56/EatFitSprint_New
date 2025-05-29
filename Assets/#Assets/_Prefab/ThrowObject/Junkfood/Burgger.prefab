@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 4519820851086825364}
   - component: {fileID: 2143092874413415417}
   - component: {fileID: 7547644033003393398}
-  - component: {fileID: 784794900119018484}
   m_Layer: 0
   m_Name: Burgger
   m_TagString: JunkFood
@@ -30,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6896862261039963335}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.07, y: 0.28, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
@@ -107,10 +106,10 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.5527622, y: 0.880257, z: 1.5577043}
-  m_Center: {x: 0.0010227561, y: 0.7478091, z: 0.16553253}
+  m_Size: {x: 1.7053261, y: 0.880257, z: 1.795573}
+  m_Center: {x: -0.05511856, y: 0.7478091, z: -0.04170736}
 --- !u!54 &2143092874413415417
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -154,28 +153,6 @@ MonoBehaviour:
   upForce: 50
   life: 0.75
   giveDamge: 5
-  force: 15000
+  enemy: {fileID: 0}
   vfxCollideParticle: {fileID: 0}
   hitClip: {fileID: 8300000, guid: e19f9bd9b610259499a08e662469693d, type: 3}
---- !u!64 &784794900119018484
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6896862261039963335}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1198743231517016826, guid: 9417b44ccd0097240ade5dba5fbe8836, type: 3}

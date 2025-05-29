@@ -1,5 +1,6 @@
 using DG.Tweening;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerCollisionObstacle : MonoBehaviour
@@ -21,168 +22,256 @@ public class PlayerCollisionObstacle : MonoBehaviour
     AudioClip crashSound;
     [SerializeField]
     float yAfterLost, rotationZ, rotateDuration;
+    private static readonly HashSet<string> pointDeductObstacles = new() { "Hay", "Box", "Vas" };
+    private static readonly HashSet<string> gameOverObstacles = new() { "Car", "WoodCart", "Barrier", "Lamp" };
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    switch (other.tag)
+    //    {
+    //        case "Hay":
+    //            //damege food -4 points
+    //            if (GameManager.instance.fruitCount != 0)
+    //                GameManager.instance.fruitCount -= 4;
+    //            if (GameManager.instance.junkFoodCount != 0)
+    //                GameManager.instance.junkFoodCount -= 4;
+
+    //            if (GameManager.instance.fruitCount < 0)
+    //            {
+    //                GameManager.instance.fruitCount = 0;
+    //            }
+    //            if (GameManager.instance.junkFoodCount < 0)
+    //            {
+    //                GameManager.instance.junkFoodCount = 0;
+    //            }
+
+    //            break;
+    //        case "Car":
+    //            //Cart Damage Game over
+    //            //Player transform change
+    //            if (!triggerAtOnce)
+    //            {
+    //                triggerAtOnce = true;
+    //                HY_AudioManager.instance.PlayAudioEffectOnce(crashSound);
+    //                if (!doTweemAnimationCalled)
+    //                {
+    //                    doTweemAnimationCalled = true;
+    //                    //yTiltSpeed = 0;
+    //                    transform.DOShakePosition(0.5f, 0.5f, 10, 90)
+    //                          .OnComplete(() =>
+    //                          {
+    //                              //Vector3 pos = transform.position;
+    //                              // pos.y = yAfterLost; // Lock Y
+    //                              transform.DORotate(new Vector3(0, 0, rotationZ), rotateDuration, RotateMode.FastBeyond360).SetEase(Ease.OutBack)
+    //                              .OnUpdate(() =>
+    //                              {
+    //                                  transform.DOMove(new Vector3(transform.position.x, yAfterLost, transform.position.z), 0.2f);
+    //                              });
+
+    //                          });
+    //                    //                 transform.DORotate(new Vector3(0, 0, rotationZ), rotateDuration, RotateMode.FastBeyond360)
+    //                    //.SetEase(Ease.OutBack);
+    //                }
+    //                PlayerMovement_Ristriction.CanStopMove(true);
+    //                n_Timer.StartTimerBool(false);
+    //                timerBG.gameObject.SetActive(false);
+    //                StartCoroutine(WaitForGameOverScreen());
+    //            }
+    //            break;
+    //        case "WoodCart":
+    //            //cart Damage Game over
+    //            if (!triggerAtOnce)
+    //            {
+    //                triggerAtOnce = true;
+    //                HY_AudioManager.instance.PlayAudioEffectOnce(crashSound);
+    //                if (!doTweemAnimationCalled)
+    //                {
+    //                    doTweemAnimationCalled = true;
+    //                    //yTiltSpeed = 0;
+    //                    transform.DOShakePosition(0.5f, 0.5f, 10, 90)
+    //                          .OnComplete(() =>
+    //                          {
+    //                              //Vector3 pos = transform.position;
+    //                              // pos.y = yAfterLost; // Lock Y
+    //                              transform.DORotate(new Vector3(0, 0, rotationZ), rotateDuration, RotateMode.FastBeyond360).SetEase(Ease.OutBack)
+    //                              .OnUpdate(() =>
+    //                              {
+    //                                  transform.DOMove(new Vector3(transform.position.x, yAfterLost, transform.position.z), 0.2f);
+    //                              });
+
+    //                          });
+    //                    //                 transform.DORotate(new Vector3(0, 0, rotationZ), rotateDuration, RotateMode.FastBeyond360)
+    //                    //.SetEase(Ease.OutBack);
+    //                }
+    //                PlayerMovement_Ristriction.CanStopMove(true);
+    //                n_Timer.StartTimerBool(false);
+    //                timerBG.gameObject.SetActive(false);
+    //                StartCoroutine(WaitForGameOverScreen());
+    //            }
+    //            break;
+    //        case "Barrier":
+    //            //Cart Damage Game over
+    //            if (!triggerAtOnce)
+    //            {
+    //                triggerAtOnce = true;
+    //                HY_AudioManager.instance.PlayAudioEffectOnce(crashSound);
+    //                if (!doTweemAnimationCalled)
+    //                {
+    //                    doTweemAnimationCalled = true;
+    //                    //yTiltSpeed = 0;
+    //                    transform.DOShakePosition(0.5f, 0.5f, 10, 90)
+    //                          .OnComplete(() =>
+    //                          {
+    //                              //Vector3 pos = transform.position;
+    //                              // pos.y = yAfterLost; // Lock Y
+    //                              transform.DORotate(new Vector3(0, 0, rotationZ), rotateDuration, RotateMode.FastBeyond360).SetEase(Ease.OutBack)
+    //                              .OnUpdate(() =>
+    //                              {
+    //                                  transform.DOMove(new Vector3(transform.position.x, yAfterLost, transform.position.z), 0.2f);
+    //                              });
+
+    //                          });
+    //                    //                 transform.DORotate(new Vector3(0, 0, rotationZ), rotateDuration, RotateMode.FastBeyond360)
+    //                    //.SetEase(Ease.OutBack);
+    //                }
+    //                PlayerMovement_Ristriction.CanStopMove(true);
+    //                n_Timer.StartTimerBool(false);
+    //                timerBG.gameObject.SetActive(false);
+    //                StartCoroutine(WaitForGameOverScreen());
+    //            }
+    //            break;
+    //        case "LongBarrier":
+    //            //cart Damage Game over
+    //            if (!triggerAtOnce)
+    //            {
+    //                triggerAtOnce = true;
+    //                HY_AudioManager.instance.PlayAudioEffectOnce(crashSound);
+    //                if (!doTweemAnimationCalled)
+    //                {
+    //                    doTweemAnimationCalled = true;
+    //                    //yTiltSpeed = 0;
+    //                    transform.DOShakePosition(0.5f, 0.5f, 10, 90)
+    //                          .OnComplete(() =>
+    //                          {
+    //                              //Vector3 pos = transform.position;
+    //                              // pos.y = yAfterLost; // Lock Y
+    //                              transform.DORotate(new Vector3(0, 0, rotationZ), rotateDuration, RotateMode.FastBeyond360).SetEase(Ease.OutBack)
+    //                              .OnUpdate(() =>
+    //                              {
+    //                                  transform.DOMove(new Vector3(transform.position.x, yAfterLost, transform.position.z), 0.2f);
+    //                              });
+
+    //                          });
+    //                    //                 transform.DORotate(new Vector3(0, 0, rotationZ), rotateDuration, RotateMode.FastBeyond360)
+    //                    //.SetEase(Ease.OutBack);
+    //                }
+    //                PlayerMovement_Ristriction.CanStopMove(true);
+    //                n_Timer.StartTimerBool(false);
+    //                timerBG.gameObject.SetActive(false);
+    //                StartCoroutine(WaitForGameOverScreen());
+    //            }
+    //            break;
+    //        case "Box":
+    //            // Damage Food -2 points
+    //            if (GameManager.instance.fruitCount != 0)
+    //                GameManager.instance.fruitCount -= 4;
+    //            if (GameManager.instance.junkFoodCount != 0)
+    //                GameManager.instance.junkFoodCount -= 4;
+
+    //            if (GameManager.instance.fruitCount < 0)
+    //            {
+    //                GameManager.instance.fruitCount = 0;
+    //            }
+    //            if (GameManager.instance.junkFoodCount < 0)
+    //            {
+    //                GameManager.instance.junkFoodCount = 0;
+    //            }
+    //            break;
+    //        case "Vas":
+    //            // Damage Food -2 points
+    //            if (GameManager.instance.fruitCount != 0)
+    //                GameManager.instance.fruitCount -= 4;
+    //            if (GameManager.instance.junkFoodCount != 0)
+    //                GameManager.instance.junkFoodCount -= 4;
+
+    //            if (GameManager.instance.fruitCount < 0)
+    //            {
+    //                GameManager.instance.fruitCount = 0;
+    //            }
+    //            if (GameManager.instance.junkFoodCount < 0)
+    //            {
+    //                GameManager.instance.junkFoodCount = 0;
+    //            }
+    //            break;
+    //        case "Lamp":
+    //            if (!triggerAtOnce)
+    //            {
+    //                triggerAtOnce = true;
+    //                HY_AudioManager.instance.PlayAudioEffectOnce(crashSound);
+    //                if (!doTweemAnimationCalled)
+    //                {
+    //                    doTweemAnimationCalled = true;
+    //                    //yTiltSpeed = 0;
+    //                    transform.DOShakePosition(0.5f, 0.5f, 10, 90)
+    //                          .OnComplete(() =>
+    //                          {
+    //                              //Vector3 pos = transform.position;
+    //                              // pos.y = yAfterLost; // Lock Y
+    //                              transform.DORotate(new Vector3(0, 0, rotationZ), rotateDuration, RotateMode.FastBeyond360).SetEase(Ease.OutBack)
+    //                              .OnUpdate(() =>
+    //                              {
+    //                                  transform.DOMove(new Vector3(transform.position.x, yAfterLost, transform.position.z), 0.2f);
+    //                              });
+
+    //                          });
+    //                    //                 transform.DORotate(new Vector3(0, 0, rotationZ), rotateDuration, RotateMode.FastBeyond360)
+    //                    //.SetEase(Ease.OutBack);
+    //                }
+    //                PlayerMovement_Ristriction.CanStopMove(true);
+    //                n_Timer.StartTimerBool(false);
+    //                timerBG.gameObject.SetActive(false);
+    //                StartCoroutine(WaitForGameOverScreen());
+    //            }
+    //            break;
+
+    //    }
+    //}
+
     private void OnTriggerEnter(Collider other)
     {
-        switch (other.tag)
+        string tag = other.tag;
+
+        if (pointDeductObstacles.Contains(tag))
         {
-            case "Hay":
-                //damege food -4 points
-                if (GameManager.instance.fruitCount != 0)
-                    GameManager.instance.fruitCount -= 4;
-                if (GameManager.instance.junkFoodCount != 0)
-                    GameManager.instance.junkFoodCount -= 4;
+            int damage = 4;
+            GameManager.instance.fruitCount = Mathf.Max(0, GameManager.instance.fruitCount - damage);
+            GameManager.instance.junkFoodCount = Mathf.Max(0, GameManager.instance.junkFoodCount - damage);
+            return;
+        }
 
-                if (GameManager.instance.fruitCount < 0)
-                {
-                    GameManager.instance.fruitCount = 0;
-                }
-                if (GameManager.instance.junkFoodCount < 0)
-                {
-                    GameManager.instance.junkFoodCount = 0;
-                }
+        if (gameOverObstacles.Contains(tag) && !triggerAtOnce)
+        {
+            triggerAtOnce = true;
+            HY_AudioManager.instance.PlayAudioEffectOnce(crashSound);
 
-                break;
-            case "Car":
-                //Cart Damage Game over
-                //Player transform change
-                if (!triggerAtOnce)
-                {
-                    triggerAtOnce = true;
-                    HY_AudioManager.instance.PlayAudioEffectOnce(crashSound);
-                    if (!doTweemAnimationCalled)
+            if (!doTweemAnimationCalled)
+            {
+                doTweemAnimationCalled = true;
+                transform.DOShakePosition(0.5f, 0.5f, 10, 90)
+                    .OnComplete(() =>
                     {
-                        doTweemAnimationCalled = true;
-                        //yTiltSpeed = 0;
-                        transform.DOShakePosition(0.5f, 0.5f, 10, 90)
-                              .OnComplete(() =>
-                              {
-                                  //Vector3 pos = transform.position;
-                                  // pos.y = yAfterLost; // Lock Y
-                                  transform.DORotate(new Vector3(0, 0, rotationZ), rotateDuration, RotateMode.FastBeyond360).SetEase(Ease.OutBack)
-                                  .OnUpdate(() =>
-                                  { 
-                                      transform.DOMove(new Vector3(transform.position.x, yAfterLost, transform.position.z), 0.2f);
-                                  });
+                        transform.DORotate(new Vector3(0, 0, rotationZ), rotateDuration, RotateMode.FastBeyond360)
+                            .SetEase(Ease.OutBack)
+                            .OnUpdate(() =>
+                            {
+                                transform.DOMove(new Vector3(transform.position.x, yAfterLost, transform.position.z), 0.2f);
+                            });
+                    });
+            }
 
-                              });
-                        //                 transform.DORotate(new Vector3(0, 0, rotationZ), rotateDuration, RotateMode.FastBeyond360)
-                        //.SetEase(Ease.OutBack);
-                    }
-                    PlayerMovement_Ristriction.CanStopMove(true);
-                    n_Timer.StartTimerBool(false);
-                    timerBG.gameObject.SetActive(false);
-                    StartCoroutine(WaitForGameOverScreen());
-                }
-                break;
-            case "WoodCart":
-                //cart Damage Game over
-                if (!triggerAtOnce)
-                {
-                    triggerAtOnce = true;
-                    HY_AudioManager.instance.PlayAudioEffectOnce(crashSound);
-                    if (!doTweemAnimationCalled)
-                    {
-                        doTweemAnimationCalled = true;
-                        //yTiltSpeed = 0;
-                        transform.DOShakePosition(0.5f, 0.5f, 10, 90)
-                              .OnUpdate(() =>
-                              {
-                                  Vector3 pos = transform.position;
-                                  pos.y = yAfterLost; // Lock Y
-                                  transform.position = pos;
-                              }).OnComplete(() =>
-                              {
-                                  transform.DORotate(new Vector3(0, 0, rotationZ), rotateDuration, RotateMode.FastBeyond360)
-                 .SetEase(Ease.OutBack);
-                              });
-
-
-
-                    }
-                    PlayerMovement_Ristriction.CanStopMove(true);
-                    n_Timer.StartTimerBool(false);
-                    timerBG.gameObject.SetActive(false);
-                    StartCoroutine(WaitForGameOverScreen());
-                }
-                break;
-            case "Barrier":
-                //Cart Damage Game over
-                if (!triggerAtOnce)
-                {
-                    triggerAtOnce = true;
-                    //  HY_AudioManager.instance.PlayAudioEffectOnce(crashSound);
-                    if (!doTweemAnimationCalled)
-                    {
-                        doTweemAnimationCalled = true;
-                        //yTiltSpeed = 0;
-                        transform.DOShakePosition(0.5f, 0.5f, 10, 90)
-                              .OnComplete(() =>
-                              {
-                                  Vector3 pos = transform.position;
-                                  pos.y = yAfterLost; // Lock Y
-                                  transform.position = pos;
-                              }).OnComplete(() =>
-                              {
-                                  transform.DORotate(new Vector3(0, 0, rotationZ), rotateDuration, RotateMode.FastBeyond360)
-                 .SetEase(Ease.OutBack);
-                              });
-
-
-
-                    }
-                    PlayerMovement_Ristriction.CanStopMove(true);
-                    n_Timer.StartTimerBool(false);
-                    timerBG.gameObject.SetActive(false);
-                    StartCoroutine(WaitForGameOverScreen());
-                }
-                break;
-            case "LongBarrier":
-                //cart Damage Game over
-                if (!triggerAtOnce)
-                {
-                    triggerAtOnce = true;
-                    //  HY_AudioManager.instance.PlayAudioEffectOnce(crashSound);
-                    if (!doTweemAnimationCalled)
-                    {
-                        doTweemAnimationCalled = true;
-                        //yTiltSpeed = 0;
-                        transform.DOShakePosition(0.5f, 0.5f, 10, 90)
-                              .OnComplete(() =>
-                              {
-                                  Vector3 pos = transform.position;
-                                  pos.y = yAfterLost; // Lock Y
-                                  transform.position = pos;
-                              }).OnComplete(() =>
-                              {
-                                  transform.DORotate(new Vector3(0, 0, rotationZ), rotateDuration, RotateMode.FastBeyond360)
-                 .SetEase(Ease.OutBack);
-                              });
-
-
-
-                    }
-                    PlayerMovement_Ristriction.CanStopMove(true);
-                    n_Timer.StartTimerBool(false);
-                    timerBG.gameObject.SetActive(false);
-                    StartCoroutine(WaitForGameOverScreen());
-                }
-                break;
-            case "Box":
-                // Damage Food -2 points
-                if (GameManager.instance.fruitCount != 0)
-                    GameManager.instance.fruitCount -= 4;
-                if (GameManager.instance.junkFoodCount != 0)
-                    GameManager.instance.junkFoodCount -= 4;
-
-                if (GameManager.instance.fruitCount < 0)
-                {
-                    GameManager.instance.fruitCount = 0;
-                }
-                if (GameManager.instance.junkFoodCount < 0)
-                {
-                    GameManager.instance.junkFoodCount = 0;
-                }
-                break;
+            PlayerMovement_Ristriction.CanStopMove(true);
+            n_Timer.StartTimerBool(false);
+            timerBG.gameObject.SetActive(false);
+            StartCoroutine(WaitForGameOverScreen());
         }
     }
 
