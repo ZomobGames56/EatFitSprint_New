@@ -64,6 +64,7 @@ public class GameManager : MonoBehaviour
     {
         fruitCountTxt.text = fruitCount.ToString();
         junkFoodCountTxt.text = junkFoodCount.ToString();
+
         if (isVictory && InGameTimer.instance.isGameEnded)
         {
             if (!soundPlayed)

@@ -1609,7 +1609,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
+  m_fontSize: 66.8
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3100,7 +3100,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7301949988881081412, guid: 91a2269edf748684a9301c200073bc36, type: 3}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Retry
         m_Mode: 1
@@ -6423,7 +6423,7 @@ GameObject:
   - component: {fileID: 1339440089785466419}
   - component: {fileID: 569507112932978837}
   m_Layer: 5
-  m_Name: Coins (1)
+  m_Name: Daimonds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6446,8 +6446,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 360, y: 0}
-  m_SizeDelta: {x: 304, y: 120}
+  m_AnchoredPosition: {x: 320, y: 0}
+  m_SizeDelta: {x: 250, y: 110}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &1339440089785466419
 CanvasRenderer:
@@ -6876,7 +6876,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6493678789897936855}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: baaa303dbeedcde41a5b76b8f06a7b35, type: 2}
   m_CullingMode: 0
@@ -7362,7 +7362,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
+  m_fontSize: 66.8
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -9090,7 +9090,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -99.999756}
+  m_AnchoredPosition: {x: 0, y: -140}
   m_SizeDelta: {x: -100, y: 230}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &1400105831321123139
@@ -9962,7 +9962,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 30, y: 0}
-  m_SizeDelta: {x: 304, y: 120}
+  m_SizeDelta: {x: 250, y: 110}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &3820654886503604496
 CanvasRenderer:

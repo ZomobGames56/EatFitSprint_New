@@ -16,6 +16,8 @@ TagManager:
   - Box
   - Vas
   - Lamp
+  - Dustbin
+  - Chair
   layers:
   - Default
   - TransparentFX

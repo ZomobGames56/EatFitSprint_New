@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ObjectGeneratorWithObstacles : MonoBehaviour
 {
-    public enum FoodType { Fruit, Junk, Obstacle }
+    public enum FoodType { Fruit, Junk, Obstacle, SpecialObstacle }
 
     [Range(0, 1)] public float fruitProbability = 0.4f;
     [Range(0, 1)] public float junkProbability = 0.4f;
@@ -71,7 +71,7 @@ public class ObjectGeneratorWithObstacles : MonoBehaviour
     FoodType GetRandomType(FoodType? last)
     {
         float rand = Random.value;
-       // print(rand);
+        // print(rand);
         // Adjusted to prevent same type repetition if needed
         if (last.HasValue)
         {

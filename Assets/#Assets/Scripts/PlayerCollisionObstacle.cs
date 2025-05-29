@@ -22,8 +22,8 @@ public class PlayerCollisionObstacle : MonoBehaviour
     AudioClip crashSound;
     [SerializeField]
     float yAfterLost, rotationZ, rotateDuration;
-    private static readonly HashSet<string> pointDeductObstacles = new() { "Hay", "Box", "Vas" };
-    private static readonly HashSet<string> gameOverObstacles = new() { "Car", "WoodCart", "Barrier", "Lamp" };
+    private static readonly HashSet<string> pointDeductObstacles = new() { "Hay", "Box", "Vas","Dustbin","Chair" };
+    private static readonly HashSet<string> gameOverObstacles = new() { "Car", "WoodCart", "Barrier", "Lamp"};
     //private void OnTriggerEnter(Collider other)
     //{
     //    switch (other.tag)
@@ -245,6 +245,10 @@ public class PlayerCollisionObstacle : MonoBehaviour
             int damage = 4;
             GameManager.instance.fruitCount = Mathf.Max(0, GameManager.instance.fruitCount - damage);
             GameManager.instance.junkFoodCount = Mathf.Max(0, GameManager.instance.junkFoodCount - damage);
+            transform.DOShakePosition(0.5f, 0.5f, 10, 90);
+            // Food Animation.
+            //Vibration.
+            // Screem Flash.
             return;
         }
 

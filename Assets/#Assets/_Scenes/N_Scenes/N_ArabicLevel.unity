@@ -5511,8 +5511,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 28714376426096247}
-  initialCameraRotation: {x: 25, y: 0, z: 0}
-  offsetFromPlayer: {x: 0, y: 40, z: -48}
+  initialCameraRotation: {x: 11, y: -3, z: 0}
+  offsetFromPlayer: {x: -2, y: 10, z: -30}
   cameraFollowSpeed: 5
 --- !u!1 &308087455
 GameObject:
@@ -30174,8 +30174,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52bf100e2d517da428cb60a57c6e8124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fruitProbability: 0.4
-  junkProbability: 0.4
+  fruitProbability: 0.5
+  junkProbability: 0.5
   m_fruits:
   - {fileID: 5050382607185618181, guid: 6a65da450d1bfed42aa955507811a70c, type: 3}
   - {fileID: 535855137397266707, guid: 679a0bf8c4089cb49b64b4ce8d893d0b, type: 3}
