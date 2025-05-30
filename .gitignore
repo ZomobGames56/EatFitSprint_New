@@ -62,7 +62,10 @@ sysinfo.txt
 *.unitypackage
 *.unitypackage.meta
 *.app
-
+#Firebase SDK
+/[Aa]ssets/Firebase
+/[Aa]ssets/Plugins/Firebase
+/[Aa]ssets/[Ss]Streaming[Aa]ssets/Firebase
 # Crashlytics generated file
 crashlytics-build.properties
 
@@ -72,3 +75,7 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+# Avoid uploading Large Plugin files
+*.aar
+*.jar
+*.dll
