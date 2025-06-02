@@ -80,17 +80,13 @@ public class InGameTimer : MonoBehaviour
             {
                 GameManager.instance.FitnessStatus(CharacterShapeChange.instance.fitNessBar.value);
                 StartCoroutine(WaitToShowGameOver());
-               
                 //revive panel open
-
                 timeUp = true;
                 timerText.text = "00:00";
                 junkFoodThrowBtn.interactable = false;
                 fruitThrowBtn.interactable = false;
                 minutes = 0;
                 isGameEnded = true;
-                
-
             }
             else
             {

@@ -276,6 +276,7 @@ public class PlayerCollisionObstacle : MonoBehaviour
             n_Timer.StartTimerBool(false);
             timerBG.gameObject.SetActive(false);
             StartCoroutine(WaitForGameOverScreen());
+            AnalyticsEvents.GameOverEvent("Hit Obstacle");
         }
     }
 

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8885261451962243801}
   - component: {fileID: 7301949988881081412}
+  - component: {fileID: 6999326599788998360}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -76,3 +77,20 @@ MonoBehaviour:
   playBtnClip: {fileID: 8300000, guid: 7346d18b77ef2974c9e720ec19932b02, type: 3}
   winClip: {fileID: 8300000, guid: e091e9ab679aed44789cbe93b88ddc88, type: 3}
   loseClip: {fileID: 8300000, guid: ee61f30a4f29daa4fad207264f746304, type: 3}
+  timerBG_GO: {fileID: 0}
+  modelViewCamera: {fileID: 0}
+  modelViewPanel: {fileID: 0}
+  joystick: {fileID: 0}
+  loadingPanel: {fileID: 0}
+--- !u!114 &6999326599788998360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8520520910224955059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2c14f0af39746342a42ec59742b19a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     bool soundPlayed;
     [SerializeField]
     GameObject loadingPanel;
+    string levelIndex;
 
     private void Awake()
     {
@@ -51,6 +52,12 @@ public class GameManager : MonoBehaviour
         m_movementInstruction.SetActive(false);
         timerBG_GO.SetActive(false);
         modelViewCamera.SetActive(false);
+    }
+    private void Start()
+    {
+        AnalyticsEvents.LevelStartEvent(SceneManager.GetActiveScene().buildIndex + 1);
+        AnalyticsEvents.LevelNameEvent(SceneManager.GetActiveScene().name);
+
     }
     private void OnEnable()
     {
@@ -99,6 +106,8 @@ public class GameManager : MonoBehaviour
         if (sliderVal >= 70 && sliderVal <= 150)
         {
             status = "TOO FAT";
+            AnalyticsEvents.LevelCompleteEvent(SceneManager.GetActiveScene().buildIndex, "Lose");
+
             //200
             // DefaultCoins = 200;
             //default coins
@@ -109,6 +118,8 @@ public class GameManager : MonoBehaviour
         {
             status = "FAT";
             //350
+            AnalyticsEvents.LevelCompleteEvent(SceneManager.GetActiveScene().buildIndex, "Lose");
+
             // DefaultCoins = 350;
 
         }
@@ -117,6 +128,8 @@ public class GameManager : MonoBehaviour
             status = "FIT";
             //1000
             isVictory = true;
+            AnalyticsEvents.LevelCompleteEvent(SceneManager.GetActiveScene().buildIndex, "Win");
+
             //  DefaultCoins = 1000;
         }
         else if (sliderVal >= -10 && sliderVal <= 5)
@@ -124,6 +137,8 @@ public class GameManager : MonoBehaviour
             status = "PERFECT";
             //2000
             isVictory = true;
+            AnalyticsEvents.LevelCompleteEvent(SceneManager.GetActiveScene().buildIndex, "Win");
+
 
             //  DefaultCoins = 2000;
             // WinCheck();
@@ -134,6 +149,7 @@ public class GameManager : MonoBehaviour
             status = "FIT";
             //1000
             isVictory = true;
+            AnalyticsEvents.LevelCompleteEvent(SceneManager.GetActiveScene().buildIndex, "Lose");
 
             // DefaultCoins = 1000;
 
@@ -142,12 +158,16 @@ public class GameManager : MonoBehaviour
         {
             status = "SLIM";
             //350
+            AnalyticsEvents.LevelCompleteEvent(SceneManager.GetActiveScene().buildIndex, "Lose");
+
             // DefaultCoins = 350;
 
         }
         else if (sliderVal >= -150 && sliderVal <= -70)
         {
             status = "TOO SLIM";
+            AnalyticsEvents.LevelCompleteEvent(SceneManager.GetActiveScene().buildIndex, "Lose");
+
             //200
             // DefaultCoins = 200;
 

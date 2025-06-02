@@ -9635,10 +9635,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1530689011}
     - target: {fileID: 7301949988881081412, guid: 91a2269edf748684a9301c200073bc36, type: 3}
-      propertyPath: gameObjects.Array.size
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7301949988881081412, guid: 91a2269edf748684a9301c200073bc36, type: 3}
       propertyPath: 'gameObjects.Array.data[0]'
       value: 
       objectReference: {fileID: 1057492973}
@@ -9701,10 +9697,6 @@ PrefabInstance:
     - target: {fileID: 8520520910224955059, guid: 91a2269edf748684a9301c200073bc36, type: 3}
       propertyPath: m_Name
       value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520520910224955059, guid: 91a2269edf748684a9301c200073bc36, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8885261451962243801, guid: 91a2269edf748684a9301c200073bc36, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13605,7 +13597,7 @@ PrefabInstance:
       objectReference: {fileID: 1185396008}
     - target: {fileID: 8880487545840823418, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Retry
+      value: HomeBtn
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
