@@ -16955,6 +16955,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 932146488}
   m_Mesh: {fileID: 4224582281979107922, guid: 6cd6a4166dfeaf242bf9f6be7cc7ec65, type: 3}
+--- !u!224 &944210269 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4755306583250894711, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
+  m_PrefabInstance: {fileID: 1269910531}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &945422529
 GameObject:
   m_ObjectHideFlags: 0
@@ -23331,6 +23336,34 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 470259832}
+    - target: {fileID: 2131109050318972440, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3605267410089917886, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
+      propertyPath: m_Colors.m_NormalColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3605267410089917886, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
+      propertyPath: m_Colors.m_NormalColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3605267410089917886, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
+      propertyPath: m_Colors.m_NormalColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3605267410089917886, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.9607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 3605267410089917886, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.9607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 3605267410089917886, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.9607843
+      objectReference: {fileID: 0}
     - target: {fileID: 5123760859482871613, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -31790,6 +31823,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1779190886}
   m_Mesh: {fileID: 3236877214769756450, guid: 6cd6a4166dfeaf242bf9f6be7cc7ec65, type: 3}
+--- !u!224 &1779455199 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4993813115091590585, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
+  m_PrefabInstance: {fileID: 1269910531}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1783620680
 GameObject:
   m_ObjectHideFlags: 0
@@ -34398,6 +34436,14 @@ PrefabInstance:
       propertyPath: timerBG_GO
       value: 
       objectReference: {fileID: 1286902929}
+    - target: {fileID: 7301949988881081412, guid: 91a2269edf748684a9301c200073bc36, type: 3}
+      propertyPath: junkCounter
+      value: 
+      objectReference: {fileID: 944210269}
+    - target: {fileID: 7301949988881081412, guid: 91a2269edf748684a9301c200073bc36, type: 3}
+      propertyPath: fruitCounter
+      value: 
+      objectReference: {fileID: 1779455199}
     - target: {fileID: 7301949988881081412, guid: 91a2269edf748684a9301c200073bc36, type: 3}
       propertyPath: loadingPanel
       value: 

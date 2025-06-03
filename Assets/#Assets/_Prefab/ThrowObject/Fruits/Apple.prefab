@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fwdSpeed: 500
-  upForce: 50
+  upForce: 100
   life: 0.75
   giveDamge: -2
   enemy: {fileID: 0}

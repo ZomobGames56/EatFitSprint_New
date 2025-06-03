@@ -37,6 +37,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     GameObject loadingPanel;
     string levelIndex;
+    [SerializeField]
+    Transform fruitCounter, junkCounter;
 
     private void Awake()
     {
@@ -55,9 +57,14 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
+        StartCoroutine(StartFirebaseEvent());
+
+    }
+    IEnumerator StartFirebaseEvent()
+    {
+        yield return new WaitUntil(() => FirebaseInit.isFirebaseReady);
         AnalyticsEvents.LevelStartEvent(SceneManager.GetActiveScene().buildIndex + 1);
         AnalyticsEvents.LevelNameEvent(SceneManager.GetActiveScene().name);
-
     }
     private void OnEnable()
     {
@@ -88,7 +95,16 @@ public class GameManager : MonoBehaviour
                 soundPlayed = true;
             }
         }
+    }
 
+    public void FruitCounterEffect()
+    {
+        fruitCounter.DOPunchScale(Vector3.one * 0.2f, 0.3f).OnComplete(() => { fruitCounter.DOScale(Vector3.one, 0.2f); });
+    }
+    public void JunkCounterEffect()
+    {
+
+        junkCounter.DOPunchScale(Vector3.one * 0.2f, 0.3f).OnComplete(() => { junkCounter.DOScale(Vector3.one, 0.2f); });
 
     }
     public void Play()
@@ -96,8 +112,8 @@ public class GameManager : MonoBehaviour
         modelViewCamera.SetActive(true);
         HY_AudioManager.instance.PlayAudioEffectOnce(playBtnClip);
         mainMenuPanel.SetActive(false);
-        CameraFollow.instance.initialCameraRotation = new Vector3 (25,0,0);
-        CameraFollow.instance.offsetFromPlayer = new Vector3 (0,40,-48);
+        CameraFollow.instance.initialCameraRotation = new Vector3(25, 0, 0);
+        CameraFollow.instance.offsetFromPlayer = new Vector3(0, 40, -48);
     }
     //---------------------------- -150 to 150 
 
@@ -181,7 +197,7 @@ public class GameManager : MonoBehaviour
     public void HomeBtn()
     {
         HY_AudioManager.instance.PlayAudioEffectOnce(playBtnClip);
-        int rand = Random.Range(0, 4);
+        int rand = Random.Range(0, 3);
         StartCoroutine(LoadSceneAsync(rand));
     }
 

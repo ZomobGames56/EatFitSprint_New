@@ -43,6 +43,7 @@ public class PickUpAnimation : MonoBehaviour
                         if (gameObject.transform.tag == "Fruit")
                         {
                            GameManager.instance.fruitCount += 1;
+                            GameManager.instance.FruitCounterEffect();
                             GameManager.instance.gameObjects[GameManager.instance.index].SetActive(true);
                            /// print(GameManager.instance.gameObjects[GameManager.instance.index]);
                            // print(GameManager.instance);
@@ -51,8 +52,10 @@ public class PickUpAnimation : MonoBehaviour
                         else if(gameObject.transform.tag =="JunkFood")
                         {
                             GameManager.instance.junkFoodCount += 1;
+                            GameManager.instance.JunkCounterEffect();
+
                         }
-                       
+
                     });
             });
     }
