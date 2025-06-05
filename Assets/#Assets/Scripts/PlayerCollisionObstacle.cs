@@ -1,4 +1,4 @@
-using DG.Tweening;
+﻿using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,8 +22,9 @@ public class PlayerCollisionObstacle : MonoBehaviour
     AudioClip crashSound;
     [SerializeField]
     float yAfterLost, rotationZ, rotateDuration;
-    private static readonly HashSet<string> pointDeductObstacles = new() { "Hay", "Box", "Vas","Dustbin","Chair" };
-    private static readonly HashSet<string> gameOverObstacles = new() { "Car", "WoodCart", "Barrier", "Lamp"};
+    private static readonly HashSet<string> pointDeductObstacles = new() { "Hay", "Box", "Vas", "Dustbin", "Chair" };
+    private static readonly HashSet<string> gameOverObstacles = new() { "Car", "WoodCart", "Barrier", "Lamp" };
+    #region
     //private void OnTriggerEnter(Collider other)
     //{
     //    switch (other.tag)
@@ -235,23 +236,75 @@ public class PlayerCollisionObstacle : MonoBehaviour
 
     //    }
     //}
+    #endregion//Unused Code 
+    /* private void OnTriggerEnter(Collider other)
+     {
+         string tag = other.tag;
+         if (pointDeductObstacles.Contains(tag))
+         {
+             int damage = 4;
+             GameManager.instance.fruitCount = Mathf.Max(0, GameManager.instance.fruitCount - damage);
+             GameManager.instance.junkFoodCount = Mathf.Max(0, GameManager.instance.junkFoodCount - damage);
+             GameManager.instance.JunkTextUpdate();
+             GameManager.instance.FruitTextUpdate();
+             transform.DOShakePosition(0.5f, 0.5f, 10, 90);
+             return;
+         }
+         if (gameOverObstacles.Contains(tag) && !triggerAtOnce)
+         {
+             triggerAtOnce = true;
+             HY_AudioManager.instance.PlayAudioEffectOnce(crashSound);
 
-    private void OnTriggerEnter(Collider other)
+             if (!doTweemAnimationCalled)
+             {
+                 doTweemAnimationCalled = true;
+                 transform.DOShakePosition(0.5f, 0.5f, 10, 90)
+                     .OnComplete(() =>
+                     {
+                         transform.DORotate(new Vector3(0, 0, rotationZ), rotateDuration, RotateMode.FastBeyond360)
+                             .SetEase(Ease.OutBack)
+                             .OnUpdate(() =>
+                             {
+                                 transform.DOMove(new Vector3(transform.position.x, yAfterLost, transform.position.z), 0.2f);
+                             });
+                     });
+             }
+             PlayerMovement_Ristriction.CanStopMove(true);
+             n_Timer.StartTimerBool(false);
+             timerBG.gameObject.SetActive(false);
+             StartCoroutine(WaitForGameOverScreen());
+             AnalyticsEvents.GameOverEvent("Hit Obstacle");
+         }
+     }*/
+    private void OnCollisionEnter(Collision collision)
     {
-        string tag = other.tag;
-
+        string tag = collision.transform.tag;
         if (pointDeductObstacles.Contains(tag))
         {
             int damage = 4;
             GameManager.instance.fruitCount = Mathf.Max(0, GameManager.instance.fruitCount - damage);
             GameManager.instance.junkFoodCount = Mathf.Max(0, GameManager.instance.junkFoodCount - damage);
-            transform.DOShakePosition(0.5f, 0.5f, 10, 90);
-            // Food Animation.
-            //Vibration.
-            // Screem Flash.
+            GameManager.instance.JunkTextUpdate();
+            GameManager.instance.FruitTextUpdate();
+            transform.DOShakePosition(0.5f, 0.5f, 10, 90)
+                .OnComplete(() =>
+                {
+                    float yRot = transform.eulerAngles.y;
+                    if (yRot >= 90f && yRot <= 270f) // roughly facing the camera
+                    {
+                        transform.DOMove(new Vector3(transform.position.x, transform.position.y, transform.position.z + 15f), 0.5f);
+                        Debug.Log("Facing camera +15");
+                        Debug.Log("Y Rotation: " + yRot);
+                    }
+                    else
+                    {
+                        transform.DOMove(new Vector3(transform.position.x, transform.position.y, transform.position.z - 15f), 0.5f);
+                        Debug.Log("Not facing camera  -15");
+                        Debug.Log("Y Rotation: " + yRot);
+                    }
+                });
             return;
         }
-
         if (gameOverObstacles.Contains(tag) && !triggerAtOnce)
         {
             triggerAtOnce = true;
@@ -271,7 +324,6 @@ public class PlayerCollisionObstacle : MonoBehaviour
                             });
                     });
             }
-
             PlayerMovement_Ristriction.CanStopMove(true);
             n_Timer.StartTimerBool(false);
             timerBG.gameObject.SetActive(false);
@@ -279,7 +331,6 @@ public class PlayerCollisionObstacle : MonoBehaviour
             AnalyticsEvents.GameOverEvent("Hit Obstacle");
         }
     }
-
     IEnumerator WaitForGameOverScreen()
     {
         yield return new WaitForSeconds(2f);

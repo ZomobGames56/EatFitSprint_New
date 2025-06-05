@@ -57,8 +57,14 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
+        FruitTextUpdate();
+        JunkTextUpdate();
         StartCoroutine(StartFirebaseEvent());
 
+    }
+    private void OnDestroy()
+    {
+        Destroy(gameObject);
     }
     IEnumerator StartFirebaseEvent()
     {
@@ -76,8 +82,8 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
-        fruitCountTxt.text = fruitCount.ToString();
-        junkFoodCountTxt.text = junkFoodCount.ToString();
+       // fruitCountTxt.text = fruitCount.ToString();
+       // junkFoodCountTxt.text = junkFoodCount.ToString();
 
         if (isVictory && InGameTimer.instance.isGameEnded)
         {
@@ -96,7 +102,14 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-
+    public void FruitTextUpdate()
+    {
+        fruitCountTxt.text = fruitCount.ToString();
+    }
+    public void JunkTextUpdate()
+    {
+        junkFoodCountTxt.text = junkFoodCount.ToString();
+    }
     public void FruitCounterEffect()
     {
         fruitCounter.DOPunchScale(Vector3.one * 0.2f, 0.3f).OnComplete(() => { fruitCounter.DOScale(Vector3.one, 0.2f); });
