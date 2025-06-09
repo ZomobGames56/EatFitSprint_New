@@ -7,20 +7,22 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:627170825523:android:157018266dce2d417d9a46",
+        "mobilesdk_app_id": "1:627170825523:ios:ad8e8894421ea3ff7d9a46",
         "android_client_info": {
-          "package_name": "com.playarenagamingstudio.Eatfitsprint"
+          "package_name": "com.zomobgames.eatfitsprint"
         }
       },
-      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDGeFamXT3ASGOiECM1uPHM5Azh1LOgTok"
+          "current_key": "AIzaSyAQMeyMXSfXQRzadoAAsFAmRaT0rHnjWG8"
         }
       ],
       "services": {
+        "analytics_service": {
+          "status": 0
+        },
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "status": 1
         }
       }
     }
