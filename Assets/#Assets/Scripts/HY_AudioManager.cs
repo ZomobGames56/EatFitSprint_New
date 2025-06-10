@@ -37,8 +37,8 @@ public class HY_AudioManager : MonoBehaviour
     }
     private void Update()
     {
-        //bgAudioSource.volume = musicSlider.value;
-        //forOnShotPlayAudioSource.volume = sfxSlider.value;
+        bgAudioSource.volume = musicSlider.value;
+        forOnShotPlayAudioSource.volume = sfxSlider.value;
     }
     public void PlayAudioEffectOnce(AudioClip effectClip)
     {

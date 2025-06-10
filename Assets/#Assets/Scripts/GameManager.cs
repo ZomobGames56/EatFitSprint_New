@@ -143,7 +143,7 @@ public class GameManager : MonoBehaviour
 
 
         }
-        else if (sliderVal >= 15 && sliderVal <= 69)
+        else if (sliderVal >= 30 && sliderVal <= 69)
         {
             status = "FAT";
             //350
@@ -152,7 +152,7 @@ public class GameManager : MonoBehaviour
             // DefaultCoins = 350;
 
         }
-        else if (sliderVal >= 6 && sliderVal <= 14)
+        else if (sliderVal >= 6 && sliderVal <= 31)
         {
             status = "FIT";
             //1000
@@ -173,7 +173,7 @@ public class GameManager : MonoBehaviour
             // WinCheck();
 
         }
-        else if (sliderVal >= -14 && sliderVal <= -9)
+        else if (sliderVal >= -30 && sliderVal <= -9)
         {
             status = "FIT";
             //1000
@@ -183,7 +183,7 @@ public class GameManager : MonoBehaviour
             // DefaultCoins = 1000;
 
         }
-        else if (sliderVal >= -69 && sliderVal <= -15)
+        else if (sliderVal >= -69 && sliderVal <= -31)
         {
             status = "SLIM";
             //350
