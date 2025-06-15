@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 8121122648984344395}
   - component: {fileID: -2365571938475560900}
   - component: {fileID: -9108052974693872767}
-  - component: {fileID: -9165987377981922129}
   m_Layer: 0
   m_Name: Apple
   m_TagString: Fruit
@@ -31,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7665996226415346601}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_ConstrainProportionsScale: 1
@@ -108,10 +107,10 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.8813378, y: 0.80512184, z: 0.786456}
-  m_Center: {x: 0.009166151, y: 0.5823171, z: 0.0010323524}
+  m_Size: {x: 1.1206902, y: 1.3390615, z: 0.78645605}
+  m_Center: {x: 0.009166384, y: 0.63755214, z: 0.0010323524}
 --- !u!54 &8121122648984344395
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -167,31 +166,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fwdSpeed: 500
-  upForce: 50
+  upForce: 100
   life: 0.75
   giveDamge: -2
-  force: 15000
+  enemy: {fileID: 0}
   vfxCollideParticle: {fileID: 0}
   hitClip: {fileID: 8300000, guid: e19f9bd9b610259499a08e662469693d, type: 3}
---- !u!64 &-9165987377981922129
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7665996226415346601}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 7004783832934855251, guid: 3d169ccca22f8e94794765ed5a0cc593, type: 3}

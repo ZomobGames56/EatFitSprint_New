@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: -4408203156810644140}
   - component: {fileID: -2039502205650633898}
   - component: {fileID: 2233595472937173443}
-  - component: {fileID: -4562274978830340324}
   m_Layer: 0
   m_Name: Mango
   m_TagString: Fruit
@@ -31,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1862483479269618223}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_ConstrainProportionsScale: 1
@@ -108,10 +107,10 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.7416411, y: 0.743158, z: 0.8471275}
-  m_Center: {x: 0.23331955, y: 0.7153807, z: 0}
+  m_Size: {x: 0.9948021, y: 1.4059801, z: 0.84712756}
+  m_Center: {x: 0.22181225, y: 0.70157194, z: 0}
 --- !u!54 &-4408203156810644140
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -167,31 +166,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fwdSpeed: 500
-  upForce: 50
+  upForce: 100
   life: 0.75
   giveDamge: -3
-  force: 15000
+  enemy: {fileID: 0}
   vfxCollideParticle: {fileID: 0}
   hitClip: {fileID: 8300000, guid: e19f9bd9b610259499a08e662469693d, type: 3}
---- !u!64 &-4562274978830340324
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1862483479269618223}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -7196802604745430461, guid: 91cdc1a80802c394e901f3afec4b6741, type: 3}

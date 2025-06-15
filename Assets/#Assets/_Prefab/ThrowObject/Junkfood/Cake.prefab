@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 9125901363919880709}
   - component: {fileID: -4077269667358647765}
   - component: {fileID: 1804549455736737978}
-  - component: {fileID: 2496856404998362690}
   m_Layer: 0
   m_Name: Cake
   m_TagString: JunkFood
@@ -30,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8052600896780958722}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0.28, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
@@ -107,7 +106,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1.9079924, y: 1.3906573, z: 1.8331641}
   m_Center: {x: -0.03299439, y: 0.69532865, z: 0.03030008}
@@ -151,31 +150,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fwdSpeed: 500
-  upForce: 50
+  upForce: 100
   life: 0.75
   giveDamge: 2
-  force: 15000
+  enemy: {fileID: 0}
   vfxCollideParticle: {fileID: 0}
   hitClip: {fileID: 8300000, guid: e19f9bd9b610259499a08e662469693d, type: 3}
---- !u!64 &2496856404998362690
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8052600896780958722}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8792586484180348971, guid: b334821635e3d25479d99a4aafb4ed4f, type: 3}

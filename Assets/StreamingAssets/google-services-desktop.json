@@ -1,0 +1,31 @@
+{
+  "project_info": {
+    "project_number": "627170825523",
+    "project_id": "games-c5112",
+    "storage_bucket": "games-c5112.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:627170825523:ios:ad8e8894421ea3ff7d9a46",
+        "android_client_info": {
+          "package_name": "com.zomobgames.eatfitsprint"
+        }
+      },
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQMeyMXSfXQRzadoAAsFAmRaT0rHnjWG8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 0
+        },
+        "appinvite_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

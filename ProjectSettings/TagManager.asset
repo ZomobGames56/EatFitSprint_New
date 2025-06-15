@@ -9,6 +9,15 @@ TagManager:
   - Fruit
   - JunkFood
   - Enemy
+  - Hay
+  - WoodCart
+  - Car
+  - Barrier
+  - Box
+  - Vas
+  - Lamp
+  - Dustbin
+  - Chair
   layers:
   - Default
   - TransparentFX
@@ -16,8 +25,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Cube
+  - Cylinder
   - 
   - 
   - 

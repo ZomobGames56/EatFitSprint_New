@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: -8810145619308459796}
   - component: {fileID: -2007198206737728000}
   - component: {fileID: 1537265539107030662}
-  - component: {fileID: 3579177121719351940}
   m_Layer: 0
   m_Name: Orange
   m_TagString: Fruit
@@ -31,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5883453794713221969}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_ConstrainProportionsScale: 1
@@ -108,10 +107,10 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.9862103, y: 0.79858696, z: 0.9899078}
-  m_Center: {x: 0.0063314736, y: 0.66773313, z: -0.015739292}
+  m_Size: {x: 1.3165363, y: 1.5335999, z: 0.98990786}
+  m_Center: {x: -0.0073409798, y: 0.759064, z: -0.015739297}
 --- !u!54 &-8810145619308459796
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -167,31 +166,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fwdSpeed: 500
-  upForce: 50
+  upForce: 100
   life: 0.75
   giveDamge: -5
-  force: 15000
+  enemy: {fileID: 0}
   vfxCollideParticle: {fileID: 0}
   hitClip: {fileID: 8300000, guid: e19f9bd9b610259499a08e662469693d, type: 3}
---- !u!64 &3579177121719351940
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5883453794713221969}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4711208715938537054, guid: d7a4e0af9ecb6264dbdc6b04e8e48f63, type: 3}
