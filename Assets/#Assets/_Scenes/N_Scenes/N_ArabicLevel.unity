@@ -23393,10 +23393,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 470259832}
-    - target: {fileID: 787992614740178774, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Retry
-      objectReference: {fileID: 0}
     - target: {fileID: 821230260107113861, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -23405,34 +23401,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 470259832}
-    - target: {fileID: 2131109050318972440, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3605267410089917886, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
-      propertyPath: m_Colors.m_NormalColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3605267410089917886, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
-      propertyPath: m_Colors.m_NormalColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3605267410089917886, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
-      propertyPath: m_Colors.m_NormalColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3605267410089917886, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.b
-      value: 0.9607843
-      objectReference: {fileID: 0}
-    - target: {fileID: 3605267410089917886, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.g
-      value: 0.9607843
-      objectReference: {fileID: 0}
-    - target: {fileID: 3605267410089917886, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.r
-      value: 0.9607843
-      objectReference: {fileID: 0}
     - target: {fileID: 5123760859482871613, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -23537,10 +23505,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 470259832}
-    - target: {fileID: 8671570432742090095, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Quit
-      objectReference: {fileID: 0}
     - target: {fileID: 8724036741796438450, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -23549,10 +23513,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 470259832}
-    - target: {fileID: 8880487545840823418, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HomeBtn
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
