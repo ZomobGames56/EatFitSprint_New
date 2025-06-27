@@ -17,6 +17,8 @@ public class FireObjectbehavior : MonoBehaviour
     GameObject vfxCollideParticle;
     [SerializeField]
     AudioClip hitClip;
+    [SerializeField]
+    float adjustVal;
     private void Start()
     {
         if (rb == null)
@@ -25,7 +27,7 @@ public class FireObjectbehavior : MonoBehaviour
         }
     }
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         rb.linearVelocity = Vector3.forward * fwdSpeed + Vector3.up * upForce;
 
@@ -33,14 +35,28 @@ public class FireObjectbehavior : MonoBehaviour
 
         //transform.position = Vector3.MoveTowards(transform.position, enemy.position, force * Time.deltaTime);
     }
-    private void OnTriggerEnter(Collider other)
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.tag == "Enemy")
+    //    {
+    //        HY_AudioManager.instance.PlayAudioEffectOnce(hitClip);
+    //        CharacterShapeChange.instance.takeDamage(giveDamge);
+    //        // print("TakingDamageCalled");
+    //        //  Instantiate(vfxCollideParticle, gameObject.transform.position, Quaternion.identity);
+    //        ParticlePool.instance.HitEffect(new Vector3(transform.position.x,transform.position.y,transform.position.z));
+    //        Destroy(gameObject);
+    //    }
+    //}
+
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.tag == "Enemy")
+        if (collision.transform.tag == "Enemy")
         {
             HY_AudioManager.instance.PlayAudioEffectOnce(hitClip);
             CharacterShapeChange.instance.takeDamage(giveDamge);
             // print("TakingDamageCalled");
-          //  Instantiate(vfxCollideParticle, gameObject.transform.position, Quaternion.identity);
+            //  Instantiate(vfxCollideParticle, gameObject.transform.position, Quaternion.identity);
+            ParticlePool.instance.HitEffect(new Vector3(transform.position.x, transform.position.y, transform.position.z));
             Destroy(gameObject);
         }
     }

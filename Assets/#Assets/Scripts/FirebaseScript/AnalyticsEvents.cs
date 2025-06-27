@@ -56,4 +56,13 @@ public class AnalyticsEvents : MonoBehaviour
         }
     }
 
+    public static void GameSessionStart()
+    {
+        FirebaseAnalytics.LogEvent("Session", new Parameter("GameStart","GameStart"));
+    }
+    public static void GameSessionEnd()
+    {
+        FirebaseAnalytics.LogEvent("Session", new Parameter("GameEnd", "GameEnd"));
+    }
+
 }

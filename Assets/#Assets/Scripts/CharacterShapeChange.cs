@@ -73,6 +73,9 @@ public class CharacterShapeChange : MonoBehaviour
 
         playersSkin.SetBlendShapeWeight(0, fitNessBar.value);
          HY_AudioManager.instance.PlayAudioEffectOnce(hitSound);
+        
+
+
 
 
     }

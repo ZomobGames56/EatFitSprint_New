@@ -1,4 +1,4 @@
-using DG.Tweening;
+﻿using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -40,6 +40,10 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     Transform fruitCounter, junkCounter;
 
+    [SerializeField]
+    int gameRewardCoins;
+    [SerializeField]
+    TextMeshProUGUI rewardScreenCoinTxt;
     private void Awake()
     {
         if (instance == null)
@@ -82,8 +86,8 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
-       // fruitCountTxt.text = fruitCount.ToString();
-       // junkFoodCountTxt.text = junkFoodCount.ToString();
+        // fruitCountTxt.text = fruitCount.ToString();
+        // junkFoodCountTxt.text = junkFoodCount.ToString();
 
         if (isVictory && InGameTimer.instance.isGameEnded)
         {
@@ -112,12 +116,18 @@ public class GameManager : MonoBehaviour
     }
     public void FruitCounterEffect()
     {
-        fruitCounter.DOPunchScale(Vector3.one * 0.2f, 0.3f).OnComplete(() => { fruitCounter.DOScale(Vector3.one, 0.2f); });
+        float x = fruitCounter.localScale.x;
+        if (x < 1.21f)
+            fruitCounter.DOPunchScale(Vector3.one * 0.2f, 0.3f).OnComplete(() => { fruitCounter.DOScale(Vector3.one, 0.2f); });
+
+
+        Debug.Log(fruitCounter.localScale);
     }
     public void JunkCounterEffect()
     {
-
-        junkCounter.DOPunchScale(Vector3.one * 0.2f, 0.3f).OnComplete(() => { junkCounter.DOScale(Vector3.one, 0.2f); });
+        float x = junkCounter.localScale.x;
+        if (x < 1.21f)
+            junkCounter.DOPunchScale(Vector3.one * 0.2f, 0.3f).OnComplete(() => { junkCounter.DOScale(Vector3.one, 0.2f); });
 
     }
     public void Play()
@@ -134,40 +144,46 @@ public class GameManager : MonoBehaviour
     {
         if (sliderVal >= 70 && sliderVal <= 150)
         {
-            status = "TOO FAT";
+            //FITNESS: TOO SLIM
+            status = "FITNESS: TOO FAT";
             AnalyticsEvents.LevelCompleteEvent(SceneManager.GetActiveScene().buildIndex, "Lose");
 
             //200
             // DefaultCoins = 200;
             //default coins
+            gameRewardCoins = 200;
 
 
         }
         else if (sliderVal >= 30 && sliderVal <= 69)
         {
-            status = "FAT";
+            status = "FITNESS: FAT";
             //350
             AnalyticsEvents.LevelCompleteEvent(SceneManager.GetActiveScene().buildIndex, "Lose");
 
             // DefaultCoins = 350;
+            gameRewardCoins = 350;
+
 
         }
         else if (sliderVal >= 6 && sliderVal <= 31)
         {
-            status = "FIT";
+            status = "FITNESS: FIT";
             //1000
             isVictory = true;
             AnalyticsEvents.LevelCompleteEvent(SceneManager.GetActiveScene().buildIndex, "Win");
+            gameRewardCoins = 1000;
 
             //  DefaultCoins = 1000;
         }
         else if (sliderVal >= -10 && sliderVal <= 5)
         {
-            status = "PERFECT";
+            status = "FITNESS: PERFECT";
             //2000
             isVictory = true;
             AnalyticsEvents.LevelCompleteEvent(SceneManager.GetActiveScene().buildIndex, "Win");
 
+            gameRewardCoins = 2000;
 
             //  DefaultCoins = 2000;
             // WinCheck();
@@ -175,37 +191,48 @@ public class GameManager : MonoBehaviour
         }
         else if (sliderVal >= -30 && sliderVal <= -9)
         {
-            status = "FIT";
+            status = "FITNESS: FIT";
             //1000
             isVictory = true;
             AnalyticsEvents.LevelCompleteEvent(SceneManager.GetActiveScene().buildIndex, "Lose");
+            gameRewardCoins = 1000;
 
             // DefaultCoins = 1000;
 
         }
         else if (sliderVal >= -69 && sliderVal <= -31)
         {
-            status = "SLIM";
+            status = "FITNESS: SLIM";
             //350
             AnalyticsEvents.LevelCompleteEvent(SceneManager.GetActiveScene().buildIndex, "Lose");
+            gameRewardCoins = 350;
 
             // DefaultCoins = 350;
 
         }
         else if (sliderVal >= -150 && sliderVal <= -70)
         {
-            status = "TOO SLIM";
+            status = "FITNESS: TOO SLIM";
             AnalyticsEvents.LevelCompleteEvent(SceneManager.GetActiveScene().buildIndex, "Lose");
 
             //200
             // DefaultCoins = 200;
+            gameRewardCoins = 200;
+
 
         }
+        rewardScreenCoinTxt.text = gameRewardCoins.ToString();
     }
     public void Quit()
     {
         HY_AudioManager.instance.PlayAudioEffectOnce(playBtnClip);
         Application.Quit();
+    }
+
+    public void OnRewardNoThanks()
+    {
+        CoinsUpdateManager.AddCoins(gameRewardCoins);
+        HomeBtn();
     }
     public void HomeBtn()
     {

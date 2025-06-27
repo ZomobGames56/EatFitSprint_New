@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8786493259378459271
+--- !u!1 &4072307000416968092
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,41 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7528006209228554260}
-  - component: {fileID: 2792634640604715533}
+  - component: {fileID: 5896685642242225931}
+  - component: {fileID: 2609154345647550826}
   m_Layer: 0
-  m_Name: ParticlePool
+  m_Name: CoinUpdateManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7528006209228554260
+--- !u!4 &5896685642242225931
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8786493259378459271}
+  m_GameObject: {fileID: 4072307000416968092}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -30.771048, y: -206.7902, z: -125.916756}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2792634640604715533
+--- !u!114 &2609154345647550826
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8786493259378459271}
+  m_GameObject: {fileID: 4072307000416968092}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55405c55c6b19ef47b0d370eee4714f7, type: 3}
+  m_Script: {fileID: 11500000, guid: d86282ec549d0024f9642dcabedb817f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlePrefab: {fileID: 1441702122950337617, guid: 6bf5af738e4f37444a066b87912e46ff, type: 3}
-  modelHitEffect: {fileID: 3294917400154503360, guid: b867aedf50f845947b762debc68ff7e7, type: 3}
+  coinText: {fileID: 0}

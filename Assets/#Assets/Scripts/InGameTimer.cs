@@ -28,6 +28,8 @@ public class InGameTimer : MonoBehaviour
     GameObject gameEndPanel;
 
     public bool isGameEnded;
+    [SerializeField]
+    GameObject mainMenuPanel,topPanel,CenterPanel,downPanel,play_stagePanel, fightPanel;
     private void Awake()
     {
         if (instance == null)
@@ -55,6 +57,12 @@ public class InGameTimer : MonoBehaviour
     {
         yield return new WaitForSeconds(waitTimeForGameEndScreen);
         OpenGameOverPanel();
+        mainMenuPanel.SetActive(true);
+        topPanel.SetActive(true);
+        CenterPanel.SetActive(false);
+        downPanel.SetActive(false);
+        play_stagePanel.SetActive(false);
+        fightPanel.SetActive(false);
     }
     void OpenGameOverPanel()
     {
@@ -70,6 +78,7 @@ public class InGameTimer : MonoBehaviour
         }
 
     }
+   
     void TimerUpdate()
     {
         seconds -= Time.deltaTime;

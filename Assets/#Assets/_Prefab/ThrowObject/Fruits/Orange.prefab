@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 7412057685536621914}
   - component: {fileID: 3967896158342672274}
   - component: {fileID: -8810145619308459796}
-  - component: {fileID: -2007198206737728000}
   - component: {fileID: 1537265539107030662}
   m_Layer: 0
   m_Name: Orange
@@ -105,7 +104,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -138,21 +137,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-2007198206737728000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5883453794713221969}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5c8723c77f2e1743b2edfb0c08a8b5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fwdSpeed: 600
-  life: 3
-  force: 800
 --- !u!114 &1537265539107030662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,3 +156,4 @@ MonoBehaviour:
   enemy: {fileID: 0}
   vfxCollideParticle: {fileID: 0}
   hitClip: {fileID: 8300000, guid: e19f9bd9b610259499a08e662469693d, type: 3}
+  adjustVal: 0

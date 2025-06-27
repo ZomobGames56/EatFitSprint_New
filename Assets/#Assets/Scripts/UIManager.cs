@@ -5,7 +5,7 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
     [SerializeField]
-    TextMeshProUGUI foodCountText,junkfoodText,coinText,diamondText;
+    TextMeshProUGUI foodCountText,junkfoodText;
 
     [SerializeField]
     public GameObject gameOverPanel,settingPanel;

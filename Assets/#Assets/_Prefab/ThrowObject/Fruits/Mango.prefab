@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2137563190080998579}
   - component: {fileID: 5412731143360805940}
   - component: {fileID: -4408203156810644140}
-  - component: {fileID: -2039502205650633898}
   - component: {fileID: 2233595472937173443}
   m_Layer: 0
   m_Name: Mango
@@ -105,7 +104,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -138,21 +137,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-2039502205650633898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1862483479269618223}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5c8723c77f2e1743b2edfb0c08a8b5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fwdSpeed: 600
-  life: 3
-  force: 800
 --- !u!114 &2233595472937173443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,3 +156,4 @@ MonoBehaviour:
   enemy: {fileID: 0}
   vfxCollideParticle: {fileID: 0}
   hitClip: {fileID: 8300000, guid: e19f9bd9b610259499a08e662469693d, type: 3}
+  adjustVal: 0

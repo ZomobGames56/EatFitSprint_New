@@ -35,10 +35,14 @@ public class HY_AudioManager : MonoBehaviour
         bgAudioSource.Play();
         
     }
-    private void Update()
+    public void MusicSliderChange()
     {
-        //bgAudioSource.volume = musicSlider.value;
-        //forOnShotPlayAudioSource.volume = sfxSlider.value;
+        bgAudioSource.volume = musicSlider.value;
+    }
+    public void VfxSlider()
+    {
+        forOnShotPlayAudioSource.volume = sfxSlider.value;
+
     }
     public void PlayAudioEffectOnce(AudioClip effectClip)
     {
