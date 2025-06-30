@@ -22,8 +22,7 @@ public class InGameTimer : MonoBehaviour
     TextMeshProUGUI statusTXT;
     [SerializeField]
     Sprite win, lose;
-    [SerializeField]
-    Image win_loseBGImg;
+    
     [SerializeField]
     GameObject gameEndPanel;
 
@@ -68,15 +67,6 @@ public class InGameTimer : MonoBehaviour
     {
         statusTXT.text = GameManager.instance.status;
         gameEndPanel.SetActive(true);
-        if (GameManager.instance.isVictory)
-        {
-            win_loseBGImg.sprite = win;
-        }
-        else
-        {
-            win_loseBGImg.sprite = lose;
-        }
-
     }
    
     void TimerUpdate()

@@ -42,12 +42,12 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Update()
     {
-        if (GameManager.instance.start && !canLeftRightMovement)
-        {
+      
+        
             transform.position += Vector3.forward * forwardSpeed * Time.deltaTime;
             PlayerHorizontalMovement();
             PlayerBound();
-        }
+        
         if (canLeftRightMovement)
         {
             FightTimeMovement();

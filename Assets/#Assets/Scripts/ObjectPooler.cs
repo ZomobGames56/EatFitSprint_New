@@ -10,7 +10,7 @@ public class ObjectPooler : MonoBehaviour
     [SerializeField]
     private GameObject platform;
     [SerializeField]
-    List<GameObject> platformObjs = new List<GameObject>();
+    List<GameObject> activeOBj = new List<GameObject>();
     [SerializeField]
     List<GameObject> deactivateObj= new List<GameObject>();
     [Header("Debug")]
@@ -21,12 +21,12 @@ public class ObjectPooler : MonoBehaviour
     Transform lastPlatform;
     private void Start()
     {
-        lastPlatform = platformObjs[platformObjs.Count - 1].transform;
+        lastPlatform = activeOBj[activeOBj.Count - 1].transform;
         for (int i = 0; i < 10; i++)
         {
             GameObject go = Instantiate(platform);
             go.SetActive(false);
-            platformObjs.Add(go);
+            activeOBj.Add(go);
             stacks.Push(go);
         }
     }
@@ -36,12 +36,12 @@ public class ObjectPooler : MonoBehaviour
         {
             GetPoolObject();
         }
-        foreach (GameObject backObj in platformObjs)
+        foreach (GameObject backObj in activeOBj)
         {
             if (backObj.transform.position.z - player.position.z <= -18f)
             {
                 backObj.SetActive(false);
-                platformObjs.Remove(backObj);
+                activeOBj.Remove(backObj);
                 deactivateObj.Add(backObj);
                 break;
             }
@@ -59,7 +59,7 @@ public class ObjectPooler : MonoBehaviour
             GameObject go = deactivateObj[0];
             go.transform.position = new Vector3(0, 0, lastPlatform.position.z + 10);
             deactivateObj.Remove(go);
-            platformObjs.Add(go);
+            activeOBj.Add(go);
             go.SetActive(true);
             lastPlatform = go.transform;
            // Debug.Log("Got Deaactivate object");
@@ -68,7 +68,7 @@ public class ObjectPooler : MonoBehaviour
         {
             GameObject newObj = Instantiate(platform);
            newObj.transform.position = new Vector3(0, 0, lastPlatform.position.z + 10);
-            platformObjs.Add(newObj);
+            activeOBj.Add(newObj);
             lastPlatform = newObj.transform;
            // Debug.Log("Got New object");
         }
@@ -77,13 +77,13 @@ public class ObjectPooler : MonoBehaviour
     void SpawnGetObject()
     {
         GameObject go = GetDeactivateObject();
-        go.transform.position = new Vector3(0, 0, platformObjs[platformObjs.Count - 1].transform.position.z + 10);
+        go.transform.position = new Vector3(0, 0, activeOBj[activeOBj.Count - 1].transform.position.z + 10);
         go.SetActive(true);
 
     }
    GameObject GetDeactivateObject()
     {
-        foreach (GameObject obj in platformObjs)
+        foreach (GameObject obj in activeOBj)
         {
             if (!obj.activeInHierarchy)
             {
@@ -92,7 +92,7 @@ public class ObjectPooler : MonoBehaviour
         }
         GameObject newObj = Instantiate(platform);
         newObj.SetActive(false);
-        platformObjs.Add(newObj);
+        activeOBj.Add(newObj);
         return newObj;
     }
     //GameObject PoolPlatform()
