@@ -109,13 +109,13 @@ public class n_Timer : MonoBehaviour
             timeText.transform.DOMove(new Vector3(540, timeText.transform.position.y, timeText.transform.position.z), 0.5f)
                 .OnComplete(() =>
                 {
-                    timeText.transform.DOMove(new Vector3(540, timeText.transform.position.y, timeText.transform.position.z), 2f)
+                    timeText.transform.DOMove(new Vector3(540, timeText.transform.position.y, timeText.transform.position.z), 0.75f)
                     .OnComplete(() =>
                     {
                         timeText.transform.DOMove(new Vector3(500, timeText.transform.position.y, timeText.transform.position.z), 0.1f)
                          .OnComplete(() =>
                          {
-                             timeText.transform.DOMove(new Vector3(1500, timeText.transform.position.y, timeText.transform.position.z), 0.5f)
+                             timeText.transform.DOMove(new Vector3(1500, timeText.transform.position.y, timeText.transform.position.z), 0.35f)
                                  .OnComplete(() =>
                                  {
                                      timeText.transform.DOKill();
@@ -130,12 +130,12 @@ public class n_Timer : MonoBehaviour
 
 
             OnHideParent?.Invoke();
-            timerObj.transform.DOScale(1.35f, 5f).SetEase(Ease.OutBack)
+            timerObj.transform.DOScale(1.35f, 1.75f).SetEase(Ease.OutBack)
                 .OnComplete(() =>
                 {
 
 
-                    timerObj.transform.DOScale(0f, 0.5f).SetEase(Ease.InBack)
+                    timerObj.transform.DOScale(0f, 0.3f).SetEase(Ease.InBack)
                    .OnComplete(() =>
                    {
                        timerObj.transform.DOKill();

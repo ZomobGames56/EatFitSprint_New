@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98d2489f4841bb04e867cf3c2d527aa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seconds: 25
+  seconds: 10
   waitTimeForGameEndScreen: 5
   minutes: 0
   timeUp: 0
@@ -55,6 +55,11 @@ MonoBehaviour:
   statusTXT: {fileID: 0}
   win: {fileID: 21300000, guid: 8f943c0cdc597c4428a751856969b0ac, type: 3}
   lose: {fileID: 21300000, guid: 638a8e5c188e874479d2d46cfe485c3f, type: 3}
-  win_loseBGImg: {fileID: 0}
   gameEndPanel: {fileID: 0}
   isGameEnded: 0
+  mainMenuPanel: {fileID: 0}
+  topPanel: {fileID: 0}
+  CenterPanel: {fileID: 0}
+  downPanel: {fileID: 0}
+  play_stagePanel: {fileID: 0}
+  fightPanel: {fileID: 0}
