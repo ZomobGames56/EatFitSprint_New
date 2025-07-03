@@ -1,3 +1,4 @@
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
@@ -8,12 +9,13 @@ public class UIManager : MonoBehaviour
     TextMeshProUGUI foodCountText, junkfoodText;
 
     [SerializeField]
-    public GameObject gameOverPanel, settingPanel;
+    public GameObject gameOverPanel, settingPanel, centerPanel, topPanel, downPanel,crossBtnMission_Shop, play_StagePanel;
     [SerializeField]
     AudioClip buttonClip;
     [SerializeField]
     GameObject mission_ShopCrossBtn, mission_ShopObj, missionPanel, ShopPanel;
-
+    [SerializeField]
+    Transform playerTransform;
     private void Awake()
     {
         if (Instance == null)
@@ -57,8 +59,10 @@ public class UIManager : MonoBehaviour
         }
         else
         {
-
             ShopPanel.SetActive(false);
+            playerTransform.DORotate(Vector3.zero, 0.5f, RotateMode.Fast);
+            centerPanel.SetActive(true);
+            play_StagePanel.SetActive(true);
         }
         mission_ShopCrossBtn.SetActive(false);
         mission_ShopObj.SetActive(true);
@@ -76,5 +80,10 @@ public class UIManager : MonoBehaviour
         ShopPanel.SetActive(true);
         mission_ShopObj.SetActive(false);
         mission_ShopCrossBtn.SetActive(true);
+      //-----------------------------------------
+      centerPanel.SetActive(false);
+        play_StagePanel.SetActive(false);
+        playerTransform.DORotate(new Vector3(0, 210f, 0), 0.5f, RotateMode.Fast);
+
     }
 }

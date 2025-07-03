@@ -58,6 +58,8 @@ public class GameManager : MonoBehaviour
         m_movementInstruction.SetActive(false);
         timerBG_GO.SetActive(false);
         modelViewCamera.SetActive(false);
+
+        
     }
     private void Start()
     {
@@ -229,7 +231,7 @@ public class GameManager : MonoBehaviour
         Application.Quit();
     }
 
-    public void OnRewardNoThanks()
+    public void OnRewardNoTha4nks()
     {
         CoinsUpdateManager.AddCoins(gameRewardCoins);
         HomeBtn();

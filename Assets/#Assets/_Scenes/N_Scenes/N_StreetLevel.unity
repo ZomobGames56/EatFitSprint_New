@@ -10077,7 +10077,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 1057492958}
   initialCameraRotation: {x: 11, y: -2.2, z: 0}
-  offsetFromPlayer: {x: -2, y: 10, z: -30}
+  offsetFromPlayer: {x: 0, y: 10, z: -30}
   cameraFollowSpeed: 5
 --- !u!114 &1221369864
 MonoBehaviour:

@@ -1691,13 +1691,25 @@ PrefabInstance:
       value: UIManager
       objectReference: {fileID: 0}
     - target: {fileID: 3596051438412628504, guid: 32df2de663d5b5b4eb4528a6a2fe0463, type: 3}
+      propertyPath: topPanel
+      value: 
+      objectReference: {fileID: 532854276}
+    - target: {fileID: 3596051438412628504, guid: 32df2de663d5b5b4eb4528a6a2fe0463, type: 3}
       propertyPath: ShopPanel
       value: 
       objectReference: {fileID: 454043339}
     - target: {fileID: 3596051438412628504, guid: 32df2de663d5b5b4eb4528a6a2fe0463, type: 3}
+      propertyPath: downPanel
+      value: 
+      objectReference: {fileID: 532854273}
+    - target: {fileID: 3596051438412628504, guid: 32df2de663d5b5b4eb4528a6a2fe0463, type: 3}
       propertyPath: timerBG_GO
       value: 
       objectReference: {fileID: 1125500885}
+    - target: {fileID: 3596051438412628504, guid: 32df2de663d5b5b4eb4528a6a2fe0463, type: 3}
+      propertyPath: centerPanel
+      value: 
+      objectReference: {fileID: 532854275}
     - target: {fileID: 3596051438412628504, guid: 32df2de663d5b5b4eb4528a6a2fe0463, type: 3}
       propertyPath: junkfoodText
       value: 
@@ -1722,6 +1734,18 @@ PrefabInstance:
       propertyPath: mission_ShopObj
       value: 
       objectReference: {fileID: 454043341}
+    - target: {fileID: 3596051438412628504, guid: 32df2de663d5b5b4eb4528a6a2fe0463, type: 3}
+      propertyPath: play_StagePanel
+      value: 
+      objectReference: {fileID: 532854274}
+    - target: {fileID: 3596051438412628504, guid: 32df2de663d5b5b4eb4528a6a2fe0463, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 2081092492}
+    - target: {fileID: 3596051438412628504, guid: 32df2de663d5b5b4eb4528a6a2fe0463, type: 3}
+      propertyPath: crossBtnMission_Shop
+      value: 
+      objectReference: {fileID: 454043342}
     - target: {fileID: 3596051438412628504, guid: 32df2de663d5b5b4eb4528a6a2fe0463, type: 3}
       propertyPath: mission_ShopCrossBtn
       value: 
@@ -13245,7 +13269,7 @@ Transform:
   m_GameObject: {fileID: 304820022}
   serializedVersion: 2
   m_LocalRotation: {x: 0.09581292, y: -0.026056439, z: 0.0025089497, w: 0.99505514}
-  m_LocalPosition: {x: -2.4999998, y: 10, z: -930}
+  m_LocalPosition: {x: 0, y: 10, z: -930}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13265,7 +13289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 2081092492}
   initialCameraRotation: {x: 11, y: -3, z: 0}
-  offsetFromPlayer: {x: -2, y: 10, z: -30}
+  offsetFromPlayer: {x: 0, y: 10, z: -30}
   cameraFollowSpeed: 5
 --- !u!114 &304820025
 MonoBehaviour:
@@ -44604,10 +44628,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 31565019}
-    - target: {fileID: 497799738277859704, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnMissionBtn
-      objectReference: {fileID: 0}
     - target: {fileID: 782848440023119216, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -44628,34 +44648,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 31565019}
-    - target: {fileID: 2931548715666487963, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnShopBtn
-      objectReference: {fileID: 0}
     - target: {fileID: 3107551635111122332, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1755900555}
-    - target: {fileID: 3107551635111122332, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnRewardNoThanks
-      objectReference: {fileID: 0}
     - target: {fileID: 3407427025455198081, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 31565019}
-    - target: {fileID: 4209070937950483014, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5123760859482871613, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1755900555}
-    - target: {fileID: 5435974049552426787, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5454261373941455992, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -44740,18 +44744,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 31565019}
-    - target: {fileID: 6889640125123490494, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleMission_ShopCrossBtn
-      objectReference: {fileID: 0}
     - target: {fileID: 7819911453860188149, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 31565019}
-    - target: {fileID: 7894322455639866051, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8585923308809930883, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
       propertyPath: m_Name
       value: Canvas (1)
@@ -44764,10 +44760,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2139772752}
-    - target: {fileID: 8880487545840823418, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1755900555}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -82106,10 +82098,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1967192905361044632, guid: be10e4cba9a021c4087c59e8921d918d, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2244109494693106162, guid: be10e4cba9a021c4087c59e8921d918d, type: 3}
       propertyPath: cam
       value: 
@@ -82118,10 +82106,6 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 1125500867}
-    - target: {fileID: 2244109494693106162, guid: be10e4cba9a021c4087c59e8921d918d, type: 3}
-      propertyPath: moveSpeed
-      value: 45
-      objectReference: {fileID: 0}
     - target: {fileID: 2244109494693106162, guid: be10e4cba9a021c4087c59e8921d918d, type: 3}
       propertyPath: timerUpPanel
       value: 
@@ -82173,10 +82157,6 @@ PrefabInstance:
     - target: {fileID: 3724089293387856743, guid: be10e4cba9a021c4087c59e8921d918d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5963658261447925524, guid: be10e4cba9a021c4087c59e8921d918d, type: 3}
-      propertyPath: m_Constraints
-      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 8957000192174808202, guid: be10e4cba9a021c4087c59e8921d918d, type: 3}
       propertyPath: timerBG
