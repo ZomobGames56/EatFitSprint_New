@@ -43,8 +43,8 @@ public class CharacterShapeChange : MonoBehaviour
             toShowplayerBar.value = rndStartSlimVal;
             ImageObjActiveState(false);
             fruitTxt.text = "Avoid Fruit!";
-            fruitTxt.color = Color.red;
-            junkTxt.text = "Collect Junk Food To Get Fit!";
+            ////fruitTxt.color = Color.red;
+            junkTxt.text = "Collect Junk Food \n To \n Get Fit!";
 
         }
         if (rndGenratorNum == 1)
@@ -56,8 +56,8 @@ public class CharacterShapeChange : MonoBehaviour
             toShowplayerBar.value = rndStartFatVal;
             ImageObjActiveState(true);
             junkTxt.text = "Avoid Junk Food!";
-            junkTxt.color = Color.red;
-            fruitTxt.text = "Collect Fruit To Get Fit!";
+           // junkTxt.color = Color.red;
+            fruitTxt.text = "Collect Fruit \n To \n Get Fit!";
         }
     }
     void ImageObjActiveState(bool canTrue)

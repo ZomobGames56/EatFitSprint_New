@@ -88,7 +88,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6023258316557579752, guid: f3ff72c98035797449dcdab3167625db, type: 3}
       propertyPath: m_Name
-      value: Apple (5)
+      value: Apple
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -150,7 +150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6023258316557579752, guid: f3ff72c98035797449dcdab3167625db, type: 3}
       propertyPath: m_Name
-      value: Apple (4)
+      value: Apple
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -212,7 +212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6023258316557579752, guid: f3ff72c98035797449dcdab3167625db, type: 3}
       propertyPath: m_Name
-      value: Apple (6)
+      value: Apple
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -274,7 +274,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6023258316557579752, guid: f3ff72c98035797449dcdab3167625db, type: 3}
       propertyPath: m_Name
-      value: Apple (3)
+      value: Apple
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -336,7 +336,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6023258316557579752, guid: f3ff72c98035797449dcdab3167625db, type: 3}
       propertyPath: m_Name
-      value: Apple (1)
+      value: Apple
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -460,7 +460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6023258316557579752, guid: f3ff72c98035797449dcdab3167625db, type: 3}
       propertyPath: m_Name
-      value: Apple (2)
+      value: Apple
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

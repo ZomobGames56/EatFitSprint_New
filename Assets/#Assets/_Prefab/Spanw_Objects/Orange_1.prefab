@@ -51,7 +51,7 @@ GameObject:
   - component: {fileID: 4437885179169884836}
   - component: {fileID: 2623694215349826891}
   m_Layer: 0
-  m_Name: Orange (2)
+  m_Name: Orange
   m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -363,7 +363,7 @@ GameObject:
   - component: {fileID: 6273895815505038837}
   - component: {fileID: 3360891665507351257}
   m_Layer: 0
-  m_Name: Orange (3)
+  m_Name: Orange
   m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -519,7 +519,7 @@ GameObject:
   - component: {fileID: 2175906529861385003}
   - component: {fileID: 8940820585542340402}
   m_Layer: 0
-  m_Name: Orange (1)
+  m_Name: Orange
   m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -675,7 +675,7 @@ GameObject:
   - component: {fileID: 6298716578857372752}
   - component: {fileID: 5167927936360836283}
   m_Layer: 0
-  m_Name: Orange (4)
+  m_Name: Orange
   m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -148,7 +148,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6140924244649413642, guid: 0c533876424311241b8bb142c1ccdb5c, type: 3}
       propertyPath: m_Name
-      value: Mango (2)
+      value: Mango
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -210,7 +210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6140924244649413642, guid: 0c533876424311241b8bb142c1ccdb5c, type: 3}
       propertyPath: m_Name
-      value: Mango (4)
+      value: Mango
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -272,7 +272,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6140924244649413642, guid: 0c533876424311241b8bb142c1ccdb5c, type: 3}
       propertyPath: m_Name
-      value: Mango (1)
+      value: Mango
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -334,7 +334,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6140924244649413642, guid: 0c533876424311241b8bb142c1ccdb5c, type: 3}
       propertyPath: m_Name
-      value: Mango (3)
+      value: Mango
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

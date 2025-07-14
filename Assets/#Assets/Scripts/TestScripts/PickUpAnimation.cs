@@ -47,6 +47,8 @@ public class PickUpAnimation : MonoBehaviour
                             GameManager.instance.FruitTextUpdate();
                             GameManager.instance.FruitCounterEffect();
                             GameManager.instance.gameObjects[GameManager.instance.index].SetActive(true);
+                            MissionManager.instance.AddMissionProgress(gameObject.name, 1);
+                            print(gameObject.name);
                            /// print(GameManager.instance.gameObjects[GameManager.instance.index]);
                            // print(GameManager.instance);
                             GameManager.instance.index++;
@@ -54,6 +56,8 @@ public class PickUpAnimation : MonoBehaviour
                         else if(gameObject.transform.tag =="JunkFood")
                         {
                             GameManager.instance.junkFoodCount += 1;
+                            print(gameObject.name);
+                            MissionManager.instance.AddMissionProgress(gameObject.name, 1);
                             GameManager.instance.JunkTextUpdate();
                             GameManager.instance.JunkCounterEffect();
                             ParticlePool.instance.PlayEffect(playerTransform.position);
@@ -78,6 +82,7 @@ public class PickUpAnimation : MonoBehaviour
         }
     }
 
+
     private void Update()
     {
         if (gameObject.activeInHierarchy && transform.position.y <= -2.5f)
@@ -92,6 +97,8 @@ public class PickUpAnimation : MonoBehaviour
             OnPickup();
         }
     }
+
+
    /* private void OnTriggerEnter(Collider other)
     {
         if (other.transform.tag=="Player")

@@ -47,7 +47,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4239719709827791565, guid: 5826ad9a42d8062439ea0f4cdaf2320d, type: 3}
       propertyPath: m_Name
-      value: Burgger (2)
+      value: Burger
       objectReference: {fileID: 0}
     - target: {fileID: 7772971372642053143, guid: 5826ad9a42d8062439ea0f4cdaf2320d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -109,7 +109,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4239719709827791565, guid: 5826ad9a42d8062439ea0f4cdaf2320d, type: 3}
       propertyPath: m_Name
-      value: Burgger (5)
+      value: Burger
       objectReference: {fileID: 0}
     - target: {fileID: 7772971372642053143, guid: 5826ad9a42d8062439ea0f4cdaf2320d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -171,7 +171,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4239719709827791565, guid: 5826ad9a42d8062439ea0f4cdaf2320d, type: 3}
       propertyPath: m_Name
-      value: Burgger
+      value: Burger
       objectReference: {fileID: 0}
     - target: {fileID: 7772971372642053143, guid: 5826ad9a42d8062439ea0f4cdaf2320d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -233,7 +233,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4239719709827791565, guid: 5826ad9a42d8062439ea0f4cdaf2320d, type: 3}
       propertyPath: m_Name
-      value: Burgger (7)
+      value: Burger
       objectReference: {fileID: 0}
     - target: {fileID: 7772971372642053143, guid: 5826ad9a42d8062439ea0f4cdaf2320d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -295,7 +295,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4239719709827791565, guid: 5826ad9a42d8062439ea0f4cdaf2320d, type: 3}
       propertyPath: m_Name
-      value: Burgger (8)
+      value: Burger
       objectReference: {fileID: 0}
     - target: {fileID: 7772971372642053143, guid: 5826ad9a42d8062439ea0f4cdaf2320d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -357,7 +357,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4239719709827791565, guid: 5826ad9a42d8062439ea0f4cdaf2320d, type: 3}
       propertyPath: m_Name
-      value: Burgger (6)
+      value: Burger
       objectReference: {fileID: 0}
     - target: {fileID: 7772971372642053143, guid: 5826ad9a42d8062439ea0f4cdaf2320d, type: 3}
       propertyPath: m_LocalPosition.x

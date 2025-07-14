@@ -47,7 +47,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2121162353383460020, guid: a2a816ca199770244ad9456c59b51722, type: 3}
       propertyPath: m_Name
-      value: Cold Drinks (5)
+      value: ColdDrinks
       objectReference: {fileID: 0}
     - target: {fileID: 2121162353383460020, guid: a2a816ca199770244ad9456c59b51722, type: 3}
       propertyPath: m_IsActive
@@ -113,7 +113,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2121162353383460020, guid: a2a816ca199770244ad9456c59b51722, type: 3}
       propertyPath: m_Name
-      value: Cold Drinks (2)
+      value: ColdDrinks
       objectReference: {fileID: 0}
     - target: {fileID: 2121162353383460020, guid: a2a816ca199770244ad9456c59b51722, type: 3}
       propertyPath: m_IsActive
@@ -179,7 +179,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2121162353383460020, guid: a2a816ca199770244ad9456c59b51722, type: 3}
       propertyPath: m_Name
-      value: Cold Drinks (4)
+      value: ColdDrinks
       objectReference: {fileID: 0}
     - target: {fileID: 2121162353383460020, guid: a2a816ca199770244ad9456c59b51722, type: 3}
       propertyPath: m_IsActive
@@ -245,7 +245,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2121162353383460020, guid: a2a816ca199770244ad9456c59b51722, type: 3}
       propertyPath: m_Name
-      value: Cold Drinks (1)
+      value: ColdDrinks
       objectReference: {fileID: 0}
     - target: {fileID: 2121162353383460020, guid: a2a816ca199770244ad9456c59b51722, type: 3}
       propertyPath: m_IsActive
@@ -311,7 +311,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2121162353383460020, guid: a2a816ca199770244ad9456c59b51722, type: 3}
       propertyPath: m_Name
-      value: Cold Drinks
+      value: ColdDrinks
       objectReference: {fileID: 0}
     - target: {fileID: 2121162353383460020, guid: a2a816ca199770244ad9456c59b51722, type: 3}
       propertyPath: m_IsActive
@@ -377,7 +377,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2121162353383460020, guid: a2a816ca199770244ad9456c59b51722, type: 3}
       propertyPath: m_Name
-      value: Cold Drinks (6)
+      value: ColdDrinks
       objectReference: {fileID: 0}
     - target: {fileID: 2121162353383460020, guid: a2a816ca199770244ad9456c59b51722, type: 3}
       propertyPath: m_IsActive
