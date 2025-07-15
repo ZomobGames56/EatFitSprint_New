@@ -42,6 +42,11 @@ public class CoinsUpdateManager : MonoBehaviour
             Debug.LogError("Not have Enough coins");
         }
     }
+
+    public static int GetCoin()
+    {
+        return instance.currentCoins;
+    }
     void UpdateUI()
     {
         if (coinText != null)

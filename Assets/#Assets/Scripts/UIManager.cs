@@ -66,6 +66,20 @@ public class UIManager : MonoBehaviour
         }
         mission_ShopCrossBtn.SetActive(false);
         mission_ShopObj.SetActive(true);
+
+        if (CartBuyManager.instance.carts[CartBuyManager.instance.GetSelectedCartIndex()].isUnlocked)
+        {
+            return;
+        }
+        else
+        {
+            for (int i = 0; i < CartBuyManager.instance.carts.Length - 1; i++)
+            {
+                CartBuyManager.instance.carts[i].cartObject.gameObject.SetActive(false);
+            }
+                CartBuyManager.instance.carts[0].cartObject.gameObject.SetActive(true);
+            
+        }
     }
 
     public void OnMissionBtn()
