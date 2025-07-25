@@ -73,7 +73,7 @@ public class UIManager : MonoBehaviour
         }
         else
         {
-            for (int i = 0; i < CartBuyManager.instance.carts.Length - 1; i++)
+            for (int i = 0; i < CartBuyManager.instance.carts.Length; i++)
             {
                 CartBuyManager.instance.carts[i].cartObject.gameObject.SetActive(false);
             }

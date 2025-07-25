@@ -5,8 +5,9 @@ using UnityEngine.UI;
 public class CharacterShapeChange : MonoBehaviour
 {
     public static CharacterShapeChange instance;
+    
     [SerializeField]
-    SkinnedMeshRenderer playersSkin;
+    SkinnedMeshRenderer[] girlSkinMeshRenderer;
     public float myValue = 0;
     //[SerializeField]
     public Slider fitNessBar, toShowplayerBar;
@@ -31,16 +32,18 @@ public class CharacterShapeChange : MonoBehaviour
     void Start()
     {
         // transform.position = new Vector3(transform.position.x, 18, transform.position.z);
-        playersSkin = GetComponentInChildren<SkinnedMeshRenderer>();
+        //SplayersSkin = GetComponentInChildren<SkinnedMeshRenderer>();
         rndGenratorNum = Random.Range(0, 2);
         // print(rndGenratorNum);
         if (rndGenratorNum == 0)
         {
             // Means Character is slim, generate slim bar value.
-            rndStartSlimVal = Random.Range(-150, -70);
-            playersSkin.SetBlendShapeWeight(0, rndStartSlimVal);
+            rndStartSlimVal = Random.Range(-99, -70);
+           // playersSkin.SetBlendShapeWeight(0, rndStartSlimVal);
+            CharacterBlendShapesUPD(rndStartSlimVal);
             fitNessBar.value = rndStartSlimVal;
             toShowplayerBar.value = rndStartSlimVal;
+            print(rndStartSlimVal);
             ImageObjActiveState(false);
             fruitTxt.text = "Avoid Fruit!";
             ////fruitTxt.color = Color.red;
@@ -50,10 +53,12 @@ public class CharacterShapeChange : MonoBehaviour
         if (rndGenratorNum == 1)
         {
             // Means Character is fat, genrate fat bar value.
-            rndStartFatVal = Random.Range(70, 151);
-            playersSkin.SetBlendShapeWeight(0, rndStartFatVal);
+            rndStartFatVal = Random.Range(60, 100);
+           // playersSkin.SetBlendShapeWeight(0, rndStartFatVal);
+            CharacterBlendShapesUPD(rndStartFatVal);
             fitNessBar.value = rndStartFatVal;
             toShowplayerBar.value = rndStartFatVal;
+            print(rndStartFatVal);
             ImageObjActiveState(true);
             junkTxt.text = "Avoid Junk Food!";
            // junkTxt.color = Color.red;
@@ -70,14 +75,15 @@ public class CharacterShapeChange : MonoBehaviour
     public void takeDamage(float damageVal)
     {
         fitNessBar.value += damageVal;
-
-        playersSkin.SetBlendShapeWeight(0, fitNessBar.value);
+        //playersSkin.SetBlendShapeWeight(0, fitNessBar.value);
+        CharacterBlendShapesUPD(fitNessBar.value);
          HY_AudioManager.instance.PlayAudioEffectOnce(hitSound);
-        
-
-
-
-
     }
-
+    public void CharacterBlendShapesUPD(float val)
+    {
+        foreach (var skins in girlSkinMeshRenderer)
+        {
+            skins.SetBlendShapeWeight(0, val);  
+        }
+    }
 }

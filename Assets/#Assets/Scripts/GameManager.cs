@@ -144,7 +144,7 @@ public class GameManager : MonoBehaviour
 
     public void FitnessStatus(float sliderVal)
     {
-        if (sliderVal >= 70 && sliderVal <= 150)
+        if (sliderVal >= 30 && sliderVal <= 100)
         {
             //FITNESS: TOO SLIM
             status = "FITNESS: TOO FAT";
@@ -157,7 +157,7 @@ public class GameManager : MonoBehaviour
 
 
         }
-        else if (sliderVal >= 30 && sliderVal <= 69)
+        else if (sliderVal >= 16 && sliderVal <= 29)
         {
             status = "FITNESS: FAT";
             //350
@@ -168,7 +168,7 @@ public class GameManager : MonoBehaviour
 
 
         }
-        else if (sliderVal >= 6 && sliderVal <= 31)
+        else if (sliderVal >= 5 && sliderVal <= 15)
         {
             status = "FITNESS: FIT";
             //1000
@@ -178,7 +178,7 @@ public class GameManager : MonoBehaviour
 
             //  DefaultCoins = 1000;
         }
-        else if (sliderVal >= -10 && sliderVal <= 5)
+        else if (sliderVal >= -5 && sliderVal <= 4)
         {
             status = "FITNESS: PERFECT";
             //2000
@@ -191,7 +191,7 @@ public class GameManager : MonoBehaviour
             // WinCheck();
 
         }
-        else if (sliderVal >= -30 && sliderVal <= -9)
+        else if (sliderVal >= -30 && sliderVal <= -4)
         {
             status = "FITNESS: FIT";
             //1000
@@ -212,7 +212,7 @@ public class GameManager : MonoBehaviour
             // DefaultCoins = 350;
 
         }
-        else if (sliderVal >= -150 && sliderVal <= -70)
+        else if (sliderVal >= -100 && sliderVal <= -70)
         {
             status = "FITNESS: TOO SLIM";
             AnalyticsEvents.LevelCompleteEvent(SceneManager.GetActiveScene().buildIndex, "Lose");

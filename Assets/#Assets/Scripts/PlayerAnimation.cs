@@ -7,7 +7,7 @@ public class PlayerAnimation : MonoBehaviour
     void Start()
     {
         m_Animator = GetComponent<Animator>();
-        index = Random.Range(0, 2);
+        index = 0;
 
     }
     void Update()
@@ -33,6 +33,7 @@ public class PlayerAnimation : MonoBehaviour
                 case 2:
                     m_Animator.SetFloat("Blend", 1);
                     break;
+               
             }
 
         }

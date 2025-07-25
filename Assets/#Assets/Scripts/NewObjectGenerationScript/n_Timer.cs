@@ -15,6 +15,8 @@ public class n_Timer : MonoBehaviour
     TextMeshProUGUI timerText;
     [SerializeField]
     GameObject timerObj, timeText;
+    [SerializeField]
+    RectTransform timeText_;
     public static event Action OnHideParent;
     public static event Action NotifyPlayerTimeUp;
     //bool isInvoked;
@@ -25,6 +27,9 @@ public class n_Timer : MonoBehaviour
 
     private Tween pulseTween;
     bool isPulsing = false, isFade = false;
+
+    [SerializeField]
+    GameObject cartPlayer;
 
     private void Awake()
     {
@@ -104,33 +109,51 @@ public class n_Timer : MonoBehaviour
         // isPulsing = false;
         if (!isFade)
         {
+            #region //Learn Do tween Short
             /// Time Up Text animation
-            timeText.SetActive(true);
-            timeText.transform.DOMove(new Vector3(540, timeText.transform.position.y, timeText.transform.position.z), 0.5f)
-                .OnComplete(() =>
-                {
-                    timeText.transform.DOMove(new Vector3(540, timeText.transform.position.y, timeText.transform.position.z), 0.75f)
-                    .OnComplete(() =>
-                    {
-                        timeText.transform.DOMove(new Vector3(500, timeText.transform.position.y, timeText.transform.position.z), 0.1f)
-                         .OnComplete(() =>
-                         {
-                             timeText.transform.DOMove(new Vector3(1500, timeText.transform.position.y, timeText.transform.position.z), 0.35f)
-                                 .OnComplete(() =>
-                                 {
-                                     timeText.transform.DOKill();
-                                     timeText.gameObject.SetActive(false);
+            //timeText.SetActive(true);
+            //timeText.transform.DOMove(new Vector3(540, timeText.transform.position.y, timeText.transform.position.z), 0.5f)
+            //    .OnComplete(() =>
+            //    {
+            //        timeText.transform.DOMove(new Vector3(540, timeText.transform.position.y, timeText.transform.position.z), 0.75f)
+            //        .OnComplete(() =>
+            //        {
+            //            timeText.transform.DOMove(new Vector3(500, timeText.transform.position.y, timeText.transform.position.z), 0.1f)
+            //             .OnComplete(() =>
+            //             {
+            //                 timeText.transform.DOMove(new Vector3(1500, timeText.transform.position.y, timeText.transform.position.z), 0.35f)
+            //                     .OnComplete(() =>
+            //                     {
+            //                         timeText.transform.DOKill();
+            //                         timeText.gameObject.SetActive(false);
 
-                                 });
-                         });
-                    });
+            //                     });
+            //             });
+            //        });
 
-                });
+            //    });
+            #endregion
 
+            timeText.gameObject.SetActive(true);
+
+            Vector2 startPos = timeText_.anchoredPosition;
+            Sequence seq = DOTween.Sequence();
+
+            seq.Append(timeText_.DOAnchorPosX(250, 0.5f))   // Move to center or visible zone
+               .Append(timeText_.DOAnchorPosX(150, 0.35f))   // Slight back
+               .Append(timeText_.DOAnchorPosX(0, 1f))  // Hold in place
+               .Append(timeText_.DOAnchorPosX(920, 0.35f)) // Exit screen (right side)
+               .OnComplete(() =>
+               {
+                   timeText_.DOKill();
+                   timeText.gameObject.SetActive(false);
+               });
+
+                   cartPlayer.SetActive(false);
 
 
             OnHideParent?.Invoke();
-            timerObj.transform.DOScale(1.35f, 1.75f).SetEase(Ease.OutBack)
+            timerObj.transform.DOScale(1.35f, 2f).SetEase(Ease.OutBack)
                 .OnComplete(() =>
                 {
 

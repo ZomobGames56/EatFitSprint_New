@@ -12,7 +12,6 @@ public class CartData
 
 public class CartBuyManager : MonoBehaviour
 {
-
     public static CartBuyManager instance;
     public CartData[] carts;
 
@@ -24,15 +23,15 @@ public class CartBuyManager : MonoBehaviour
 
     [SerializeField]
     TextMeshProUGUI buyButtonText;
-    // private int CoinUpdateManager.GetCoin() = 100; // Replace this with your real coin system
+
     private void Awake()
     {
         instance = this;
     }
+
     private void Start()
     {
-        // Unlock and show 0th cart
-        carts[0].isUnlocked = true;
+        LoadCartUnlockStatus();
 
         leftButton.onClick.AddListener(() => Navigate(-1));
         rightButton.onClick.AddListener(() => Navigate(1));
@@ -59,12 +58,10 @@ public class CartBuyManager : MonoBehaviour
             carts[i].cartObject.SetActive(i == index);
         }
 
-        // Buy button logic
         if (carts[index].isUnlocked)
         {
-            //buyButton.gameObject.SetActive(false);
             buyButtonText.text = "SELECTED";
-
+            buyButton.interactable = false;
         }
         else
         {
@@ -83,12 +80,31 @@ public class CartBuyManager : MonoBehaviour
         {
             CoinsUpdateManager.SpendCoins(current.cost);
             current.isUnlocked = true;
-            ShowCart(currentIndex); // Refresh
+            SaveCartUnlockStatus(currentIndex);
+            ShowCart(currentIndex);
         }
     }
 
     public int GetSelectedCartIndex()
     {
         return currentIndex;
+    }
+
+    private void SaveCartUnlockStatus(int index)
+    {
+        PlayerPrefs.SetInt("cart_unlocked_" + index, 1);
+        PlayerPrefs.Save();
+    }
+
+    private void LoadCartUnlockStatus()
+    {
+        for (int i = 0; i < carts.Length; i++)
+        {
+            // Cart 0 should always be unlocked
+            if (i == 0 || PlayerPrefs.GetInt("cart_unlocked_" + i, 0) == 1)
+                carts[i].isUnlocked = true;
+            else
+                carts[i].isUnlocked = false;
+        }
     }
 }

@@ -28,6 +28,9 @@ public class PlayerMovement_Ristriction : MonoBehaviour
     float leftRightMoveSpeed;
     [SerializeField]
     float positiveXVal = 2.5f, negativeXVal = -2.5f, yAfterLost;
+
+    [SerializeField]
+    Animator characterAnimator;
     private void Awake()
     {
         instance = this;
@@ -81,7 +84,8 @@ public class PlayerMovement_Ristriction : MonoBehaviour
             float joystickStrength = Mathf.Clamp01(new Vector2(joystick.Horizontal, joystick.Vertical).magnitude);
         
             transform.position += move * moveSpeed * joystickStrength * Time.deltaTime;
-
+        characterAnimator.SetFloat("Blend", move.magnitude);
+             
             if (joystickStrength >= 0.01f)
             {
                 Rotate();
