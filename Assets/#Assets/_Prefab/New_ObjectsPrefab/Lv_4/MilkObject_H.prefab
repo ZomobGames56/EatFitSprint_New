@@ -108,7 +108,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2220871527168252975, guid: 59bd457d4704a6149a8f995965229c76, type: 3}
       propertyPath: m_Name
-      value: Milk (3)
+      value: Milk
       objectReference: {fileID: 0}
     - target: {fileID: 6625294190760636553, guid: 59bd457d4704a6149a8f995965229c76, type: 3}
       propertyPath: m_LocalPosition.x
@@ -170,7 +170,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2220871527168252975, guid: 59bd457d4704a6149a8f995965229c76, type: 3}
       propertyPath: m_Name
-      value: Milk (2)
+      value: Milk
       objectReference: {fileID: 0}
     - target: {fileID: 6625294190760636553, guid: 59bd457d4704a6149a8f995965229c76, type: 3}
       propertyPath: m_LocalPosition.x
@@ -232,7 +232,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2220871527168252975, guid: 59bd457d4704a6149a8f995965229c76, type: 3}
       propertyPath: m_Name
-      value: Milk (1)
+      value: Milk
       objectReference: {fileID: 0}
     - target: {fileID: 6625294190760636553, guid: 59bd457d4704a6149a8f995965229c76, type: 3}
       propertyPath: m_LocalPosition.x
@@ -294,7 +294,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2220871527168252975, guid: 59bd457d4704a6149a8f995965229c76, type: 3}
       propertyPath: m_Name
-      value: Milk (4)
+      value: Milk
       objectReference: {fileID: 0}
     - target: {fileID: 6625294190760636553, guid: 59bd457d4704a6149a8f995965229c76, type: 3}
       propertyPath: m_LocalPosition.x

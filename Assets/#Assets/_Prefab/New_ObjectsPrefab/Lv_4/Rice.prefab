@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8608182146129410525}
   - component: {fileID: 2135558866007529079}
   m_Layer: 0
-  m_Name: Rice_H
+  m_Name: Rice
   m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,8 +72,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5.336359, y: 2.8643522, z: 4.2266874}
-  m_Center: {x: -0.07344389, y: 2.21832, z: -0.7444153}
+  m_Size: {x: 3.5136857, y: 4.330416, z: 4.2266874}
+  m_Center: {x: -0.35080737, y: 2.1390731, z: -0.7444153}
 --- !u!1001 &6849982990241232825
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -92,7 +92,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3413134213268080993, guid: aac2843d7c86f024e9392f229f7cdc19, type: 3}
       propertyPath: m_Name
-      value: rice
+      value: Rice
       objectReference: {fileID: 0}
     - target: {fileID: 4564429243829418638, guid: aac2843d7c86f024e9392f229f7cdc19, type: 3}
       propertyPath: m_LocalScale.x

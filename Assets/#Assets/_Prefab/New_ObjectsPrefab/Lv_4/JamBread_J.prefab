@@ -90,7 +90,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6595589595754940613, guid: 8aadb885074882c43a1e2f3a39fbd5df, type: 3}
       propertyPath: m_Name
-      value: JamBread (3)
+      value: Jam Bread
       objectReference: {fileID: 0}
     - target: {fileID: 7430361211926028182, guid: 8aadb885074882c43a1e2f3a39fbd5df, type: 3}
       propertyPath: m_LocalScale.x
@@ -209,7 +209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6595589595754940613, guid: 8aadb885074882c43a1e2f3a39fbd5df, type: 3}
       propertyPath: m_Name
-      value: JamBread
+      value: Jam Bread
       objectReference: {fileID: 0}
     - target: {fileID: 7430361211926028182, guid: 8aadb885074882c43a1e2f3a39fbd5df, type: 3}
       propertyPath: m_LocalScale.x
@@ -328,7 +328,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6595589595754940613, guid: 8aadb885074882c43a1e2f3a39fbd5df, type: 3}
       propertyPath: m_Name
-      value: JamBread (4)
+      value: Jam Bread
       objectReference: {fileID: 0}
     - target: {fileID: 7430361211926028182, guid: 8aadb885074882c43a1e2f3a39fbd5df, type: 3}
       propertyPath: m_LocalScale.x
@@ -447,7 +447,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6595589595754940613, guid: 8aadb885074882c43a1e2f3a39fbd5df, type: 3}
       propertyPath: m_Name
-      value: JamBread (1)
+      value: Jam Bread
       objectReference: {fileID: 0}
     - target: {fileID: 7430361211926028182, guid: 8aadb885074882c43a1e2f3a39fbd5df, type: 3}
       propertyPath: m_LocalScale.x
@@ -566,7 +566,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6595589595754940613, guid: 8aadb885074882c43a1e2f3a39fbd5df, type: 3}
       propertyPath: m_Name
-      value: JamBread (2)
+      value: Jam Bread
       objectReference: {fileID: 0}
     - target: {fileID: 7430361211926028182, guid: 8aadb885074882c43a1e2f3a39fbd5df, type: 3}
       propertyPath: m_LocalScale.x

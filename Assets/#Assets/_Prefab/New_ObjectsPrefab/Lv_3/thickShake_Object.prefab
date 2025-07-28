@@ -102,7 +102,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5435118902294309117, guid: 850e49730a3fd4e44b96eef46c2e865f, type: 3}
       propertyPath: m_Name
-      value: thick shake (1)
+      value: ThickShake
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -180,7 +180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5435118902294309117, guid: 850e49730a3fd4e44b96eef46c2e865f, type: 3}
       propertyPath: m_Name
-      value: thick shake (4)
+      value: ThickShake
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -258,7 +258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5435118902294309117, guid: 850e49730a3fd4e44b96eef46c2e865f, type: 3}
       propertyPath: m_Name
-      value: thick shake (5)
+      value: ThickShake
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -336,7 +336,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5435118902294309117, guid: 850e49730a3fd4e44b96eef46c2e865f, type: 3}
       propertyPath: m_Name
-      value: thick shake (2)
+      value: ThickShake
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -414,7 +414,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5435118902294309117, guid: 850e49730a3fd4e44b96eef46c2e865f, type: 3}
       propertyPath: m_Name
-      value: thick shake (3)
+      value: ThickShake
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

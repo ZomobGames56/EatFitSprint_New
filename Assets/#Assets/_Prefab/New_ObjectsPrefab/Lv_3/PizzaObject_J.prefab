@@ -101,7 +101,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3714754046601128145
 Transform:
   m_ObjectHideFlags: 0
@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 3720671144598129823}
   - component: {fileID: 4565276470166351488}
   m_Layer: 0
-  m_Name: pizzaBoxParent (1)
+  m_Name: Pizza
   m_TagString: JunkFood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,7 +146,7 @@ Transform:
   m_GameObject: {fileID: 2217236594542576593}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -2.5, y: 0, z: 0}
+  m_LocalPosition: {x: -3, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -465,7 +465,7 @@ GameObject:
   - component: {fileID: 1248148682487867094}
   - component: {fileID: 2653040233754706337}
   m_Layer: 0
-  m_Name: pizzaBoxParent
+  m_Name: Pizza
   m_TagString: JunkFood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -480,7 +480,7 @@ Transform:
   m_GameObject: {fileID: 7105415533354294855}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.6940481, z: -0, w: -0.7199287}
-  m_LocalPosition: {x: 2.5, y: 0, z: 0}
+  m_LocalPosition: {x: 3, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

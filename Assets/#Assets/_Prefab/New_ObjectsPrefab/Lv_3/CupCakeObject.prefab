@@ -106,7 +106,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7256280669917341887, guid: 3f4a79e3d2617214ca057f5b49623e88, type: 3}
       propertyPath: m_Name
-      value: cupcake (2)
+      value: Cupcake
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -184,7 +184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7256280669917341887, guid: 3f4a79e3d2617214ca057f5b49623e88, type: 3}
       propertyPath: m_Name
-      value: cupcake (3)
+      value: Cupcake
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -262,7 +262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7256280669917341887, guid: 3f4a79e3d2617214ca057f5b49623e88, type: 3}
       propertyPath: m_Name
-      value: cupcake (5)
+      value: Cupcake
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -340,7 +340,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7256280669917341887, guid: 3f4a79e3d2617214ca057f5b49623e88, type: 3}
       propertyPath: m_Name
-      value: cupcake (7)
+      value: Cupcake
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -418,7 +418,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7256280669917341887, guid: 3f4a79e3d2617214ca057f5b49623e88, type: 3}
       propertyPath: m_Name
-      value: cupcake (8)
+      value: Cupcake
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -496,7 +496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7256280669917341887, guid: 3f4a79e3d2617214ca057f5b49623e88, type: 3}
       propertyPath: m_Name
-      value: cupcake (4)
+      value: Cupcake
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -574,7 +574,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7256280669917341887, guid: 3f4a79e3d2617214ca057f5b49623e88, type: 3}
       propertyPath: m_Name
-      value: cupcake (6)
+      value: Cupcake
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -652,7 +652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7256280669917341887, guid: 3f4a79e3d2617214ca057f5b49623e88, type: 3}
       propertyPath: m_Name
-      value: cupcake
+      value: Cupcake
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -730,7 +730,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7256280669917341887, guid: 3f4a79e3d2617214ca057f5b49623e88, type: 3}
       propertyPath: m_Name
-      value: cupcake (1)
+      value: Cupcake
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

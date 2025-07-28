@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6738320917131513624
 Transform:
   m_ObjectHideFlags: 0
@@ -106,7 +106,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5615184383606211671, guid: b9a1a71c2eb4090479a6e858adfcff29, type: 3}
       propertyPath: m_Name
-      value: yogurt (2)
+      value: Yogurt
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -188,7 +188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5615184383606211671, guid: b9a1a71c2eb4090479a6e858adfcff29, type: 3}
       propertyPath: m_Name
-      value: yogurt (3)
+      value: Yogurt
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -270,7 +270,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5615184383606211671, guid: b9a1a71c2eb4090479a6e858adfcff29, type: 3}
       propertyPath: m_Name
-      value: yogurt (4)
+      value: Yogurt
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -352,7 +352,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5615184383606211671, guid: b9a1a71c2eb4090479a6e858adfcff29, type: 3}
       propertyPath: m_Name
-      value: yogurt (1)
+      value: Yogurt
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -434,7 +434,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5615184383606211671, guid: b9a1a71c2eb4090479a6e858adfcff29, type: 3}
       propertyPath: m_Name
-      value: yogurt
+      value: Yogurt
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

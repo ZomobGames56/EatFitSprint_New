@@ -106,7 +106,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4363150378809319393, guid: 6441b810a7daf474faa7aad20c8a8f5e, type: 3}
       propertyPath: m_Name
-      value: Pomagranates (4)
+      value: Pomagranates
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -184,7 +184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4363150378809319393, guid: 6441b810a7daf474faa7aad20c8a8f5e, type: 3}
       propertyPath: m_Name
-      value: Pomagranates (6)
+      value: Pomagranates
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -262,7 +262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4363150378809319393, guid: 6441b810a7daf474faa7aad20c8a8f5e, type: 3}
       propertyPath: m_Name
-      value: Pomagranates (7)
+      value: Pomagranates
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -418,7 +418,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4363150378809319393, guid: 6441b810a7daf474faa7aad20c8a8f5e, type: 3}
       propertyPath: m_Name
-      value: Pomagranates (1)
+      value: Pomagranates
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -496,7 +496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4363150378809319393, guid: 6441b810a7daf474faa7aad20c8a8f5e, type: 3}
       propertyPath: m_Name
-      value: Pomagranates (2)
+      value: Pomagranates
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -574,7 +574,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4363150378809319393, guid: 6441b810a7daf474faa7aad20c8a8f5e, type: 3}
       propertyPath: m_Name
-      value: Pomagranates (5)
+      value: Pomagranates
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -652,7 +652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4363150378809319393, guid: 6441b810a7daf474faa7aad20c8a8f5e, type: 3}
       propertyPath: m_Name
-      value: Pomagranates (8)
+      value: Pomagranates
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -730,7 +730,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4363150378809319393, guid: 6441b810a7daf474faa7aad20c8a8f5e, type: 3}
       propertyPath: m_Name
-      value: Pomagranates (3)
+      value: Pomagranates
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

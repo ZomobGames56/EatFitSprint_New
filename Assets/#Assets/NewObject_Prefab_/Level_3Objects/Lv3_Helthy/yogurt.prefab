@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1161903167498756825}
   - component: {fileID: 6578979982999589070}
   m_Layer: 0
-  m_Name: yogurt_cup
+  m_Name: Yogurt
   m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -138,7 +138,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4894751421511422347}
   m_Layer: 0
-  m_Name: yogurt
+  m_Name: Yogurt
   m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

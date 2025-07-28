@@ -44895,6 +44895,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 31565019}
+    - target: {fileID: 3927638391422792173, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5123760859482871613, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -45015,6 +45019,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 31565019}
+    - target: {fileID: 7829942816516091380, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8129123567030850311, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -74256,6 +74264,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 843573869011261456, guid: fde46375eca72a840887d9579aabaa1c, type: 3}
+      propertyPath: 'missions.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: d90aef21405668348ac792d1914ea65e, type: 2}
+    - target: {fileID: 843573869011261456, guid: fde46375eca72a840887d9579aabaa1c, type: 3}
+      propertyPath: 'missions.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 8c4040387835d024389edb41c92751d3, type: 2}
+    - target: {fileID: 843573869011261456, guid: fde46375eca72a840887d9579aabaa1c, type: 3}
+      propertyPath: 'missions.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 4def613c211023f4a8cd8921ca4cf1c8, type: 2}
+    - target: {fileID: 843573869011261456, guid: fde46375eca72a840887d9579aabaa1c, type: 3}
+      propertyPath: 'missions.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 4782269bbf6ff8c4ba1087b4cf333c06, type: 2}
     - target: {fileID: 843573869011261456, guid: fde46375eca72a840887d9579aabaa1c, type: 3}
       propertyPath: 'missionSlots.Array.data[0]'
       value: 

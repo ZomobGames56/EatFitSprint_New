@@ -100,7 +100,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8874077152173373258, guid: 124338989a355384999d08f9c3e91181, type: 3}
       propertyPath: m_Name
-      value: Falafal (1)
+      value: Falafal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -178,7 +178,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8874077152173373258, guid: 124338989a355384999d08f9c3e91181, type: 3}
       propertyPath: m_Name
-      value: Falafal (2)
+      value: Falafal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

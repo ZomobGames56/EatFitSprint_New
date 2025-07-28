@@ -44,7 +44,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4340363306411203333, guid: 10bb9fb47d177774ab80935143dda94d, type: 3}
       propertyPath: m_Name
-      value: banana (1)
+      value: Banana
       objectReference: {fileID: 0}
     - target: {fileID: 5956923526061988052, guid: 10bb9fb47d177774ab80935143dda94d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -106,7 +106,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4340363306411203333, guid: 10bb9fb47d177774ab80935143dda94d, type: 3}
       propertyPath: m_Name
-      value: banana (2)
+      value: Banana
       objectReference: {fileID: 0}
     - target: {fileID: 5956923526061988052, guid: 10bb9fb47d177774ab80935143dda94d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -168,7 +168,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4340363306411203333, guid: 10bb9fb47d177774ab80935143dda94d, type: 3}
       propertyPath: m_Name
-      value: banana
+      value: Banana
       objectReference: {fileID: 0}
     - target: {fileID: 5956923526061988052, guid: 10bb9fb47d177774ab80935143dda94d, type: 3}
       propertyPath: m_LocalScale.x

@@ -100,6 +100,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Samosa
       objectReference: {fileID: 0}
+    - target: {fileID: 8970632502300299414, guid: 8994145e0604e294a9d438e32ebe61d2, type: 3}
+      propertyPath: m_TagString
+      value: JunkFood
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

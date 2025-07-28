@@ -24,6 +24,9 @@ public class PlayerCollisionObstacle : MonoBehaviour
     float yAfterLost, rotationZ, rotateDuration;
     private static readonly HashSet<string> pointDeductObstacles = new() { "Hay", "Box", "Vas", "Dustbin", "Chair" };
     private static readonly HashSet<string> gameOverObstacles = new() { "Car", "WoodCart", "Barrier", "Lamp" };
+
+    [SerializeField]
+    GameObject playerObject;
     #region
     //private void OnTriggerEnter(Collider other)
     //{
@@ -307,6 +310,7 @@ public class PlayerCollisionObstacle : MonoBehaviour
         }
         if (gameOverObstacles.Contains(tag) && !triggerAtOnce)
         {
+            playerObject.SetActive(false);  
             triggerAtOnce = true;
             HY_AudioManager.instance.PlayAudioEffectOnce(crashSound);
 
