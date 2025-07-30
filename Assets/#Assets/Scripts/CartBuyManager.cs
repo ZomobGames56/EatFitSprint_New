@@ -23,6 +23,8 @@ public class CartBuyManager : MonoBehaviour
 
     [SerializeField]
     TextMeshProUGUI buyButtonText;
+    [SerializeField]
+    AudioClip buttonClip;
 
     private void Awake()
     {
@@ -43,7 +45,7 @@ public class CartBuyManager : MonoBehaviour
     private void Navigate(int direction)
     {
         currentIndex += direction;
-
+        HY_AudioManager.instance.PlayAudioEffectOnce(buttonClip);
         // Wrap around
         if (currentIndex < 0) currentIndex = carts.Length - 1;
         if (currentIndex >= carts.Length) currentIndex = 0;

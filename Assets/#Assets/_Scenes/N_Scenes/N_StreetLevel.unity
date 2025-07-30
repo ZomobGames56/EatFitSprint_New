@@ -5660,6 +5660,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &730549170 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3179680499311374646, guid: be10e4cba9a021c4087c59e8921d918d, type: 3}
+  m_PrefabInstance: {fileID: 1057492956}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &749197197
 GameObject:
   m_ObjectHideFlags: 0
@@ -8269,6 +8274,10 @@ PrefabInstance:
       propertyPath: timerBG
       value: 
       objectReference: {fileID: 1530689009}
+    - target: {fileID: 8957000192174808202, guid: be10e4cba9a021c4087c59e8921d918d, type: 3}
+      propertyPath: playerObject
+      value: 
+      objectReference: {fileID: 730549170}
     - target: {fileID: 8957000192174808202, guid: be10e4cba9a021c4087c59e8921d918d, type: 3}
       propertyPath: gameOverScreen
       value: 

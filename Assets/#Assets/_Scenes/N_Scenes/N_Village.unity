@@ -642,6 +642,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9029060 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3179680499311374646, guid: be10e4cba9a021c4087c59e8921d918d, type: 3}
+  m_PrefabInstance: {fileID: 2081092490}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &13477363
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41124,7 +41129,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7971106071523412447, guid: 8c11639c205e7a04ebcd6c34c6827bc9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -82452,6 +82457,10 @@ PrefabInstance:
       propertyPath: timerBG
       value: 
       objectReference: {fileID: 1125500885}
+    - target: {fileID: 8957000192174808202, guid: be10e4cba9a021c4087c59e8921d918d, type: 3}
+      propertyPath: playerObject
+      value: 
+      objectReference: {fileID: 9029060}
     - target: {fileID: 8957000192174808202, guid: be10e4cba9a021c4087c59e8921d918d, type: 3}
       propertyPath: gameOverScreen
       value: 
