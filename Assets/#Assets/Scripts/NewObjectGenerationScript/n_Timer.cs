@@ -102,7 +102,10 @@ public class n_Timer : MonoBehaviour
 
 
     }
-
+    public static void SetSeconds(int i)
+    {
+        instance.seconds += i;
+    }
     void TimeUpAnimationEffect()
     {
         pulseTween.Kill();

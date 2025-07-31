@@ -1,5 +1,8 @@
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Advertisements;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class rewardedads : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListener
@@ -11,8 +14,11 @@ public class rewardedads : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
     //public int REWARDTIMES = 0;
     int typeOfCaller = -1;
     [SerializeField]
-    Button adButtons;
-
+    Button[] adButtons;
+    [SerializeField]
+    float cooldownTime;
+    bool isCooldown;
+    UnityAction collectAmountNotify;
     void Awake()
     {
         // Get the Ad Unit ID for the current platform:
@@ -32,7 +38,8 @@ public class rewardedads : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
         // Disable the button until the ad is ready to show:
         //_showAdButton.interactable = false;
         //LoadAd();
-        adButtons.interactable = false;
+        //adButtons.interactable = false;
+        AdButtonsState(false);
         LoadAd();
 
     }
@@ -56,13 +63,14 @@ public class rewardedads : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
             // _showAdButton.onClick.AddListener(ShowAd);
             // Enable the button for users to click:
             // _showAdButton.interactable = true;
-            adButtons.interactable = true;
-           
+            //adButtons.interactable = true;
+            AdButtonsState(true);
             print("we can ready the button ");
         }
         else
         {
-            adButtons.interactable = false;
+            //adButtons.interactable = false;
+            AdButtonsState(false);
             print("Baand Kaar");
         }
     }
@@ -78,11 +86,7 @@ public class rewardedads : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
     {
         Advertisement.Show(_adUnitId, this);
     }
-    void OnDestroy()
-    {
-        if (adButtons != null)
-            adButtons.onClick.RemoveAllListeners();
-    }
+    
     // Implement the Show Listener's OnUnityAdsShowComplete callback method to determine if the user gets a reward:
 
     public void OnUnityAdsShowComplete(string adUnitId, UnityAdsShowCompletionState showCompletionState)
@@ -90,23 +94,26 @@ public class rewardedads : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
         if (adUnitId.Equals(_adUnitId) && showCompletionState.Equals(UnityAdsShowCompletionState.COMPLETED))
         {
             Debug.Log("Unity Ads Rewarded Ad Completed");
-
+            // Power, Speed, Timer.
             switch (typeOfCaller)
             {
                 case 0:
                     //  HY_HoleBehaviour.instance.IncreaseSizeFromReward();
                     // HY_HoleBehaviour.instance.VFXChnage(1);
+                    //Power
+                    collectAmountNotify?.Invoke();
                     break;
                 case 1:
-                    //  HY_HoleBehaviour.instance.IncreacePowerLevel(1);
-                    //  HY_HoleBehaviour.instance.VFXChnage(2);
+                    //Speed
+                    PlayerMovement_Ristriction.RewardMoveSpeed(15);
                     break;
                 case 2:
-                    //  HY_UIManager.instance.seconds += 5;
-                    //  HY_HoleBehaviour.instance.VFXChnage(3);
+                    //Timer                        
+                    n_Timer.SetSeconds(2);
                     break;
                 case 3:
-                    // HY_CoinMulitiplier.instance.CoinMultipier();
+                    //CoinMultiplier
+                    HY_CoinMulitiplier.instance.CoinMultipier();
                     break;
                 case 4:
                     // GameManager.instance.diamonds += 2;
@@ -118,12 +125,22 @@ public class rewardedads : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
             }
             typeOfCaller = -1;
             // Grant a reward.
+            StartCoroutine(StartCooldown());
+
+        }
+    }
+
+    void AdButtonsState(bool b)
+    {
+        foreach (var button in adButtons)
+        {
+            button.interactable = b;
         }
     }
     private void OnEnable()
     {
        // adButtons.onClick.RemoveAllListeners();
-        adButtons.onClick.AddListener(ShowAd);
+     //   adButtons.onClick.AddListener(ShowAd);
     }
     // Implement Load and Show Listener error callbacks:
     public void OnUnityAdsFailedToLoad(string adUnitId, UnityAdsLoadError error, string message)
@@ -131,8 +148,9 @@ public class rewardedads : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
         Debug.Log($"Error loading Ad Unit {adUnitId}: {error.ToString()} - {message}");
         // Use the error details to determine whether to try to load another ad.
         //_showAdButton.interactable=false;
-        adButtons.onClick.RemoveAllListeners();
-        adButtons.interactable = false;
+        //adButtons.onClick.RemoveAllListeners();
+        //adButtons.interactable = false;
+        AdButtonsState(false);
     }
 
     public void OnUnityAdsShowFailure(string adUnitId, UnityAdsShowError error, string message)
@@ -142,7 +160,23 @@ public class rewardedads : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
         Debug.Log($"Error showing Ad Unit {adUnitId}: {error.ToString()} - {message}");
 
     }
+    private IEnumerator StartCooldown()
+    {
+        isCooldown = true;
+       // adButtons.interactable = false;
+        AdButtonsState(false);
+        float elapsed = 0f;
+        while (elapsed < cooldownTime)
+        {
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
 
+        isCooldown = false;
+
+        // Only enable button if ad is ready again
+        LoadAd();
+    }
     public void OnUnityAdsShowStart(string adUnitId) { }
     public void OnUnityAdsShowClick(string adUnitId) { }
 

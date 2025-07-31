@@ -877,8 +877,8 @@ MonoBehaviour:
   m_Vertical: 1
   m_MovementType: 1
   m_Elasticity: 0.1
-  m_Inertia: 0
-  m_DecelerationRate: 0.135
+  m_Inertia: 1
+  m_DecelerationRate: 0.2
   m_ScrollSensitivity: 50
   m_Viewport: {fileID: 856796224672996488}
   m_HorizontalScrollbar: {fileID: 0}
@@ -3639,9 +3639,9 @@ RectTransform:
   - {fileID: 3267615719398603770}
   m_Father: {fileID: 6246625322568921665}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 410, y: -1329.5834}
   m_SizeDelta: {x: 820, y: 302.7381}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3737707302930174989
@@ -5721,7 +5721,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -5739,7 +5739,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3958923889975851827}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: rewardedads, Assembly-CSharp
+        m_MethodName: MyShowAd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2295514329420793268
 GameObject:
   m_ObjectHideFlags: 0
@@ -6797,9 +6809,9 @@ RectTransform:
   - {fileID: 5500590649766223808}
   m_Father: {fileID: 6246625322568921665}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 410, y: -196.36905}
   m_SizeDelta: {x: 820, y: 302.7381}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8590535792385605171
@@ -8712,7 +8724,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OnRewardNoThanks
+        m_MethodName: OnRewardNoTha4nks
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10366,9 +10378,9 @@ RectTransform:
   - {fileID: 6741854442453900209}
   m_Father: {fileID: 6246625322568921665}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 410, y: -2085.0596}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 820, y: 302.7381}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4424431092239932603
@@ -10923,6 +10935,7 @@ GameObject:
   - component: {fileID: 1189558338377552498}
   - component: {fileID: 6031004420378330678}
   - component: {fileID: 1350498763246495199}
+  - component: {fileID: 9068454409884060954}
   m_Layer: 5
   m_Name: MultiplierBtn
   m_TagString: Untagged
@@ -10988,6 +11001,62 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &9068454409884060954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4138667527472500391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1350498763246495199}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: rewardedads, Assembly-CSharp
+        m_MethodName: MyShowAd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4181924293398044044
 GameObject:
   m_ObjectHideFlags: 0
@@ -12421,7 +12490,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -12439,7 +12508,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 679563783821649108}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: rewardedads, Assembly-CSharp
+        m_MethodName: MyShowAd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4883665076706276786
 GameObject:
   m_ObjectHideFlags: 0
@@ -13322,9 +13403,9 @@ RectTransform:
   - {fileID: 1199142016414338617}
   m_Father: {fileID: 6246625322568921665}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 410, y: -574.1072}
   m_SizeDelta: {x: 820, y: 302.7381}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &804564986327988400
@@ -14308,6 +14389,7 @@ GameObject:
   - component: {fileID: 8432545804611892884}
   - component: {fileID: 7958318866546643998}
   - component: {fileID: 6868199641842425031}
+  - component: {fileID: 7452922935101745118}
   m_Layer: 5
   m_Name: Indigator
   m_TagString: Untagged
@@ -14372,6 +14454,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7452922935101745118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5781880309555327658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a0cc0b9510a7254288b1e149ea48050, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indigetor: {fileID: 6868199641842425031}
+  coinMultiplierTxt: {fileID: 141015445029603384}
+  coinMultiplier: 0
+  rotationSpeed: 400
+  maxRotation: 80
 --- !u!1 &5798384434705713978
 GameObject:
   m_ObjectHideFlags: 0
@@ -14862,9 +14961,9 @@ RectTransform:
   - {fileID: 2048259423171465484}
   m_Father: {fileID: 6246625322568921665}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 410, y: -951.8452}
   m_SizeDelta: {x: 820, y: 302.7381}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6965555726785750612
@@ -17719,7 +17818,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -410.88672, y: 399.14392}
+  m_SizeDelta: {x: -360, y: 1068.2253}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5007433638833841042
 MonoBehaviour:
@@ -18698,7 +18797,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6404922686736843907
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19194,9 +19293,9 @@ RectTransform:
   - {fileID: 2054522832351846386}
   m_Father: {fileID: 6246625322568921665}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 410, y: -1707.3214}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 820, y: 302.7381}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7738065520735538818
@@ -21884,7 +21983,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -21902,7 +22001,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6362537402719810572}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: rewardedads, Assembly-CSharp
+        m_MethodName: MyShowAd
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8489283761656270601
 GameObject:
   m_ObjectHideFlags: 0

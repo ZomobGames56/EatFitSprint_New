@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
     Transform fruitCounter, junkCounter;
 
     [SerializeField]
-    int gameRewardCoins;
+   public int gameRewardCoins;
     [SerializeField]
     TextMeshProUGUI rewardScreenCoinTxt;
     private void Awake()
@@ -68,6 +68,8 @@ public class GameManager : MonoBehaviour
         StartCoroutine(StartFirebaseEvent());
 
     }
+
+    
     private void OnDestroy()
     {
         Destroy(gameObject);

@@ -1,5 +1,6 @@
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PickUpAnimation : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class PickUpAnimation : MonoBehaviour
     public float duration = 0.5f; // Duration of the rotation
     [SerializeField]
     AudioClip objectCollection;
+    [SerializeField]
+    int collectAmount;
     private void Start()
     {
         if (playerTransform == null)
@@ -22,6 +25,7 @@ public class PickUpAnimation : MonoBehaviour
         transform.DORotate(new Vector3(0, rotationAngle, 0), duration, RotateMode.LocalAxisAdd)
                 .SetEase(Ease.InOutSine)
                 .SetLoops(-1, LoopType.Yoyo);
+        collectAmount = 1;
     }
 
     public void OnPickup()
@@ -43,7 +47,7 @@ public class PickUpAnimation : MonoBehaviour
                         if (gameObject.transform.tag == "Fruit")
                         {
                             ParticlePool.instance.PlayEffect(playerTransform.position);
-                           GameManager.instance.fruitCount += 1;
+                           GameManager.instance.fruitCount += collectAmount;
                             GameManager.instance.FruitTextUpdate();
                             GameManager.instance.FruitCounterEffect();
                             GameManager.instance.gameObjects[GameManager.instance.index].SetActive(true);
@@ -55,7 +59,7 @@ public class PickUpAnimation : MonoBehaviour
                         }
                         else if(gameObject.transform.tag =="JunkFood")
                         {
-                            GameManager.instance.junkFoodCount += 1;
+                            GameManager.instance.junkFoodCount += collectAmount;
                             print(gameObject.name);
                             MissionManager.instance.AddMissionProgress(gameObject.name, 1);
                             GameManager.instance.JunkTextUpdate();

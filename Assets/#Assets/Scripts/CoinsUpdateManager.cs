@@ -8,6 +8,8 @@ public class CoinsUpdateManager : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI coinText;
     int currentCoins;
+
+    float coinInFloat;
     private void Awake()
     {
         instance = this;
@@ -28,6 +30,8 @@ public class CoinsUpdateManager : MonoBehaviour
         instance.currentCoins += amount;
         instance.UpdateUI();
         instance.SaveCoins();
+
+       
     }
     public static void SpendCoins(int amount)
     {
@@ -49,13 +53,30 @@ public class CoinsUpdateManager : MonoBehaviour
     }
     void UpdateUI()
     {
-        if (coinText != null)
+        #region //Not in use now
+        //if (coinText != null)
+        //{
+        //    coinText.text = currentCoins.ToString();
+        //}
+        //else
+        //{
+        //    Debug.LogError("CoinText is Not Assinged to CoinManager Object");
+        //}
+        #endregion
+
+        coinInFloat = currentCoins;
+        if (currentCoins >= 10000000)
         {
-            coinText.text = currentCoins.ToString();
+            coinText.text = (coinInFloat / 10000000).ToString("F") + "B";
         }
-        else
+        else if (currentCoins < 10000000 && currentCoins >= 1000000)
         {
-            Debug.LogError("CoinText is Not Assinged to CoinManager Object");
+            coinText.text = (coinInFloat / 1000000).ToString("F") + "M";
+        }
+        else if (currentCoins < 1000000 && currentCoins >= 1000)
+        {
+            coinText.text = (coinInFloat / 1000).ToString("F") + "K";
+
         }
     }
 

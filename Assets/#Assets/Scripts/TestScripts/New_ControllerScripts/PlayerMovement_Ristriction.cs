@@ -51,6 +51,10 @@ public class PlayerMovement_Ristriction : MonoBehaviour
     {
         stopRun = false;
     }
+    public static void RewardMoveSpeed(int val)
+    {
+        instance.moveSpeed += val;
+    }
     private void Update()
     {
         if (!stopRun)
