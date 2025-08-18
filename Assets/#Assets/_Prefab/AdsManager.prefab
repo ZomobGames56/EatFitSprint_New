@@ -46,9 +46,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48639d7cb531aba468472dbb0e93d12b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _androidGameId: 5564803
-  _iOSGameId: 5564802
-  _testMode: 1
+  _androidGameId: 5915469
+  _iOSGameId: 5915468
+  _testMode: 0
 --- !u!114 &1388897349240308600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,5 +77,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _androidAdUnitId: Rewarded_Android
   _iOsAdUnitId: Rewarded_iOS
-  adButtons: []
+  adButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   cooldownTime: 9

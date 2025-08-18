@@ -25,7 +25,7 @@ public class PickUpAnimation : MonoBehaviour
         transform.DORotate(new Vector3(0, rotationAngle, 0), duration, RotateMode.LocalAxisAdd)
                 .SetEase(Ease.InOutSine)
                 .SetLoops(-1, LoopType.Yoyo);
-        collectAmount = 1;
+        collectAmount = 3;
     }
 
     public void OnPickup()

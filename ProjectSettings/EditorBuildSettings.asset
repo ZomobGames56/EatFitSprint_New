@@ -6,17 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/#Assets/_Scenes/N_Scenes/N_Village.unity
+    guid: 17287ac1b0fa422409ab943750b0f774
+  - enabled: 1
+    path: Assets/#Assets/_Scenes/N_Scenes/N_StreetLevel.unity
+    guid: 4fc49d1fc55ae314d93fe17513dc9a6f
+  - enabled: 1
     path: Assets/#Assets/_Scenes/N_Scenes/N_ArabicLevel.unity
     guid: a6ff71ecb804c404f870da6855ca8e83
   - enabled: 0
     path: Assets/#Assets/_Scenes/N_Scenes/N_Roadlevel.unity
     guid: a93ce3c7e8ce1464db249ed149ff7e1b
-  - enabled: 1
-    path: Assets/#Assets/_Scenes/N_Scenes/N_StreetLevel.unity
-    guid: 4fc49d1fc55ae314d93fe17513dc9a6f
-  - enabled: 1
-    path: Assets/#Assets/_Scenes/N_Scenes/N_Village.unity
-    guid: 17287ac1b0fa422409ab943750b0f774
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

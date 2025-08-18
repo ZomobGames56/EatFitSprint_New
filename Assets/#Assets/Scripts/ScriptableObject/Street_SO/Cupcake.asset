@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missionTitle: Cupcake
   missionIcon: {fileID: 21300000, guid: 9621ded2f4d356b4f93160d7cd15746b, type: 3}
-  targetAmount: 12
-  reward: 6
+  targetAmount: 18
+  reward: 10
   ItemName: Cupcake
   currentAmount: 0

@@ -78,7 +78,7 @@ public class rewardedads : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
     public void MyShowAd(int typeOfCaller)
     {
         this.typeOfCaller = typeOfCaller;
-        LoadAd();
+        //LoadAd();
         ShowAd();
     }
     // Implement a method to execute when the user clicks the button:
@@ -109,7 +109,7 @@ public class rewardedads : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
                     break;
                 case 2:
                     //Timer                        
-                    n_Timer.SetSeconds(2);
+                    n_Timer.SetSeconds(5);
                     break;
                 case 3:
                     //CoinMultiplier

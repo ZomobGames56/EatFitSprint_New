@@ -86,6 +86,7 @@ public class InGameTimer : MonoBehaviour
                 fruitThrowBtn.interactable = false;
                 minutes = 0;
                 isGameEnded = true;
+                interstitialUnity.instance.ShowAd();
             }
             else
             {

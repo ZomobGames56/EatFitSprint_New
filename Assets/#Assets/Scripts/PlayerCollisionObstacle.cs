@@ -310,6 +310,7 @@ public class PlayerCollisionObstacle : MonoBehaviour
         }
         if (gameOverObstacles.Contains(tag) && !triggerAtOnce)
         {
+            interstitialUnity.instance.ShowAd();
             playerObject.SetActive(false);  
             triggerAtOnce = true;
             HY_AudioManager.instance.PlayAudioEffectOnce(crashSound);

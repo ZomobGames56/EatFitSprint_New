@@ -2300,6 +2300,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291049199}
   m_Mesh: {fileID: 646251105951805229, guid: bd0688d2b8af18548a96e39e77af47bd, type: 3}
+--- !u!114 &291190558 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9068454409884060954, guid: 45d48679034cd9543adbcc2a7b845c9e, type: 3}
+  m_PrefabInstance: {fileID: 1530689003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &292225287
 GameObject:
   m_ObjectHideFlags: 0
@@ -5660,11 +5671,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &730549170 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3179680499311374646, guid: be10e4cba9a021c4087c59e8921d918d, type: 3}
-  m_PrefabInstance: {fileID: 1057492956}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &749197197
 GameObject:
   m_ObjectHideFlags: 0
@@ -6082,7 +6088,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3566564829796028525, guid: e05c77fa683ec5a48be793a9093ac445, type: 3}
       propertyPath: adButtons.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3566564829796028525, guid: e05c77fa683ec5a48be793a9093ac445, type: 3}
       propertyPath: 'adButtons.Array.data[0]'
@@ -6096,6 +6102,10 @@ PrefabInstance:
       propertyPath: 'adButtons.Array.data[2]'
       value: 
       objectReference: {fileID: 1001613548}
+    - target: {fileID: 3566564829796028525, guid: e05c77fa683ec5a48be793a9093ac445, type: 3}
+      propertyPath: 'adButtons.Array.data[3]'
+      value: 
+      objectReference: {fileID: 291190558}
     - target: {fileID: 5473856861414199721, guid: e05c77fa683ec5a48be793a9093ac445, type: 3}
       propertyPath: m_Name
       value: AdsManager
@@ -8343,6 +8353,10 @@ PrefabInstance:
       propertyPath: firstTimeFight
       value: 
       objectReference: {fileID: 1530689010}
+    - target: {fileID: 2829385439407066244, guid: be10e4cba9a021c4087c59e8921d918d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3179680499311374646, guid: be10e4cba9a021c4087c59e8921d918d, type: 3}
       propertyPath: m_Name
       value: Player 1
@@ -8394,7 +8408,7 @@ PrefabInstance:
     - target: {fileID: 8957000192174808202, guid: be10e4cba9a021c4087c59e8921d918d, type: 3}
       propertyPath: playerObject
       value: 
-      objectReference: {fileID: 730549170}
+      objectReference: {fileID: 438500517}
     - target: {fileID: 8957000192174808202, guid: be10e4cba9a021c4087c59e8921d918d, type: 3}
       propertyPath: gameOverScreen
       value: 
