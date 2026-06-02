@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "627170825523",
-    "project_id": "games-c5112",
-    "storage_bucket": "games-c5112.firebasestorage.app"
+    "project_number": "867856911401",
+    "project_id": "games-5ba8b",
+    "storage_bucket": "games-5ba8b.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:627170825523:android:157018266dce2d417d9a46",
+        "mobilesdk_app_id": "1:867856911401:android:8a3534faf63f8528fbe038",
         "android_client_info": {
           "package_name": "com.playarenagamingstudio.Eatfitsprint"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDGeFamXT3ASGOiECM1uPHM5Azh1LOgTok"
+          "current_key": "AIzaSyC3T9qKhddH852Y9LXrr1__xZ9bLUCh_Og"
         }
       ],
       "services": {

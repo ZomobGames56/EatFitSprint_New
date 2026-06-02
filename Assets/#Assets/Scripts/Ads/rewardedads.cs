@@ -65,7 +65,7 @@ public class rewardedads : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
             // _showAdButton.interactable = true;
             //adButtons.interactable = true;
             AdButtonsState(true);
-            print("we can ready the button ");
+            Debug.Log("we can ready the button ");
         }
         else
         {

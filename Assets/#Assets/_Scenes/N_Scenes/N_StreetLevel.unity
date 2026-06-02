@@ -8346,6 +8346,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1530689016}
     - target: {fileID: 2244109494693106162, guid: be10e4cba9a021c4087c59e8921d918d, type: 3}
+      propertyPath: moveSpeed
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2244109494693106162, guid: be10e4cba9a021c4087c59e8921d918d, type: 3}
       propertyPath: timerUpPanel
       value: 
       objectReference: {fileID: 1530689020}

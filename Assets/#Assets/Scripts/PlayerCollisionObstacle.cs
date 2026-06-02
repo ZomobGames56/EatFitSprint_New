@@ -22,6 +22,7 @@ public class PlayerCollisionObstacle : MonoBehaviour
     AudioClip crashSound;
     [SerializeField]
     float yAfterLost, rotationZ, rotateDuration;
+    bool canTrue;
     private static readonly HashSet<string> pointDeductObstacles = new() { "Hay", "Box", "Vas", "Dustbin", "Chair" };
     private static readonly HashSet<string> gameOverObstacles = new() { "Car", "WoodCart", "Barrier", "Lamp" };
 
@@ -310,8 +311,8 @@ public class PlayerCollisionObstacle : MonoBehaviour
         }
         if (gameOverObstacles.Contains(tag) && !triggerAtOnce)
         {
-            interstitialUnity.instance.ShowAd();
-            playerObject.SetActive(false);  
+
+            playerObject.SetActive(false);
             triggerAtOnce = true;
             HY_AudioManager.instance.PlayAudioEffectOnce(crashSound);
 
@@ -326,6 +327,9 @@ public class PlayerCollisionObstacle : MonoBehaviour
                             .OnUpdate(() =>
                             {
                                 transform.DOMove(new Vector3(transform.position.x, yAfterLost, transform.position.z), 0.2f);
+                            }).OnComplete(() => 
+                            {
+                                interstitialUnity.instance.ShowAd();
                             });
                     });
             }

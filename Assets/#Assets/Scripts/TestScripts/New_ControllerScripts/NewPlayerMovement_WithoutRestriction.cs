@@ -10,10 +10,13 @@ public class NewPlayerMovement_WithoutRestriction : MonoBehaviour
     float moveSpeed = 10f;
     [SerializeField]
     Transform cam;
+    [SerializeField]
+    Animator characterAnimator;
 
     private void Update()
     {
         PlayerMovement();
+       // characterAnimator = GetComponent<Animator>();
     }
 
     /// <summary>
@@ -28,8 +31,8 @@ public class NewPlayerMovement_WithoutRestriction : MonoBehaviour
       
         
             transform.position += move * moveSpeed * Time.deltaTime;
-            // Debug.Log("Transform one is calling");
-       
+        // Debug.Log("Transform one is calling");
+        characterAnimator.SetFloat("Blend", move.magnitude);
 
         if (move.magnitude != 0)
         {

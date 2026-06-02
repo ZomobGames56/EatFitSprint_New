@@ -1,0 +1,1112 @@
+; FBX 7.7.0 project file
+; ----------------------------------------------------
+
+FBXHeaderExtension:  {
+	FBXHeaderVersion: 1004
+	FBXVersion: 7700
+	CreationTimeStamp:  {
+		Version: 1000
+		Year: 2025
+		Month: 8
+		Day: 18
+		Hour: 15
+		Minute: 59
+		Second: 10
+		Millisecond: 375
+	}
+	Creator: "FBX SDK/FBX Plugins version 2020.3.4"
+	OtherFlags:  {
+		TCDefinition: 127
+	}
+	SceneInfo: "SceneInfo::GlobalInfo", "UserData" {
+		Type: "UserData"
+		Version: 100
+		MetaData:  {
+			Version: 100
+			Title: "Created by FBX Exporter from Unity Technologies"
+			Subject: ""
+			Author: "Unity Technologies"
+			Keywords: "Nodes Meshes Materials Textures Cameras Lights Skins Animation"
+			Revision: "1.0"
+			Comment: ""
+		}
+		Properties70:  {
+			P: "Original", "Compound", "", ""
+			P: "Original|ApplicationVendor", "KString", "", "", ""
+			P: "Original|ApplicationName", "KString", "", "", "Unity FBX Exporter"
+			P: "Original|ApplicationVersion", "KString", "", "", "5.1.3"
+			P: "Original|DateTime_GMT", "DateTime", "", "", ""
+			P: "Original|FileName", "KString", "", "", ""
+			P: "LastSaved", "Compound", "", ""
+			P: "LastSaved|ApplicationVendor", "KString", "", "", ""
+			P: "LastSaved|ApplicationName", "KString", "", "", "Unity FBX Exporter"
+			P: "LastSaved|ApplicationVersion", "KString", "", "", "5.1.3"
+			P: "LastSaved|DateTime_GMT", "DateTime", "", "", ""
+		}
+	}
+}
+GlobalSettings:  {
+	Version: 1000
+	Properties70:  {
+		P: "UpAxis", "int", "Integer", "",1
+		P: "UpAxisSign", "int", "Integer", "",1
+		P: "FrontAxis", "int", "Integer", "",2
+		P: "FrontAxisSign", "int", "Integer", "",1
+		P: "CoordAxis", "int", "Integer", "",0
+		P: "CoordAxisSign", "int", "Integer", "",1
+		P: "OriginalUpAxis", "int", "Integer", "",-1
+		P: "OriginalUpAxisSign", "int", "Integer", "",1
+		P: "UnitScaleFactor", "double", "Number", "",1
+		P: "OriginalUnitScaleFactor", "double", "Number", "",1
+		P: "AmbientColor", "ColorRGB", "Color", "",0,0,0
+		P: "DefaultCamera", "KString", "", "", "Producer Perspective"
+		P: "TimeMode", "enum", "", "",0
+		P: "TimeProtocol", "enum", "", "",2
+		P: "SnapOnFrameMode", "enum", "", "",0
+		P: "TimeSpanStart", "KTime", "Time", "",0
+		P: "TimeSpanStop", "KTime", "Time", "",46186158000
+		P: "CustomFrameRate", "double", "Number", "",-1
+		P: "TimeMarker", "Compound", "", ""
+		P: "CurrentTimeMarker", "int", "Integer", "",-1
+	}
+}
+
+; Documents Description
+;------------------------------------------------------------------
+
+Documents:  {
+	Count: 1
+	Document: 2489465970688, "Scene", "Scene" {
+		Properties70:  {
+			P: "SourceObject", "object", "", ""
+			P: "ActiveAnimStackName", "KString", "", "", ""
+		}
+		RootNode: 0
+	}
+}
+
+; Document References
+;------------------------------------------------------------------
+
+References:  {
+}
+
+; Object definitions
+;------------------------------------------------------------------
+
+Definitions:  {
+	Version: 100
+	Count: 35
+	ObjectType: "GlobalSettings" {
+		Count: 1
+	}
+	ObjectType: "Model" {
+		Count: 28
+		PropertyTemplate: "FbxNode" {
+			Properties70:  {
+				P: "QuaternionInterpolate", "enum", "", "",0
+				P: "RotationOffset", "Vector3D", "Vector", "",0,0,0
+				P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
+				P: "ScalingOffset", "Vector3D", "Vector", "",0,0,0
+				P: "ScalingPivot", "Vector3D", "Vector", "",0,0,0
+				P: "TranslationActive", "bool", "", "",0
+				P: "TranslationMin", "Vector3D", "Vector", "",0,0,0
+				P: "TranslationMax", "Vector3D", "Vector", "",0,0,0
+				P: "TranslationMinX", "bool", "", "",0
+				P: "TranslationMinY", "bool", "", "",0
+				P: "TranslationMinZ", "bool", "", "",0
+				P: "TranslationMaxX", "bool", "", "",0
+				P: "TranslationMaxY", "bool", "", "",0
+				P: "TranslationMaxZ", "bool", "", "",0
+				P: "RotationOrder", "enum", "", "",0
+				P: "RotationSpaceForLimitOnly", "bool", "", "",0
+				P: "RotationStiffnessX", "double", "Number", "",0
+				P: "RotationStiffnessY", "double", "Number", "",0
+				P: "RotationStiffnessZ", "double", "Number", "",0
+				P: "AxisLen", "double", "Number", "",10
+				P: "PreRotation", "Vector3D", "Vector", "",0,0,0
+				P: "PostRotation", "Vector3D", "Vector", "",0,0,0
+				P: "RotationActive", "bool", "", "",0
+				P: "RotationMin", "Vector3D", "Vector", "",0,0,0
+				P: "RotationMax", "Vector3D", "Vector", "",0,0,0
+				P: "RotationMinX", "bool", "", "",0
+				P: "RotationMinY", "bool", "", "",0
+				P: "RotationMinZ", "bool", "", "",0
+				P: "RotationMaxX", "bool", "", "",0
+				P: "RotationMaxY", "bool", "", "",0
+				P: "RotationMaxZ", "bool", "", "",0
+				P: "InheritType", "enum", "", "",0
+				P: "ScalingActive", "bool", "", "",0
+				P: "ScalingMin", "Vector3D", "Vector", "",0,0,0
+				P: "ScalingMax", "Vector3D", "Vector", "",1,1,1
+				P: "ScalingMinX", "bool", "", "",0
+				P: "ScalingMinY", "bool", "", "",0
+				P: "ScalingMinZ", "bool", "", "",0
+				P: "ScalingMaxX", "bool", "", "",0
+				P: "ScalingMaxY", "bool", "", "",0
+				P: "ScalingMaxZ", "bool", "", "",0
+				P: "GeometricTranslation", "Vector3D", "Vector", "",0,0,0
+				P: "GeometricRotation", "Vector3D", "Vector", "",0,0,0
+				P: "GeometricScaling", "Vector3D", "Vector", "",1,1,1
+				P: "MinDampRangeX", "double", "Number", "",0
+				P: "MinDampRangeY", "double", "Number", "",0
+				P: "MinDampRangeZ", "double", "Number", "",0
+				P: "MaxDampRangeX", "double", "Number", "",0
+				P: "MaxDampRangeY", "double", "Number", "",0
+				P: "MaxDampRangeZ", "double", "Number", "",0
+				P: "MinDampStrengthX", "double", "Number", "",0
+				P: "MinDampStrengthY", "double", "Number", "",0
+				P: "MinDampStrengthZ", "double", "Number", "",0
+				P: "MaxDampStrengthX", "double", "Number", "",0
+				P: "MaxDampStrengthY", "double", "Number", "",0
+				P: "MaxDampStrengthZ", "double", "Number", "",0
+				P: "PreferedAngleX", "double", "Number", "",0
+				P: "PreferedAngleY", "double", "Number", "",0
+				P: "PreferedAngleZ", "double", "Number", "",0
+				P: "LookAtProperty", "object", "", ""
+				P: "UpVectorProperty", "object", "", ""
+				P: "Show", "bool", "", "",1
+				P: "NegativePercentShapeSupport", "bool", "", "",1
+				P: "DefaultAttributeIndex", "int", "Integer", "",-1
+				P: "Freeze", "bool", "", "",0
+				P: "LODBox", "bool", "", "",0
+				P: "Lcl Translation", "Lcl Translation", "", "A",0,0,0
+				P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+				P: "Lcl Scaling", "Lcl Scaling", "", "A",1,1,1
+				P: "Visibility", "Visibility", "", "A",1
+				P: "Visibility Inheritance", "Visibility Inheritance", "", "",1
+			}
+		}
+	}
+	ObjectType: "Geometry" {
+		Count: 1
+		PropertyTemplate: "FbxMesh" {
+			Properties70:  {
+				P: "Color", "ColorRGB", "Color", "",0.8,0.8,0.8
+				P: "BBoxMin", "Vector3D", "Vector", "",0,0,0
+				P: "BBoxMax", "Vector3D", "Vector", "",0,0,0
+				P: "Primary Visibility", "bool", "", "",1
+				P: "Casts Shadows", "bool", "", "",1
+				P: "Receive Shadows", "bool", "", "",1
+			}
+		}
+	}
+	ObjectType: "Material" {
+		Count: 1
+		PropertyTemplate: "FbxSurfaceLambert" {
+			Properties70:  {
+				P: "ShadingModel", "KString", "", "", "Lambert"
+				P: "MultiLayer", "bool", "", "",0
+				P: "EmissiveColor", "Color", "", "A",0,0,0
+				P: "EmissiveFactor", "Number", "", "A",1
+				P: "AmbientColor", "Color", "", "A",0.2,0.2,0.2
+				P: "AmbientFactor", "Number", "", "A",1
+				P: "DiffuseColor", "Color", "", "A",0.8,0.8,0.8
+				P: "DiffuseFactor", "Number", "", "A",1
+				P: "Bump", "Vector3D", "Vector", "",0,0,0
+				P: "NormalMap", "Vector3D", "Vector", "",0,0,0
+				P: "BumpFactor", "double", "Number", "",1
+				P: "TransparentColor", "Color", "", "A",0,0,0
+				P: "TransparencyFactor", "Number", "", "A",0
+				P: "DisplacementColor", "ColorRGB", "Color", "",0,0,0
+				P: "DisplacementFactor", "double", "Number", "",1
+				P: "VectorDisplacementColor", "ColorRGB", "Color", "",0,0,0
+				P: "VectorDisplacementFactor", "double", "Number", "",1
+			}
+		}
+	}
+	ObjectType: "Texture" {
+		Count: 2
+		PropertyTemplate: "FbxFileTexture" {
+			Properties70:  {
+				P: "TextureTypeUse", "enum", "", "",0
+				P: "Texture alpha", "Number", "", "A",1
+				P: "CurrentMappingType", "enum", "", "",0
+				P: "WrapModeU", "enum", "", "",0
+				P: "WrapModeV", "enum", "", "",0
+				P: "UVSwap", "bool", "", "",0
+				P: "PremultiplyAlpha", "bool", "", "",1
+				P: "Translation", "Vector", "", "A",0,0,0
+				P: "Rotation", "Vector", "", "A",0,0,0
+				P: "Scaling", "Vector", "", "A",1,1,1
+				P: "TextureRotationPivot", "Vector3D", "Vector", "",0,0,0
+				P: "TextureScalingPivot", "Vector3D", "Vector", "",0,0,0
+				P: "CurrentTextureBlendMode", "enum", "", "",1
+				P: "UVSet", "KString", "", "", "default"
+				P: "UseMaterial", "bool", "", "",0
+				P: "UseMipMap", "bool", "", "",0
+			}
+		}
+	}
+	ObjectType: "Video" {
+		Count: 2
+		PropertyTemplate: "FbxVideo" {
+			Properties70:  {
+				P: "Path", "KString", "XRefUrl", "", ""
+				P: "RelPath", "KString", "XRefUrl", "", ""
+				P: "Color", "ColorRGB", "Color", "",0.8,0.8,0.8
+				P: "ClipIn", "KTime", "Time", "",0
+				P: "ClipOut", "KTime", "Time", "",0
+				P: "Offset", "KTime", "Time", "",0
+				P: "PlaySpeed", "double", "Number", "",0
+				P: "FreeRunning", "bool", "", "",0
+				P: "Loop", "bool", "", "",0
+				P: "Mute", "bool", "", "",0
+				P: "AccessMode", "enum", "", "",0
+				P: "ImageSequence", "bool", "", "",0
+				P: "ImageSequenceOffset", "int", "Integer", "",0
+				P: "FrameRate", "double", "Number", "",0
+				P: "LastFrame", "int", "Integer", "",0
+				P: "Width", "int", "Integer", "",0
+				P: "Height", "int", "Integer", "",0
+				P: "StartFrame", "int", "Integer", "",0
+				P: "StopFrame", "int", "Integer", "",0
+				P: "InterlaceMode", "enum", "", "",0
+			}
+		}
+	}
+}
+
+; Object properties
+;------------------------------------------------------------------
+
+Objects:  {
+	Geometry: 2489415173648, "Geometry::Scene", "Mesh" {
+		Vertices: *36 {
+			a: -1200,0,1200,-1200,0,-1200,1200,0,-1200,1200,0,1200,1200,-125.956988334656,1381.66236877441,-1200,-125.956988334656,1381.66236877441,-1200,-125.956988334656,-1382.30123519897,1200,-125.956988334656,-1382.30123519897,1200,-131.401216983795,2943.84346008301,-1200,-131.401216983795,2943.84346008301,-1200,-131.401216983795,-2949.9755859375,1200,-131.401216983795,-2949.9755859375
+		} 
+		PolygonVertexIndex: *30 {
+			a: 0,2,-2,0,3,-3,3,5,-5,3,0,-6,1,7,-7,1,2,-8,4,9,-9,4,5,-10,6,11,-11,6,7,-12
+		} 
+		GeometryVersion: 124
+		LayerElementNormal: 0 {
+			Version: 102
+			Name: "Normals"
+			MappingInformationType: "ByPolygonVertex"
+			ReferenceInformationType: "Direct"
+			Normals: *90 {
+				a: -0,1,0,-0,1,0,-0,1,0,-0,1,0,-0,1,0,-0,1,0,-0,0.821788251399994,0.569793105125427,-0,0.821788251399994,0.569793105125427,-0,0.821788251399994,0.569793105125427,-0,0.821788251399994,0.569793105125427,-0,0.821788251399994,0.569793105125427,-0,0.821788251399994,0.569793105125427,-0,0.822723150253296,-0.568442225456238,-0,0.822723150253296,-0.568442225456238,-0,0.822723150253296,-0.568442225456238,-0,0.822723150253296,-0.568442225456238,-0,0.822723150253296,-0.568442225456238,-0,0.822723150253296,-0.568442225456238,-0,0.999993920326233,0.0034849988296628,-0,0.999993920326233,0.0034849988296628,-0,0.999993920326233,0.0034849988296628,-0,0.999993920326233,0.0034849988296628,-0,0.999993920326233,0.0034849988296628,-0,0.999993920326233,0.0034849988296628,-0,0.999994039535522,-0.00347278756089509,-0,0.999994039535522,-0.00347278756089509,-0,0.999994039535522,-0.00347278756089509,-0,0.999994039535522,-0.00347278756089509,-0,0.999994039535522,-0.00347278756089509,-0,0.999994039535522,-0.00347278756089509
+			} 
+			NormalsW: *30 {
+				a: 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+			} 
+		}
+		LayerElementBinormal: 0 {
+			Version: 102
+			Name: "Binormals"
+			MappingInformationType: "ByPolygonVertex"
+			ReferenceInformationType: "Direct"
+			Binormals: *90 {
+				a: -1,-0,-0,-1,-0,-0,-1,-0,-0,-1,-0,-0,-1,-0,-0,-1,-0,-0,-1.00000011920929,-0,-0,-1.00000011920929,-0,-0,-1,-0,-0,-1.00000011920929,-0,-0,-1,-0,-0,-1.00000011920929,-0,-0,-0.999999940395355,-0,0,-0.999999940395355,-0,0,-0.999999940395355,-0,0,-0.999999940395355,-0,0,-0.999999940395355,-0,0,-0.999999940395355,-0,0,-1,-0,-0,-1,-0,-0,-1,-0,-0,-1,-0,-0,-1,-0,-0,-1,-0,-0,-1.00000011920929,-0,0,-1.00000011920929,-0,0,-1.00000011920929,-0,0,-1.00000011920929,-0,0,-1.00000011920929,-0,0,-1.00000011920929,-0,0
+			} 
+			BinormalsW: *30 {
+				a: 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+			} 
+
+		}
+		LayerElementTangent: 0 {
+			Version: 102
+			Name: "Tangents"
+			MappingInformationType: "ByPolygonVertex"
+			ReferenceInformationType: "Direct"
+			Tangents: *90 {
+				a: -0,0,-1,-0,0,-1,-0,0,-1,-0,0,-1,-0,0,-1,-0,0,-1,-0,0.569793105125427,-0.821788251399994,-0,0.569793105125427,-0.821788251399994,-0,0.569793105125427,-0.821788132190704,-0,0.569793105125427,-0.821788251399994,-0,0.569793105125427,-0.821788132190704,-0,0.569793105125427,-0.821788251399994,-0,-0.568442225456238,-0.822723150253296,-0,-0.568442225456238,-0.822723150253296,-0,-0.568442225456238,-0.822723150253296,-0,-0.568442225456238,-0.822723150253296,-0,-0.568442225456238,-0.822723150253296,-0,-0.568442225456238,-0.822723150253296,-0,0.00348499859683216,-0.999993920326233,-0,0.0034849988296628,-0.999993920326233,-0,0.00348499859683216,-0.999993920326233,-0,0.00348499859683216,-0.999993920326233,-0,0.00348499859683216,-0.999993920326233,-0,0.0034849988296628,-0.999993920326233,-0,-0.00347278756089509,-0.999994039535522,-0,-0.00347278779372573,-0.999994039535522,-0,-0.0034727870952338,-0.999994039535522,-0,-0.00347278756089509,-0.999994039535522,-0,-0.00347278756089509,-0.999994039535522,-0,-0.00347278779372573,-0.999994039535522
+			} 
+			TangentsW: *30 {
+				a: 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+			} 
+		}
+		LayerElementUV: 0 {
+			Version: 101
+			Name: "UVSet0"
+			MappingInformationType: "ByPolygonVertex"
+			ReferenceInformationType: "IndexToDirect"
+			UV: *40 {
+				a: 0.000372321694158018,0.999500393867493,0.495856046676636,0.999500453472137,0.495856046676636,0.504013240337372,0.000372320413589478,0.504013240337372,0.697088420391083,0.00172233581542969,0.65145069360733,0.00172233581542969,0.65145069360733,0.497206926345825,0.697088420391083,0.497206896543503,0.699269354343414,0.497646450996399,0.745015680789948,0.497646450996399,0.745015680789948,0.00216197967529297,0.699269413948059,0.00216197967529297,0.650265872478485,0.000499486923217773,0.32774943113327,0.000499500602018088,0.327749401330948,0.495986968278885,0.650265872478485,0.495986998081207,0.000372324546333402,0.497684985399246,0.324021488428116,0.497684955596924,0.324021518230438,0.00219547748565674,0.000372320413589478,0.00219547748565674
+			} 
+			UVIndex: *30 {
+				a: 0,2,1,0,3,2,4,6,5,4,7,6,8,10,9,8,11,10,12,14,13,12,15,14,16,18,17,16,19,18
+			} 
+		}
+		LayerElementMaterial: 0 {
+			Version: 101
+			Name: "Material"
+			MappingInformationType: "AllSame"
+			ReferenceInformationType: "IndexToDirect"
+			Materials: *1 {
+				a: 0
+			} 
+		}
+		Layer: 0 {
+			Version: 100
+			LayerElement:  {
+				Type: "LayerElementNormal"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementBinormal"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementTangent"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementMaterial"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementUV"
+				TypedIndex: 0
+			}
+		}
+	}
+	Model: 2488982405296, "Model::Village_Roads", "Null" {
+		Version: 232
+		Properties70:  {
+			P: "RotationOrder", "enum", "", "",4
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 2488982415296, "Model::village_road_lo__13_", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationOrder", "enum", "", "",4
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,0,-4560.00366210938
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",-0,90,0
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1.89999997615814,1.89999997615814,1.89999997615814
+		}
+		Shading: W
+		Culling: "CullingOff"
+	}
+	Model: 2488982397296, "Model::village_road_lo__17_", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationOrder", "enum", "", "",4
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0.00217437700484879,0,13680.0048828125
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",-0,90,0
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1.89999997615814,1.89999997615814,1.89999997615814
+		}
+		Shading: W
+		Culling: "CullingOff"
+	}
+	Model: 2474515905424, "Model::village_road_lo__4_", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationOrder", "enum", "", "",4
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0.00579833940719254,0,36479.9957275391
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",-0,90,0
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1.89999997615814,1.89999997615814,1.89999997615814
+		}
+		Shading: W
+		Culling: "CullingOff"
+	}
+	Model: 2474515917424, "Model::village_road_lo__15_", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationOrder", "enum", "", "",4
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0.00217437700484879,0,4560.00366210938
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",-0,90,0
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1.89999997615814,1.89999997615814,1.89999997615814
+		}
+		Shading: W
+		Culling: "CullingOff"
+	}
+	Model: 2474515909424, "Model::village_road_lo__2_", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationOrder", "enum", "", "",4
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0.00434875473729335,0,27359.9914550781
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",-0,90,0
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1.89999997615814,1.89999997615814,1.89999997615814
+		}
+		Shading: W
+		Culling: "CullingOff"
+	}
+	Model: 2483366754160, "Model::village_road_lo__12_", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationOrder", "enum", "", "",4
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-0.00144958539749496,0,-9120.00122070312
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",-0,90,0
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1.89999997615814,1.89999997615814,1.89999997615814
+		}
+		Shading: W
+		Culling: "CullingOff"
+	}
+	Model: 2483366748160, "Model::village_road_lo__3_", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationOrder", "enum", "", "",4
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0.00507354707224295,0,31919.9920654297
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",-0,90,0
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1.89999997615814,1.89999997615814,1.89999997615814
+		}
+		Shading: W
+		Culling: "CullingOff"
+	}
+	Model: 2483366762160, "Model::village_road_lo__11_", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationOrder", "enum", "", "",4
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-0.00217437773244455,0,-13680.0109863281
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",-0,90,0
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1.89999997615814,1.89999997615814,1.89999997615814
+		}
+		Shading: W
+		Culling: "CullingOff"
+	}
+	Model: 2484310887328, "Model::village_road_lo__19_", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationOrder", "enum", "", "",4
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0.0086975094745867,0,54719.9951171875
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",-0,90,0
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1.89999997615814,1.89999997615814,1.89999997615814
+		}
+		Shading: W
+		Culling: "CullingOff"
+	}
+	Model: 2484310909328, "Model::village_road_lo__22_", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationOrder", "enum", "", "",4
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0.0108718872070312,0,68400
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",-0,90,0
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1.89999997615814,1.89999997615814,1.89999997615814
+		}
+		Shading: W
+		Culling: "CullingOff"
+	}
+	Model: 2480460449344, "Model::village_road_lo__16_", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationOrder", "enum", "", "",4
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0.00217437700484879,0,9120.00122070312
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",-0,90,0
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1.89999997615814,1.89999997615814,1.89999997615814
+		}
+		Shading: W
+		Culling: "CullingOff"
+	}
+	Model: 2480460453344, "Model::village_road_lo__25_", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationOrder", "enum", "", "",4
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0.0137710565468296,0,82080.0048828125
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",-0,90,0
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1.89999997615814,1.89999997615814,1.89999997615814
+		}
+		Shading: W
+		Culling: "CullingOff"
+	}
+	Model: 2484067292896, "Model::village_road_lo__5_", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationOrder", "enum", "", "",4
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0.0079727171396371,0,41039.9963378906
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",-0,90,0
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1.89999997615814,1.89999997615814,1.89999997615814
+		}
+		Shading: W
+		Culling: "CullingOff"
+	}
+	Model: 2486029741616, "Model::village_road_lo__1_", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationOrder", "enum", "", "",4
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0.00362396203854587,0,22799.9908447266
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",-0,90,0
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1.89999997615814,1.89999997615814,1.89999997615814
+		}
+		Shading: W
+		Culling: "CullingOff"
+	}
+	Model: 2493226954112, "Model::village_road_lo__18_", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationOrder", "enum", "", "",4
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0.00289916970359627,0,91200
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",-0,90,0
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1.89999997615814,1.89999997615814,1.89999997615814
+		}
+		Shading: W
+		Culling: "CullingOff"
+	}
+	Model: 2493226956112, "Model::village_road_lo__10_", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationOrder", "enum", "", "",4
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-0.00362396240234375,0,-27360.009765625
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",-0,90,0
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1.89999997615814,1.89999997615814,1.89999997615814
+		}
+		Shading: W
+		Culling: "CullingOff"
+	}
+	Model: 2493226926112, "Model::village_road_lo__21_", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationOrder", "enum", "", "",4
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0.0101470941444859,0,63840.0024414062
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",-0,90,0
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1.89999997615814,1.89999997615814,1.89999997615814
+		}
+		Shading: W
+		Culling: "CullingOff"
+	}
+	Model: 2493226958112, "Model::village_road_lo__7_", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationOrder", "enum", "", "",4
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0.0079727171396371,0,50159.9975585938
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",-0,90,0
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1.89999997615814,1.89999997615814,1.89999997615814
+		}
+		Shading: W
+		Culling: "CullingOff"
+	}
+	Model: 2493226942112, "Model::village_road_lo", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationOrder", "enum", "", "",4
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0.00289916970359627,0,18239.990234375
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",-0,90,0
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1.89999997615814,1.89999997615814,1.89999997615814
+		}
+		Shading: W
+		Culling: "CullingOff"
+	}
+	Model: 2493226928112, "Model::village_road_lo__23_", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationOrder", "enum", "", "",4
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0.0115966795419808,0,72960.0036621094
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",-0,90,0
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1.89999997615814,1.89999997615814,1.89999997615814
+		}
+		Shading: W
+		Culling: "CullingOff"
+	}
+	Model: 2493226960112, "Model::village_road_lo__20_", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationOrder", "enum", "", "",4
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0.00942230180953629,0,59279.9987792969
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",-0,90,0
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1.89999997615814,1.89999997615814,1.89999997615814
+		}
+		Shading: W
+		Culling: "CullingOff"
+	}
+	Model: 2493226950112, "Model::village_road_lo__24_", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationOrder", "enum", "", "",4
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0.0137710565468296,0,77520.0073242188
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",-0,90,0
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1.89999997615814,1.89999997615814,1.89999997615814
+		}
+		Shading: W
+		Culling: "CullingOff"
+	}
+	Model: 2493226944112, "Model::village_road_lo__9_", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationOrder", "enum", "", "",4
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-0.00362396240234375,0,-22800.0122070312
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",-0,90,0
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1.89999997615814,1.89999997615814,1.89999997615814
+		}
+		Shading: W
+		Culling: "CullingOff"
+	}
+	Model: 2493226932112, "Model::village_road_lo__26_", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationOrder", "enum", "", "",4
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0.0137710565468296,0,86640.0024414062
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",-0,90,0
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1.89999997615814,1.89999997615814,1.89999997615814
+		}
+		Shading: W
+		Culling: "CullingOff"
+	}
+	Model: 2493226946112, "Model::village_road_lo__8_", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationOrder", "enum", "", "",4
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-0.00289917006739415,0,-18240.0085449219
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",-0,90,0
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1.89999997615814,1.89999997615814,1.89999997615814
+		}
+		Shading: W
+		Culling: "CullingOff"
+	}
+	Model: 2493226934112, "Model::village_road_lo__6_", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationOrder", "enum", "", "",4
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0.0079727171396371,0,45599.9938964844
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",-0,90,0
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1.89999997615814,1.89999997615814,1.89999997615814
+		}
+		Shading: W
+		Culling: "CullingOff"
+	}
+	Model: 2493226948112, "Model::village_road_lo__14_", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationOrder", "enum", "", "",4
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",-0,90,0
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1.89999997615814,1.89999997615814,1.89999997615814
+		}
+		Shading: W
+		Culling: "CullingOff"
+	}
+	Material: 2489415028784, "Material::MAT_village_road", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "AmbientColor", "Color", "", "A",0,0,0
+			P: "DiffuseColor", "Color", "", "A",1,1,1
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0,0,0
+			P: "Diffuse", "Vector3D", "Vector", "",1,1,1
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Video: 2490709265408, "Video::DiffuseColor_Texture", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "E:\EatToFit_2.O\EatToFit2.0\Assets\village_road_lo_lambert1_BaseColor.1001.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\village_road_lo_lambert1_BaseColor.1001.png"
+		}
+		UseMipMap: 0
+		Filename: "E:\EatToFit_2.O\EatToFit2.0\Assets\village_road_lo_lambert1_BaseColor.1001.png"
+		RelativeFilename: "..\village_road_lo_lambert1_BaseColor.1001.png"
+	}
+	Video: 2490709265888, "Video::NormalMap_Texture", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "E:\EatToFit_2.O\EatToFit2.0\Assets\sohel_touched\textures\mesh_tex\village_road_lo_lambert1_Normal.1001.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\sohel_touched\textures\mesh_tex\village_road_lo_lambert1_Normal.1001.png"
+		}
+		UseMipMap: 0
+		Filename: "E:\EatToFit_2.O\EatToFit2.0\Assets\sohel_touched\textures\mesh_tex\village_road_lo_lambert1_Normal.1001.png"
+		RelativeFilename: "..\sohel_touched\textures\mesh_tex\village_road_lo_lambert1_Normal.1001.png"
+	}
+	Texture: 2490709264448, "Texture::DiffuseColor_Texture", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::DiffuseColor_Texture"
+		Media: "Video::DiffuseColor_Texture"
+		FileName: "E:\EatToFit_2.O\EatToFit2.0\Assets\village_road_lo_lambert1_BaseColor.1001.png"
+		RelativeFilename: "..\village_road_lo_lambert1_BaseColor.1001.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2490709264928, "Texture::NormalMap_Texture", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::NormalMap_Texture"
+		Media: "Video::NormalMap_Texture"
+		FileName: "E:\EatToFit_2.O\EatToFit2.0\Assets\sohel_touched\textures\mesh_tex\village_road_lo_lambert1_Normal.1001.png"
+		RelativeFilename: "..\sohel_touched\textures\mesh_tex\village_road_lo_lambert1_Normal.1001.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+}
+
+; Object connections
+;------------------------------------------------------------------
+
+Connections:  {
+	
+	;Model::Village_Roads, Model::RootNode
+	C: "OO",2488982405296,0
+	
+	;Model::village_road_lo__13_, Model::Village_Roads
+	C: "OO",2488982415296,2488982405296
+	
+	;Model::village_road_lo__17_, Model::Village_Roads
+	C: "OO",2488982397296,2488982405296
+	
+	;Model::village_road_lo__4_, Model::Village_Roads
+	C: "OO",2474515905424,2488982405296
+	
+	;Model::village_road_lo__15_, Model::Village_Roads
+	C: "OO",2474515917424,2488982405296
+	
+	;Model::village_road_lo__2_, Model::Village_Roads
+	C: "OO",2474515909424,2488982405296
+	
+	;Model::village_road_lo__12_, Model::Village_Roads
+	C: "OO",2483366754160,2488982405296
+	
+	;Model::village_road_lo__3_, Model::Village_Roads
+	C: "OO",2483366748160,2488982405296
+	
+	;Model::village_road_lo__11_, Model::Village_Roads
+	C: "OO",2483366762160,2488982405296
+	
+	;Model::village_road_lo__19_, Model::Village_Roads
+	C: "OO",2484310887328,2488982405296
+	
+	;Model::village_road_lo__22_, Model::Village_Roads
+	C: "OO",2484310909328,2488982405296
+	
+	;Model::village_road_lo__16_, Model::Village_Roads
+	C: "OO",2480460449344,2488982405296
+	
+	;Model::village_road_lo__25_, Model::Village_Roads
+	C: "OO",2480460453344,2488982405296
+	
+	;Model::village_road_lo__5_, Model::Village_Roads
+	C: "OO",2484067292896,2488982405296
+	
+	;Model::village_road_lo__1_, Model::Village_Roads
+	C: "OO",2486029741616,2488982405296
+	
+	;Model::village_road_lo__18_, Model::Village_Roads
+	C: "OO",2493226954112,2488982405296
+	
+	;Model::village_road_lo__10_, Model::Village_Roads
+	C: "OO",2493226956112,2488982405296
+	
+	;Model::village_road_lo__21_, Model::Village_Roads
+	C: "OO",2493226926112,2488982405296
+	
+	;Model::village_road_lo__7_, Model::Village_Roads
+	C: "OO",2493226958112,2488982405296
+	
+	;Model::village_road_lo, Model::Village_Roads
+	C: "OO",2493226942112,2488982405296
+	
+	;Model::village_road_lo__23_, Model::Village_Roads
+	C: "OO",2493226928112,2488982405296
+	
+	;Model::village_road_lo__20_, Model::Village_Roads
+	C: "OO",2493226960112,2488982405296
+	
+	;Model::village_road_lo__24_, Model::Village_Roads
+	C: "OO",2493226950112,2488982405296
+	
+	;Model::village_road_lo__9_, Model::Village_Roads
+	C: "OO",2493226944112,2488982405296
+	
+	;Model::village_road_lo__26_, Model::Village_Roads
+	C: "OO",2493226932112,2488982405296
+	
+	;Model::village_road_lo__8_, Model::Village_Roads
+	C: "OO",2493226946112,2488982405296
+	
+	;Model::village_road_lo__6_, Model::Village_Roads
+	C: "OO",2493226934112,2488982405296
+	
+	;Model::village_road_lo__14_, Model::Village_Roads
+	C: "OO",2493226948112,2488982405296
+	
+	;Material::MAT_village_road, Model::village_road_lo__13_
+	C: "OO",2489415028784,2488982415296
+	
+	;Geometry::Scene, Model::village_road_lo__13_
+	C: "OO",2489415173648,2488982415296
+	
+	;Material::MAT_village_road, Model::village_road_lo__17_
+	C: "OO",2489415028784,2488982397296
+	
+	;Geometry::Scene, Model::village_road_lo__17_
+	C: "OO",2489415173648,2488982397296
+	
+	;Material::MAT_village_road, Model::village_road_lo__4_
+	C: "OO",2489415028784,2474515905424
+	
+	;Geometry::Scene, Model::village_road_lo__4_
+	C: "OO",2489415173648,2474515905424
+	
+	;Material::MAT_village_road, Model::village_road_lo__15_
+	C: "OO",2489415028784,2474515917424
+	
+	;Geometry::Scene, Model::village_road_lo__15_
+	C: "OO",2489415173648,2474515917424
+	
+	;Material::MAT_village_road, Model::village_road_lo__2_
+	C: "OO",2489415028784,2474515909424
+	
+	;Geometry::Scene, Model::village_road_lo__2_
+	C: "OO",2489415173648,2474515909424
+	
+	;Material::MAT_village_road, Model::village_road_lo__12_
+	C: "OO",2489415028784,2483366754160
+	
+	;Geometry::Scene, Model::village_road_lo__12_
+	C: "OO",2489415173648,2483366754160
+	
+	;Material::MAT_village_road, Model::village_road_lo__3_
+	C: "OO",2489415028784,2483366748160
+	
+	;Geometry::Scene, Model::village_road_lo__3_
+	C: "OO",2489415173648,2483366748160
+	
+	;Material::MAT_village_road, Model::village_road_lo__11_
+	C: "OO",2489415028784,2483366762160
+	
+	;Geometry::Scene, Model::village_road_lo__11_
+	C: "OO",2489415173648,2483366762160
+	
+	;Material::MAT_village_road, Model::village_road_lo__19_
+	C: "OO",2489415028784,2484310887328
+	
+	;Geometry::Scene, Model::village_road_lo__19_
+	C: "OO",2489415173648,2484310887328
+	
+	;Material::MAT_village_road, Model::village_road_lo__22_
+	C: "OO",2489415028784,2484310909328
+	
+	;Geometry::Scene, Model::village_road_lo__22_
+	C: "OO",2489415173648,2484310909328
+	
+	;Material::MAT_village_road, Model::village_road_lo__16_
+	C: "OO",2489415028784,2480460449344
+	
+	;Geometry::Scene, Model::village_road_lo__16_
+	C: "OO",2489415173648,2480460449344
+	
+	;Material::MAT_village_road, Model::village_road_lo__25_
+	C: "OO",2489415028784,2480460453344
+	
+	;Geometry::Scene, Model::village_road_lo__25_
+	C: "OO",2489415173648,2480460453344
+	
+	;Material::MAT_village_road, Model::village_road_lo__5_
+	C: "OO",2489415028784,2484067292896
+	
+	;Geometry::Scene, Model::village_road_lo__5_
+	C: "OO",2489415173648,2484067292896
+	
+	;Material::MAT_village_road, Model::village_road_lo__1_
+	C: "OO",2489415028784,2486029741616
+	
+	;Geometry::Scene, Model::village_road_lo__1_
+	C: "OO",2489415173648,2486029741616
+	
+	;Material::MAT_village_road, Model::village_road_lo__18_
+	C: "OO",2489415028784,2493226954112
+	
+	;Geometry::Scene, Model::village_road_lo__18_
+	C: "OO",2489415173648,2493226954112
+	
+	;Material::MAT_village_road, Model::village_road_lo__10_
+	C: "OO",2489415028784,2493226956112
+	
+	;Geometry::Scene, Model::village_road_lo__10_
+	C: "OO",2489415173648,2493226956112
+	
+	;Material::MAT_village_road, Model::village_road_lo__21_
+	C: "OO",2489415028784,2493226926112
+	
+	;Geometry::Scene, Model::village_road_lo__21_
+	C: "OO",2489415173648,2493226926112
+	
+	;Material::MAT_village_road, Model::village_road_lo__7_
+	C: "OO",2489415028784,2493226958112
+	
+	;Geometry::Scene, Model::village_road_lo__7_
+	C: "OO",2489415173648,2493226958112
+	
+	;Material::MAT_village_road, Model::village_road_lo
+	C: "OO",2489415028784,2493226942112
+	
+	;Geometry::Scene, Model::village_road_lo
+	C: "OO",2489415173648,2493226942112
+	
+	;Material::MAT_village_road, Model::village_road_lo__23_
+	C: "OO",2489415028784,2493226928112
+	
+	;Geometry::Scene, Model::village_road_lo__23_
+	C: "OO",2489415173648,2493226928112
+	
+	;Material::MAT_village_road, Model::village_road_lo__20_
+	C: "OO",2489415028784,2493226960112
+	
+	;Geometry::Scene, Model::village_road_lo__20_
+	C: "OO",2489415173648,2493226960112
+	
+	;Material::MAT_village_road, Model::village_road_lo__24_
+	C: "OO",2489415028784,2493226950112
+	
+	;Geometry::Scene, Model::village_road_lo__24_
+	C: "OO",2489415173648,2493226950112
+	
+	;Material::MAT_village_road, Model::village_road_lo__9_
+	C: "OO",2489415028784,2493226944112
+	
+	;Geometry::Scene, Model::village_road_lo__9_
+	C: "OO",2489415173648,2493226944112
+	
+	;Material::MAT_village_road, Model::village_road_lo__26_
+	C: "OO",2489415028784,2493226932112
+	
+	;Geometry::Scene, Model::village_road_lo__26_
+	C: "OO",2489415173648,2493226932112
+	
+	;Material::MAT_village_road, Model::village_road_lo__8_
+	C: "OO",2489415028784,2493226946112
+	
+	;Geometry::Scene, Model::village_road_lo__8_
+	C: "OO",2489415173648,2493226946112
+	
+	;Material::MAT_village_road, Model::village_road_lo__6_
+	C: "OO",2489415028784,2493226934112
+	
+	;Geometry::Scene, Model::village_road_lo__6_
+	C: "OO",2489415173648,2493226934112
+	
+	;Material::MAT_village_road, Model::village_road_lo__14_
+	C: "OO",2489415028784,2493226948112
+	
+	;Geometry::Scene, Model::village_road_lo__14_
+	C: "OO",2489415173648,2493226948112
+	
+	;Texture::DiffuseColor_Texture, Material::MAT_village_road
+	C: "OO",2490709264448,2489415028784
+	
+	;Texture::NormalMap_Texture, Material::MAT_village_road
+	C: "OO",2490709264928,2489415028784
+	
+	;Texture::DiffuseColor_Texture, Material::MAT_village_road
+	C: "OP",2490709264448,2489415028784, "DiffuseColor"
+	
+	;Texture::NormalMap_Texture, Material::MAT_village_road
+	C: "OP",2490709264928,2489415028784, "NormalMap"
+	
+	;Video::DiffuseColor_Texture, Texture::DiffuseColor_Texture
+	C: "OO",2490709265408,2490709264448
+	
+	;Video::NormalMap_Texture, Texture::NormalMap_Texture
+	C: "OO",2490709265888,2490709264928
+}
+;Takes section
+;----------------------------------------------------
+
+Takes:  {
+	Current: ""
+}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 9
+  version: 10
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -40,16 +40,16 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 7d2d916f846c8c947a7de5e10f20070b, type: 3}
+        m_Texture: {fileID: 2800000, guid: a4a878d49c6c0964e831c669ebb1ec96, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 3d9f6cfb8ace01948b095cdfcfdbc49b, type: 3}
+        m_Texture: {fileID: 2800000, guid: d978f6dd5bcc0e3449a4c41facb3c440, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: -0.4}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailMask:
         m_Texture: {fileID: 0}
@@ -64,7 +64,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 7d2d916f846c8c947a7de5e10f20070b, type: 3}
+        m_Texture: {fileID: 2800000, guid: a4a878d49c6c0964e831c669ebb1ec96, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
